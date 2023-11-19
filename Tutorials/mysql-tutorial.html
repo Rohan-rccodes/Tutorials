@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>MySql-Tutorials</title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"/>
+
+    <!---------ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <link rel="stylesheet" href="../style/substyle-mysql.css"/>
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+       
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="#features">About</a></li>
+                <li><a href="javascript:void(0)" class="tutdrop-btn">Tutorials</a></li>
+                <li><a href="index.html" target="_blank">Contact</a></li>
+                <li><a href="#footer">Feedback</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+    <div class="dropdown-content dropdownhidden">
+        <ul>
+            <li><a href="#">Html</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="mysql-tutorial.html" target="_blank">MySQL</a></li>
+            <li><a href="plsql-tutorial.html" target="_blank">PL/SQL</a></li>
+        </ul>
+    </div>
+
+    <!--------sidebar anchors--links---------->
+    
+    <div class="sidebar">
+
+        <div class="link-bar">
+
+
+            <ul>
+                <p class="active"> <a href="#frame1">Database</a></p>
+                <li class="sidebar-items"><a href="#frame2">What is DBMS ?</a></li>
+                <li class="sidebar-items"><a href="#frame3">Types of DBMS</a></li>
+                <li class="sidebar-items"><a href="#frame4">What is RDBMS ?</a> </li>
+                <li class="sidebar-items"><a href="#frame5">DBMS vs File System</a> </li>
+                <li class="sidebar-items"><a href="#frame6">DBMS Architecture</a></li>
+                <li class="sidebar-items"><a href="#frame7">12-Codd's Rule</a></li> 
+            </ul>  
+            </div>
+
+        <div class="link-bar">
+            <p class="heading">Database Commands</p>
+            <ul>
+                <li class="sidebar-items"><a href="#frame8">MySQL features</a></li>
+                <li class="sidebar-items"><a href="#frame9">Create Command</a></li>
+                <li class="sidebar-items"><a href="#frame10">Show Database</a></li>
+                <li class="sidebar-items"><a href="#frame11">Use Database</a></li>
+                <li class="sidebar-items"><a href="#frame12">Drop Database</a></li>
+            </ul>
+        </div>
+
+
+        <div class="link-bar">
+            <p class="heading">Tables Commands</p>
+            <ul>
+                <li class="sidebar-items"><a href="#frame13">Create table</a></li>
+                <li class="sidebar-items"><a href="#frame14">Alter table</a></li>
+                <li class="sidebar-items"><a href="#frame15"> Show tables</a></li>
+                <li class="sidebar-items"><a href="#frame16">Rename table</a></li>
+                <li class="sidebar-items"><a href="#frame17">Drop table</a></li>
+            </ul>
+        </div>
+
+         <div class="link-bar">
+            <p class="heading">Sql Queries</p>
+            <ul> <li class="sidebar-items"><a href="#frame18">MySQL Constraints</a></li>
+                <li class="sidebar-items"><a href="#frame19">Insert statement</a> </li>
+                <li class="sidebar-items"><a href="#frame20">Update Record</a></li>
+            </ul>
+        </div>
+
+        <div class="link-bar">
+            <p class="heading">MySql Clauses</p>
+            <ul>
+                <li class="sidebar-items"><a href="#frame21">SQL Where Record</a>
+                </li>
+                <li class="sidebar-items"><a href="#frame22">DISTINCT STATEMENT</a>
+                <li class="sidebar-items"><a href="#frame23">MySQL FROM</a>
+                </li>
+                <li class="sidebar-items"><a href="#frame24">SQL ORDER BY</a></li>
+                <li class="sidebar-items"><a href="#frame25">SQL GROUP BY</a></li>
+                <li class="sidebar-items"><a href="#frame26">MySQL HAVING</a></li>
+
+            </ul>
+        </div>
+
+         <div class="link-bar">
+            <p class="heading">MySql Condition</p>
+            <ul>
+                <li class="sidebar-items"><a href="#frame27">Form Attributes</a>
+                </li>
+                <li class="sidebar-items"><a href="#frame28">Form Elements</a>
+                </li>
+                <li class="sidebar-items"><a href="#frame29">InputAttributes</a></li>
+            </ul>
+        </div>
+
+         <!-- <div class="link-bar">
+            <p class="heading">MySql Keys</p>
+            <ul>
+                <li class="sidebar-items"><a href="#frame30">Form Attributes</a>
+                </li>
+                <li class="sidebar-items"><a href="frame31">Form Elements</a>
+                </li>
+                <li class="sidebar-items"><a href="frame32">Input types</a>
+                </li> <li class="sidebar-items"><a href="frame33">Input
+                        Attributes</a></li>
+            </ul>
+        </div> -->
+
+    </div>
+
+
+    /<!----------------main  body content------------->
+
+    <div class="main-content">
+
+        <section id="frame1">
+
+            <h1 class="title">
+                What is Database ?
+            </h1>
+            <p class="description">
+                The database is a collection of inter-related data which is used to retrieve, insert and delete the data efficiently. It is also used to organize the data in the form of a table, schema, views, and reports, etc.
+            </p>
+            <p class="description">
+                DBMS allows users to create their own databases as per their requirements. The term “DBMS” includes the user of the database and other application programs. It provides an interface between the data and the software application.
+            </p>
+            <p class="description"><strong>Example:</strong>  The college Database organizes the data about the admin, staff, students and faculty etc.</p>
+
+            <img src="../images/database-storage.png" alt="" class="content-img">
+        </section>
+        <hr>
+        <section id="frame2">
+
+            <h1 class="title">Database Management System ?</h1>
+
+            <p class="description">Database Management System (DBMS) is software for storing and retrieving users data while considering appropriate security measures. It consists of a group of programs that manipulate the database. The DBMS accepts the request for data from an application and instructs the operating system to provide the specific data. In large systems, a DBMS helps users and other third-party software store and retrieve data.</p>
+
+            <p class="description">DBMS allows users to create their own databases as per their requirements. The term “DBMS” includes the user of the database and other application programs. It provides an interface between the data and the software application.</p>
+            <p class="description">DBMS provides an interface to perform various operations like database creation, storing data in it, updating data, creating a table in the database and a lot more.</p>
+            <p class="description">
+                <img src="../images/data-structure.png" alt="" class="content-img">
+            </p>
+            <h2 class="subtitle">DBMS allows users the following features :</h2>
+            <p class="description"><strong> Data Definition:</strong> It is used for creation, modification, and removal of definition that defines the organization of data in the database.</p>
+            <p class="description"><strong> Data Updation:</strong> It is used for the insertion, modification, and deletion of the actual data in the database.</p>
+            <p class="description"><strong> Data Retrieval:</strong> It is used to retrieve the data from the database which can be used by applications for various purposes.</p>
+            <p class="description"><strong> User Administration:</strong> It is used for registering and monitoring users, maintain data integrity, enforcing data security, dealing with concurrency control, monitoring performance and recovering information corrupted by unexpected failure.</p>
+
+        </section>
+        <hr>
+        <section id="frame3">
+            <h1 class="title">Types of Databases : </h1>
+            <p class="description">There are various types of databases used for storing different varieties of data:</p>
+            <img src="../images/data-server.png" alt="" class="content-img">
+
+            <h1 class="subtitle">1.Centralized Database</h1>
+            <p class="description">It is the type of database that stores data at a centralized database system. It comforts the users to access the stored data from different locations through several applications. These applications contain the authentication process to let users access data securely. An example of a Centralized database can be Central Library that carries a central database of each library in a college/university.</p>
+            <h1 class="small-subtitle">Advantages of Centralized Database</h1>
+            <p class="description">
+                <ul id="list">
+                    <li>It has decreased the risk of data management, i.e., manipulation of data will not affect the core data.</li>
+                    <li>Data consistency is maintained as it manages data in a central repository.</li>
+                    <li>It provides better data quality, which enables organizations to establish data standards..</li>
+                    <li>It contains ACID properties which maintain data in a healthy state in case of failure.</li>
+                </ul>
+            </p>
+
+            <h1 class="small-subtitle">Disadvantages of Centralized Database</h1>
+            <p class="description">
+                <ul id="list">
+                    <li>It has decreased the risk of data management, i.e., manipulation of data will not affect the core data.</li>
+                    <li>Data consistency is maintained as it manages data in a central repository.</li>
+                    <li>It provides better data quality, which enables organizations to establish data standards..</li>
+                    <li>It contains ACID properties which maintain data in a healthy state in case of failure.</li>
+                </ul>
+            </p>
+            <h1 class="subtitle"> 2. Distributed Database</h1>
+                <p class="description">Unlike a centralized database system, in distributed systems, data is distributed among different database systems of an organization. These database systems are connected via communication links. Such links help the end-users to access the data easily. Examples of the Distributed database are Apache Cassandra, HBase, Ignite, etc.
+                    We can further divide a distributed database system into:</p>
+                    <img src="../images/distributed.png" alt="" class="content-img">
+
+                    <h1 class="small-subtitle">Advantages of Distributed Database</h1>
+                    <p class="description">
+                        <ul id="list">
+                            <li>Modular development is possible in a distributed database, i.e., the system can be expanded by including new computers and connecting them to the distributed system.</li>
+                            <li>One server failure will not affect the entire data set.</li>
+                        </ul>
+                    </p>
+                    <h1 class="subtitle"> 3. Relational Database</h1>
+                        <p class="description">This database is based on the relational data model, which stores data in the form of rows(tuple) and columns(attributes), and together forms a table(relation). A relational database uses SQL for storing, manipulating, as well as maintaining the data. E.F. Codd invented the database in 1970. Each table in the database carries a key that makes the data unique from others. Examples of Relational databases are MySQL, Microsoft SQL Server, Oracle, etc.</p>
+                            <img src="../images/relational.png" alt="" class="content-img">
+
+                            <h1 class="small-subtitle">Advantages of Distributed Database</h1>
+                            <p class="description">There are following four commonly known properties of a relational model known as ACID properties, where:</p>
+                            <p class="description"><strong> A means Atomicity: </strong>This ensures the data operation will complete either with success or with failure. It follows the 'all or nothing' strategy. For example, a transaction will either be committed or will abort..</p>
+                            <p class="description"><strong>C means Consistency:: </strong>If we perform any operation over the data, its value before and after the operation should be preserved. For example, the account balance before and after the transaction should be correct, i.e., it should remain conserved.</p>
+                            <p class="description"><strong>I means Isolation:</strong>There can be concurrent users for accessing data at the same time from the database. Thus, isolation between the data should remain isolated. For example, when multiple transactions occur at the same time, one transaction effects should not be visible to the other transactions in the database.</p>
+                            <p class="description"><strong>D means Durability: </strong>IIt ensures that once it completes the operation and commits the data, data changes should remain permanent.</p>
+
+
+
+                            <h1 class="subtitle">4. Hierarchical Databases</h1>
+                            <p class="description">It is the type of database that stores data in the form of parent-children relationship nodes. Here, it organizes data in a tree-like structure.</p>
+                            <p class="description">Data get stored in the form of records that are connected via links. Each child record in the tree will contain only one parent. On the other hand, each parent record can have multiple child records.</p>
+                            <p class="description">What is hierarchical database with example?
+                                Image result for hierarchical databases
+                                Hierarchical databases are useful when you need to represent data in a tree like hierarchy. The perfect example of a hierarchical data model is the navigation file or sitemap of a Website. A company organization chart is another example of a hierarchical database</p>
+
+                            <img src="../images/hierarchical-structure.png" alt="" class="content-img">
+
+        </section>
+        <hr>
+        <section id="frame4">
+            <h1 class="title">What is RDBMS ?</h1>
+            <p class="description">RDBMS stands for Relational Database Management System.</p>
+            <p class="description">All modern database management systems like SQL, MS SQL Server, IBM DB2, ORACLE, My-SQL, and Microsoft Access are based on RDBMS.</p>
+            <p class="description">It is called Relational Database Management System (RDBMS) because it is based on the relational model introduced by E.F. Codd.</p>
+            <h2 class="small-subtitle">How it works</h2>
+            <p class="description">Data is represented in terms of tuples (rows) in RDBMS.</p>
+            <p class="description">A relational database is the most commonly used database. It contains several tables, and each table has its primary key.</p>
+            <p class="description">Due to a collection of an organized set of tables, data can be accessed easily in RDBMS.</p>
+            <img src="../images/rdbms.png" alt="" class="content-img">
+        
+        </section><hr>
+        <section id="frame5">
+            <h1 class="title">Difference between File System and DBMS</h1>
+            <h1 class="subtitle">File System Approach</h1>
+    
+            <p class="description">File based systems were an early attempt to computerize the manual system. It is also called a traditional based approach in which a decentralized approach was taken where each department stored and controlled its own data with the help of a data processing specialist</p>
+            <p class="description"> The main role of a data processing specialist was to create the necessary computer file structures, and also manage the data within structures and design some application programs that create reports based on file data.
+            </p>
+            <h2 class="small-subtitle">In the above figure:
+
+            </h2>
+            <p class="description">Consider an example of a student's file system. The student file will contain information regarding the student (i.e. roll no, student name, course etc.). Similarly, we have a subject file that contains information about the subject and the result file which contains the information regarding the result.</p>
+            <p class="description">Some fields are duplicated in more than one file, which leads to data redundancy. So to overcome this problem, we need to create a centralized system, i.e. DBMS approach.</p>
+            <p class="description">Due to a collection of an organized set of tables, data can be accessed easily in RDBMS.</p>
+            <img src="../images/rdbms.png" alt="" class="content-img">
+
+            <h1 class="subtitle">DBMS:</h1>
+            <p class="description">A database approach is a well-organized collection of data that are related in a meaningful way which can be accessed by different users but stored only once in a system. The various operations performed by the DBMS system are: Insertion, deletion, selection, sorting etc.</p>
+            <img src="../images/dbms-vs-files-system.png" alt="" class="content-img">
+            <h2 class="small-subtitle">In the above figure,</h2>
+            <p class="description">In the above figure, duplication of data is reduced due to centralization of data.</p>
+            <img src="../images/dbms-vs-files-system2.png" alt="" class="content-img">
+        
+
+        </section><hr>
+        <section id="frame6">
+            <h1 class="title">DBMS Architecture</h1>
+            <p class="description">The DBMS design depends upon its architecture. The basic client/server architecture is used to deal with a large number of PCs, web servers, database servers and other components that are connected with networks.</p>
+            <p class="description"> The client/server architecture consists of many PCs and a workstation which are connected via the network.</p>
+            <p class="description">DBMS architecture depends upon how users are connected to the database to get their request done.</p>
+
+            <h2 class="subtitle">Types of DBMS Architecture</h2>
+            <p class="description">Database architecture can be seen as a single tier or multi-tier. But logically, database architecture is of two types like: 2-tier architecture and 3-tier architecture.</p>
+
+            <h1 class="subtitle">1-Tier Architecture</h1>
+            <p class="description">In this architecture, the database is directly available to the user. It means the user can directly sit on the DBMS and uses it.</p>
+            <p class="description">Any changes done here will directly be done on the database itself. It doesn't provide a handy tool for end users.</p>
+            <p class="description">The 1-Tier architecture is used for development of the local application, where programmers can directly communicate with the database for the quick response.</p>
+            <img src="../images/1-tier.png" alt="" class="content-img">
+
+            <h1 class="subtitle">2-Tier Architecture</h1>
+            <p class="description">The 2-Tier architecture is same as basic client-server. In the two-tier architecture, applications on the client end can directly communicate with the database at the server side. For this interaction, API's like: ODBC, JDBC are used.</p>
+            <p class="description">The user interfaces and application programs are run on the client-side.</p>
+            <p class="description">The server side is responsible to provide the functionalities like: query processing and transaction management.</p>
+            <p class="description">To communicate with the DBMS, client-side application establishes a connection with the server side.</p>
+            <img src="../images/2-tier.png" alt="" class="content-img">
+
+            <h1 class="subtitle">3-Tier Architecture</h1>
+            <p class="description">The 3-Tier architecture contains another layer between the client and server. In this architecture, client can't directly communicate with the server.</p>
+            <p class="description">The application on the client-end interacts with an application server which further communicates with the database system.</p>
+            <p class="description">End user has no idea about the existence of the database beyond the application server. The database also has no idea about any other user beyond the application. The 3-Tier architecture is used in case of large web application.</p>
+            <img src="../images/3-tier.png" alt="" class="content-img">
+        </section><hr>
+        <section id="frame7">
+            <h1 class="title">
+                RDBMS 12 Codd's Rule
+            </h1>
+            <p class="description">Every database has tables, and constraints cannot be referred to as a rational database system. And if any database has only relational data model, it cannot be a Relational Database System (RDBMS). So, some rules define a database to be the correct RDBMS.</p>
+            <p class="description">These rules were developed by<b> Dr. Edgar F. Codd (E.F. Codd) in 1985,</b> who has vast research knowledge on the Relational Model of database Systems. Codd presents his 13 rules for a database to test the concept of DBMS against his relational model, and if a database follows the rule, it is called a true relational database (RDBMS). These 13 rules are popular in RDBMS, known as <strong>Codd's 12 rules.</strong></p>
+
+            <p class="description"><strong>Rule 0: The Foundation Rule</strong></p>
+            <p class="description">The database must be in relational form. So that the system can handle the database through its relational capabilities.</p>
+
+            <p class="description"><strong>Rule 1: Information Rule</strong></p>
+            <p class="description">A database contains various information, and this information must be stored in each cell of a table in the form of rows and columns.</p>
+
+            <p class="description"><strong>Rule 2: Guaranteed Access Rule</strong></p>
+            <p class="description">Every single or precise data (atomic value) may be accessed logically from a relational database using the combination of primary key value, table name, and column name.</p>
+
+            <p class="description"><strong>Rule 3: Systematic Treatment of Null Values</strong></p>
+            <p class="description">This rule defines the systematic treatment of Null values in database records. The null value has various meanings in the database, like missing the data, no value in a cell, inappropriate information, unknown data and the primary key should not be null.</p>
+
+            <p class="description"><strong>Rule 4: Active/Dynamic Online Catalog based on the relational model</strong></p>
+            <p class="description">It represents the entire logical structure of the descriptive database that must be stored online and is known as a database dictionary. It authorizes users to access the database and implement a similar query language to access the database.</p>
+            <p class="description"><strong>Rule 5: Comprehensive Data SubLanguage Rule</strong></p>
+            <p class="description">The relational database supports various languages, and if we want to access the database, the language must be the explicit, linear or well-defined syntax, character strings and supports the comprehensive: data definition, view definition, data manipulation, integrity constraints, and limit transaction management operations. If the database allows access to the data without any language, it is considered a violation of the database.</p>
+
+            <p class="description"><strong>Rule 6: View Updating Rule</strong></p>
+            <p class="description">All views table can be theoretically updated and must be practically updated by the database systems.</p>
+            <p class="description"><strong>Rule 7: Relational Level Operation (High-Level Insert, Update and delete) Rule</strong></p>
+            <p class="description"></p>
+            <p class="description"><strong></strong></p>
+            <p class="description">A database system should follow high-level relational operations such as insert, update, and delete in each level or a single row. It also supports union, intersection and minus operation in the database system.</p>
+
+            <p class="description"><strong>Rule 8: Physical Data Independence Rule</strong></p>
+            <p class="description">All stored data in a database or an application must be physically independent to access the database. Each data should not depend on other data or an application. If data is updated or the physical structure of the database is changed, it will not show any effect on external applications that are accessing the data from the database.</p>
+
+            <p class="description"><strong>Rule 9: Logical Data Independence Rule</strong></p>
+            <p class="description">It is similar to physical data independence. It means, if any changes occurred to the logical level (table structures), it should not affect the user's view (application). For example, suppose a table either split into two tables, or two table joins to create a single table, these changes should not be impacted on the user view application.</p>
+
+            <p class="description"><strong>Rule 10: Integrity Independence Rule</strong></p>
+            <p class="description">A database must maintain integrity independence when inserting data into table's cells using the SQL query language. All entered values should not be changed or rely on any external factor or application to maintain integrity. It is also helpful in making the database-independent for each front-end application.</p>
+
+            <p class="description"><strong>Rule 11: Distribution Independence Rule</strong></p>
+            <p class="description">The distribution independence rule represents a database that must work properly, even if it is stored in different locations and used by different end-users. Suppose a user accesses the database through an application; in that case, they should not be aware that another user uses particular data, and the data they always get is only located on one site. The end users can access the database, and these access data should be independent for every user to perform the SQL queries.</p>
+
+            <p class="description"><strong>Rule 12: Non Subversion Rule</strong></p>
+            <p class="description">The non-submersion rule defines RDBMS as a SQL language to store and manipulate the data in the database. If a system has a low-level or separate language other than SQL to access the database system, it should not subvert or bypass integrity to transform data.</p>
+        </section><hr>
+        <section id="frame8">
+            <h1 class="title">Features of MySql </h1>
+            <p class="description">
+                MySQL is a system that helps store and manage data efficiently. Database generally stores data in a structured fashion. It is written in C and C++, and it has been tested with a variety of compilers to check for bugs and inconsistencies.
+            </p>
+
+           <p class="description">
+            Let us understand some of the main features associated with MySQL:
+           </p>
+            
+           <p  class="small-subtitle"> Open-Source </p>
+           <p class="description">
+            MySQL is , which means this software can be downloaded, used and modified by anyone. It is free-to-use and easy-to-understand. The source code of MySQL can be studied, and changed based on the requirements.  It uses GPL, i.e. GNU General Public license which defines rules and regulations regarding what can and can't be done using the application.
+            <img src="../images/open-source.png" alt="" class="content-img">
+            </p>
+          <p  class="small-subtitle">  Quick and Reliable </p>
+          <p class="description">
+            MySQL stores data efficiently in the memory ensuring that data is consistent, and not redundant. Hence, data access and manipulation using MySQL is quick.
+            </p>
+          <p  class="small-subtitle">  Scalable </p>
+          <p class="description">
+            Scalability refers to the ability of systems to work easily with small amounts of data, large amounts of data, clusters of machines, and so on. MySQL server was developed to work with large databases. 
+            </p>
+            <img src="../images/resize.png" alt="" class="content-img">
+
+           <p  class="small-subtitle"> Data Types </p>
+           <p class="description">
+            It contains multiple data types such as unsigned integers, signed integers, float (FLOAT), double (DOUBLE), character (CHAR), variable character (VARCHAR), text, blob, date, time, datetime, timestamp, year, and so on.
+            </p>
+           <p class="small-subtitle"> Character Sets </p>
+           <p class="description">
+            It supports different character sets, and this includes latin1 (cp1252 character encoding), German, Ujis, other Unicode character sets and so on.
+            </p>
+           <p  class="small-subtitle"> Secure </p>
+           <p class="description">
+            It provides a secure interface since it has a password system which is flexible, and ensures that it is verified based on the host before accessing the database. The password is encrypted while connecting to the server.
+            </p>
+            <img src="../images/secure-data.png" alt="" class="content-img">
+          <p  class="small-subtitle">  Support for large databases </p>
+          <p class="description">
+            It comes with support for large databases, which could contain about 40 to 50 million records, 150,000 to 200,000 tables and up to 5,000,000,000 rows.
+            </p>
+         <p  class="small-subtitle"> Client and Utility Programs</p>
+          <p class="description">
+            MySQL server also comes with many client and utility programs. This includes Command line programs such as 'mysqladmin' and graphical programs such as 'MySQL Workbench'. MySQL client programs are written in a variety of languages. Client library (code encapsulated in a module) can be written in C or C++ and would be available for clients that have C bindings.
+</p>
+ <img src="../images/success.png" alt="" class="content-img">
+        </section>
+        <hr>
+        <section id="frame9">
+            <h1 class="title">Create Database</h1>
+            <p class="description">
+                MySQL implements a database as a directory that stores all files in the form of a table. It allows us to create a database mainly in two ways:
+            </p>
+
+           <p class="description">1.
+            MySQL Command Line Client </p>
+            
+           <p  class="description">2. MySQL Workbench</p>
+
+
+           <h1 class="small-subtitle">MySQL Command Line Client</h1>
+           <p class="description">The CREATE DATABASE statement is used to create a new SQL database.</p>
+           <pre class="textbox">
+            Syntax:
+
+            CREATE DATABASE databasename;
+
+            Example: 
+
+            CREATE DATABASE testDB;
+           </pre>
+
+        </section><hr>
+        <section id="frame10">
+            <h1 class="subtitle">Show Database</h1>
+            <p class="description">When we work with the MySQL server, it is a common task to show or list the databases, displaying the table from a particular database, and information of user accounts and their privileges that reside on the server. In this article, we are going to focus on how to list databases in the MySQL server.</p>
+            <p class="description">We can list all the databases available on the MySQL server host using the following command, as shown below:</p>
+            <img src="../images/mysql-show-database.png" alt="" class="content-img2">
+        </section>
+        <hr>
+        <section id="frame11">
+            <h1 class="subtitle">Use Database</h1>
+            <p class="description">SELECT Database is used in MySQL to select a particular database to work with. This query is used when multiple databases are available with MySQL Server.</p>
+            <p class="description">You can use SQL command USE to select a particular database.</p>
+            <pre class="textbox">
+                Syntax:
+    
+                use databasename;
+
+                Example: 
+    
+                use testDB
+               </pre>
+            <img src="../images/use-database.png" alt="" class="content-img2">
+        </section>
+        <hr>
+        <section id="frame12">
+
+            <h1 class="subtitle">Drop Database</h1>
+            <p class="description">We can drop/delete/remove a MySQL database quickly with the MySQL DROP DATABASE command. It will delete the database along with all the tables, indexes, and constraints permanently.</p>
+            <p class="description">Therefore, we should have to be very careful while removing the database in MySQL because we will lose all the data available in the database. If the database is not available in the MySQL server, the DROP DATABASE statement throws an error.</p>
+            <p class="description">We can drop an existing database in MySQL by using the DROP DATABASE statement with the below syntax:</p>
+            <pre class="textbox">
+                Syntax:
+    
+                DROP DATABASE databasename;
+
+                Example: 
+    
+                DROP DATABASE testDB
+               </pre>
+        </section><hr>
+        <section id="frame13">
+            <h1 class="subtitle">Create Tables in MyQsl</h1>
+            <p class="description">A table is used to organize data in the form of rows and columns and used for both storing and displaying records in the structure format. It is similar to worksheets in the spreadsheet application. A table creation command requires three things:</p>
+            <p class="description">1.Name of the table</p>
+            <p class="description">2.Names of fields</p>
+            <p class="description">3.Definitions for each field</p>
+
+            <pre class="textbox">
+                Syntax:
+    
+                CREATE TABLE table_name (
+                            column1 datatype,
+                            column2 datatype,
+                            column3 datatype,
+                            ....
+                            );
+
+                Example: 
+    
+                CREATE TABLE Persons (
+                            PersonID int,
+                            LastName varchar(255),
+                            FirstName varchar(255),
+                            Address varchar(255),
+                            City varchar(255)
+                            );
+               </pre>
+        </section><hr>
+        <section id="frame14">
+            <h1 class="subtitle">Alter table</h1>
+            <p class="description">MySQL ALTER statement is used when you want to change the name of your table or any table field. It is also used to add or delete an existing column in a table. The ALTER statement is always used with "ADD", "DROP" and "MODIFY" commands according to the situation.</p>
+            <p class="description">We can list all the databases available on the MySQL server host using the following command, as shown below:</p>
+
+            <p class="description">ALTER TABLE - ADD COLUMN</p>
+            <pre class="textbox">
+                Syntax:
+
+                ALTER TABLE table_name
+                ADD COLUMN column_name;
+
+                Example: 
+                ALTER TABLE Customers
+                ADD Email varchar(255);
+               </pre>
+
+            
+            <p class="description">ALTER TABLE - DROP COLUMN</p>
+            <pre class="textbox">
+                Syntax:
+
+                ALTER TABLE table_name
+                DROP COLUMN column_name;
+
+                Example: 
+                ALTER TABLE Customers
+                ADD Email varchar(255);
+               </pre>
+        </section>
+        <hr>
+        <section id="frame15">
+
+            <h1 class="subtitle">Show Database</h1>
+
+            <p class="description">When we work with the MySQL server, it is a common task to show or list the databases, displaying the table from a particular database, and information of user accounts and their privileges that reside on the server. In this article, we are going to focus on how to list databases in the MySQL server.</p>
+            <p class="description">We can list all the databases available on the MySQL server host using the following command, as shown below:</p>
+            <img src="../images/mysql-show-database.png" alt="" class="content-img2">
+        </section>
+        <hr>
+        <section id="frame16">
+            <h1 class="subtitle">MySQL Rename table</h1>
+            <p class="description">Sometimes our table name is non-meaningful, so it is required to rename or change the name of the table. MySQL provides a useful syntax that can rename one or more tables in the current database.</p>
+            <p class="description">The following are the syntax used to change the name of the table:</p>
+            <pre class="textbox">
+                Syntax:
+                RENAME old_table TO new_table;
+               </pre>
+               <img src="../images/rename-table.svg" class="content-img2" alt="">
+
+        </section>
+        <hr>
+        <section id="frame17"></section>
+        <section id="frame18"></section>
+        <section id="frame19"></section>
+        <section id="frame20"></section>
+        <section id="frame21"></section>
+        <section id="frame22"></section>
+        <section id="frame23"></section>
+        <section id="frame24"></section>
+        <section id="frame25"></section>
+        <section id="frame26"></section>
+        <section id="frame27"></section>
+    </div>
+ 
+
+ <footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li>Manage Reputation</li>
+        <li>Manage Website</li>
+        <li>Power Tool</li>
+        <li>Marketing Services</li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li>Html5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>DBMS</li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Manage Reputation</li>
+            <li>Power Tool</li>
+            <li>Manage Website</li>
+            <li>Marketing Services</li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, autem!</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

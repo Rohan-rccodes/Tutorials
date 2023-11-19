@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    padding: 1rem 3rem;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+h1{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color:rgb(0, 4, 133);
+}
+h2{
+    color:rgb(0, 4, 133);
+    margin-top: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+    color:rgb(0, 4, 133);
+
+    margin-top: 2rem;
+}
+
+span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:rgb(0, 4, 133);
+
+}
+ul, ol{
+    margin: 1rem 0;
+}
+
+li {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+li .code{
+    margin-top: 1rem;
+}
+
+p {
+    text-align: justify;
+    margin: 1rem 0;
+    letter-spacing: 0.4px;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+ul > li
+{
+    color: rgb(64, 64, 64);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+strong{
+    color: rgb(16, 12, 47);
+}
+
+.code{
+    position: relative;
+    /* background-color: rgba(0, 0, 0, 0.164); */
+    background-color: #282c34;
+    color: #f1f1f1;
+    padding: 1rem;
+    word-wrap: break-word;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.code:hover{
+    cursor: pointer;
+}
+
+.code .copybtn{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: display 0.2s ease-in-out;
+}
+
+.code .copybtn:hover{
+    background: #f1f1f1;
+}
+
+.code:hover .copybtn{
+    display: block;
+}
+
+.code pre{
+     
+    font-size: smaller;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 200%;
+}
+
+#structimg{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid; */
+    margin-bottom: 4rem;
+}
+#structimg:last-child{
+    margin-bottom: 0;
+}
+#structimg img{
+    max-width: 700px;
+}
+.pl img{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+#structimg .hori{
+    min-height: 70px;
+    height: 100%;
+}
+#structimg .vert{
+    max-width: 350px;
+    width: 100%;
+}
+#structimg .box{
+    height: 200px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    body{
+        padding: 1rem 2.5rem;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h3{
+        margin-top: 1.4rem;
+    }
+    p{
+        margin: 1rem 0;
+    }
+    p, li {
+        font-size: 0.9rem;
+        letter-spacing: 0.35px;
+        line-height: 1.1rem;
+    }
+    .code{
+        line-height: 1.3rem;
+    }
+    .code pre{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    body{
+        padding: 1rem 2rem;
+        padding-bottom: 4rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3{
+        margin-top: 1rem;
+    }
+    p{
+        margin: 1rem 0;
+    }
+    p, li {
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
+        line-height: 1rem;
+    }
+    #structimg img{
+        max-width: 700px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        padding-bottom: 6rem;
+    }
+    .code .copybtn{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+    .code pre{
+        font-size: x-small;
+    }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Page-5 Php-Functions</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title">PHP Functions</h1>
+    <hr class="line">
+    <p class="desc">This tutorial you will learn how to create your own custom functions in PHP.</p>
+    <hr class="line">
+    <h2 class="sub-title">PHP Built-in Functions</h2>
+    <p class="desc">
+        A function is a self-contained block of code that performs a specific task.
+    </p>
+    <p class="desc">
+        PHP has a huge collection of internal or built-in functions that you can call directly within your PHP scripts to perform a specific task, like gettype(), print_r(), var_dump, etc.
+    </p>
+    
+    <p class="desc">
+        <b>Example: </b>Simple program to print “Hello world!” message on the screen.
+    </p>
+
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <code>
+            <span><</span>?php
+
+            <span class="comment">/* echo is a print command */</span>
+            echo "Hello world!"; 
+    
+            ?> 
+        </code>
+       
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Hello world!
+    </pre>
+
+
+
+    <h2 class="sub-title">PHP User-Defined Functions</h2>
+    <p class="desc"> It is one of the widely used open-source general-purpose scripting language that is used for backend Development. Apart from this, let’s see why we should learn it.   </p>
+    <p class="desc">
+        <ul class="type-1">
+            <li><b>Functions reduces the repetition of code within a program:</b> Function allows you to extract commonly used block of code into a single component. Now you can perform the same task by calling this function wherever you want within your script without having to copy and paste the same block of code again and again.</li>
+
+            <li><b>Functions makes the code much easier to maintain:</b>Since a function created once can be used many times, so any changes made inside a function automatically implemented at all the places without touching the several files.</li>
+
+            <li><b>Functions makes it easier to eliminate the errors:</b>When the program is subdivided into functions, if any error occur you know exactly what function causing the error and where to find it. Therefore, fixing errors becomes much easier.</li>
+
+            <li><b>Functions can be reused in other application :</b> Because a function is separated from the rest of the script, it's easy to reuse the same function in other applications just by including the php file containing those functions.</li>
+        </ul>
+    </p>
+    <img src="../images/php-3.png" alt="" class="content-img">
+
+    <pre class="code-box">
+        <code>
+            function functionName(){
+               <span class="comment"> // Code to be executed</span>
+            }
+        </code>
+    </pre>
+
+    <!-------------------------------------------------------------->
+  <p class="desc">
+    The declaration of a user-defined function start with the word function, followed by the name of the function you want to create followed by parentheses i.e. () and finally place your function's code between curly brackets {}.
+  </p>
+
+  <p class="desc"><b>This is a simple example of an user-defined function, that display today's date:</b></p>
+  <pre class="code-box">
+    <code>
+        <span><</span>?php
+      <span class="comment">// Defining function</span>
+        function whatIsToday(){
+        echo "Today is " . date('l', mktime());
+        }
+        <span class="comment">// Calling function</span>
+        whatIsToday();
+        ?>
+    </code>
+  </pre>
+
+  <p><b>Output :</b></p>
+  <pre class="output-box">
+    Today is Thursday
+</pre>
+
+    
+<h2 class="sub-title">Functions with Parameters</h2>
+<p class="desc">You can specify parameters when you define your function to accept input values at run time. The parameters work like placeholder variables within a function; they're replaced at run time by the values (known as argument) provided to the function at the time of invocation.</p>
+
+<pre class="code-box">
+    <code>
+        function myFunc($oneParameter, $anotherParameter){
+           <span class="comment"> // Code to be executed</span>
+        }
+    </code>
+</pre>
+<p class="desc">
+    You can define as many parameters as you like. However for each parameter you specify, a corresponding argument needs to be passed to the function when it is called.
+</p>
+
+<p class="desc">
+    The getSum() function in following example takes two integer values as arguments, simply add them together and then display the result in the browser.
+</p>
+
+<pre class="code-box">
+    <code>
+        <span><</span>?php
+        <span class="comment">// Defining function</span>
+            function getSum($num1, $num2){
+            $sum = $num1 + $num2;
+            echo "Sum of the two numbers $num1 and $num2 is : $sum";
+            }
+            <span class="comment">// Calling function</span>
+            getSum(10, 20);
+        ?>
+    </code>
+</pre>
+
+<p><b>Ouput:</b></p>
+
+<pre class="output-box">
+        Sum of the two numbers 10 and 20 is : 30
+</pre>
+
+
+
+<div class="btn-box">
+    <div>
+        <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+    </div>
+
+    <div>
+        <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+        <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+    </div>
+    
+
+    
+</div>
+</body>
+</html>
+

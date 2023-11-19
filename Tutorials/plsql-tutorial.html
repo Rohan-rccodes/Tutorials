@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Pl-Sql-Tutorials </title>
+
+        <!--------FAV-ICONS---------->
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+
+        <!---------ICONS---------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+        <!--------MAIN STYLE---------->
+        <link rel="stylesheet" href="../style/substyle-pl-Sql.css" />
+        <!----js-style-menu ------>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+    </head>
+
+    <body>
+        <!-------navigation-------->
+        <nav id="navbar">
+            <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+
+            <div class="navigation">
+                <ul>
+                    <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="javascript:void(0)" class="tutdrop-btn">Tutorials</a></li>
+                    <li><a href="index.html" target="_blank">Contact</a></li>
+                    <li><a href="index.html#footer" target="_blank">Blog</a></li>
+                </ul>
+                <img id="menu-btn" src="../images/menu.png" alt="">
+            </div>
+        </nav>
+        <div class="dropdown-content dropdownhidden">
+            <ul>
+                <li><a href="#">Html</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="mysql-tutorial.html" target="_blank">MySQL</a></li>
+                <li><a href="plsql-tutorial.html" target="_blank">PL/SQL</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <!------sidebar anchors--links---------->
+
+        <div class="sidebar">
+
+            <div class="link-bar">
+
+
+                <p class="active">PL/SQL</p>
+                <ul>
+                    <li class="sidebar-items"><a href="#frame1">What is PL/SQL ?</a></li>
+                    <li class="sidebar-items"><a href="#frame2">List of all PL/SQL Queries</a></li>
+                    <li class="sidebar-items"><a href="#frame3">Variables in PL/SQL</a> </li>
+                </ul>
+            </div>
+
+            <div class="link-bar">
+                <p class="heading">Control statement</p>
+                <ul>
+                    <li class="sidebar-items"><a href="#frame4">IF in PL/SQL</a>
+                    </li>
+                    <li class="sidebar-items"><a href="#frame5">Case in PL/SQL</a></li>
+                    <li class="sidebar-items"><a href="#frame6">Loop in PL/SQL</a></li>
+                    <li class="sidebar-items"><a href="#frame7">Exit Loop in PL/SQL</a></li>
+                    <li class="sidebar-items"><a href="#frame8">While Loop in PL/SQL</a></li>
+                    <li class="sidebar-items"><a href="#frame9">For Loop in PL/SQL</a></li>
+                    <li class="sidebar-items"><a href="#frame10">Continue in PL/SQL</a></li>
+                    <li class="sidebar-items"><a href="#frame11">GOTO in PL/SQL</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!----------------main  body content------------->
+
+        <div class="main-content">
+
+            <section id="frame1">
+                <h1 class="title">
+                    Definition of PL/SQL Queries
+                </h1>
+                <p class="description">
+                    PL/SQL provides the different queries, or we can say commands to the user. Basically, PL/SQL is
+                    similar to the SQL language. But PL/SQL introduces the different methods that consist of the block
+                    structure, and it is helpful for well suitable development.
+                </p>
+                <p class="description">
+                    PL/SQL also provides the variable in which we can perform the variable deceleration as well as we
+                    can assign the name as well. PL/SQL structure divides into different sections, and we can write the
+                    different queries into an execution section as per user requirement. We can perform the update,
+                    create, insert and delete, etc., as per requirement.
+                </p>
+                <p class="description"><strong>Example:</strong> We can perform the update, create, insert and delete,
+                    etc..</p>
+
+                <img src="../images/plsql.png" alt="" class="content-img">
+            </section>
+
+            <section id="frame2">
+                <h1 class="title">
+                    List of all PL/SQL Queries :
+                </h1>
+                <p class="description">
+                    Now let’s see different types of queries in PL/SQL as follows.
+                <h1 class="subtitle">
+                    1. Create definition query:
+                </h1>
+                <p class="description">
+                    Variables declared in any code block can be subjected to constraints. A constraint is a condition
+                    that needs to be applied to a certain variable. Constant and non-null constraints are the most often
+                    utilized constraints. Constants are used to ensure that a value does not change after it is given
+                    for the first time. Not null ensures that the variable has a value at all times. An error will occur
+                    if any value attempts to assign a null value. Unique, check, main key, foreign key, and other
+                    restrictions are among the others.
+                </p>
+                <h2 class="small-subtitle">Syntax:</h2>
+                <pre class="textbox">
+
+                BEGIN
+                create table specified table name (required colm name 1specify data type(size), required 
+                colm name 2specify data type(size),….required colm name N specify data type(size));
+                END;
+               </pre>
+
+                <h1 class="subtitle">
+                    Explanation:
+                </h1>
+                <p class="description">
+                    n the above syntax, we use create table statement to create a new table; here, the specified table
+                    name means the actual table name that we need to create. Inside the bracket, we can write different
+                    column names as per our requirement with different data types as shown.
+                </p>
+                <h2 class="small-subtitle">Examples:</h2>
+                <pre class="textbox">
+
+                create table studentA(stud_id number(10) not null, stud_name varchar2(30) not null, 
+                stud_city varchar2(30));
+              </pre>
+                <h1 class="subtitle">
+                    Explanation:
+                </h1>
+                <p class="description">
+                    By using create table statement, we created a new table name student A, with different attributes
+                    and different data types. The final output of the above statement we illustrated by using the below
+                    screenshot is as follows.
+                </p>
+
+            </section>
+
+            <section id="frame3">
+                <h1 class="title">
+                    Variables in PL/SQL
+                </h1>
+                <p class="description">
+                    A variable is a meaningful name which facilitates a programmer to store data temporarily during the
+                    execution of code. It helps you to manipulate data in PL/SQL programs. It is nothing except a name
+                    given to a storage area. Each variable in the PL/SQL has a specific data type which defines the size
+                    and layout of the variable's memory.
+                </p>
+                <p class="description">
+                    A variable should not exceed 30 characters. Its letter optionally followed by more letters, dollar
+                    signs, numerals, underscore etc.
+                </p>
+                <p class="description"><strong>How to declare variable in PL/SQL</strong></p>
+                <p class="description">You must declare the PL/SQL variable in the declaration section or in a package
+                    as a global variable. After the declaration, PL/SQL allocates memory for the variable's value and
+                    the storage location is identified by the variable name.</p>
+
+                <pre class="textbox">
+                Syntax:
+                variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]  
+               </pre>
+
+                <img src="../images/plsql.png" alt="" class="content-img">
+            </section>
+
+            <section id="frame4">
+                <h1 class="title">
+                    IF in PL/SQL
+                </h1>
+                <p class="description">
+                    PL/SQL supports the programming language features like conditional statements and iterative
+                    statements. Its programming constructs are similar to how you use in programming languages like Java
+                    and C++.
+                </p>
+                <p class="description">
+                    There are different syntaxes for the IF-THEN-ELSE statement.
+                </p>
+                <pre class="textbox">
+                Syntax: (IF-THEN statement):
+
+                IF condition   
+                THEN   
+                Statement: {It is executed when condition is true}  
+                END IF;
+               </pre>
+                <p class="description">This syntax is used when you want to execute statements only when condition is
+                    TRUE.</p>
+                <pre class="textbox">
+                Syntax: (IF-THEN-ELSE statement):
+
+                IF condition   
+                THEN  
+                {...statements to execute when condition is TRUE...}  
+                ELSE  
+                {...statements to execute when condition is FALSE...}  
+                END IF;  
+               </pre>
+
+                <img src="../images/data-server.png" alt="" class="content-img">
+            </section>
+
+            <section id="frame5">
+                <h1 class="title">
+                    Case in PL/SQL
+                </h1>
+                <p class="description">
+                    The PL/SQL CASE statement facilitates you to execute a sequence of satatements based on a selector.
+                    A selector can be anything such as variable, function or an expression that the CASE statement
+                    checks to a boolean value.
+                </p>
+                <p class="description">
+                    The CASE statement works like the IF statement, only using the keyword WHEN. A CASE statement is
+                    evaluated from top to bottom. If it get the condition TRUE, then the corresponding THEN calause is
+                    executed and the execution goes to the END CASE clause.
+                </p>
+
+                <pre class="textbox">
+                CASE [ expression ]  
+                WHEN condition_1 THEN result_1  
+                   WHEN condition_2 THEN result_2  
+                   ...  
+                   WHEN condition_n THEN result_n  
+                 ELSE result  
+                END             
+                
+               </pre>
+            </section>
+
+            <section id="frame6">
+                <h1 class="title">
+                    Loop in PL/SQL
+
+                </h1>
+                <p class="description">
+                    The PL/SQL loops are used to repeat the execution of one or more statements for specified number of
+                    times. These are also known as iterative control statements.
+                </p>
+                <p class="description"><strong>Syntax for a basic loop:</strong> </p>
+                <pre class="textbox">
+                LOOP  
+                Sequence of statements;  
+                END LOOP;          
+                
+               </pre>
+                <p class="description">
+
+                    <b> There are 4 types of PL/SQL Loops.</b><br>
+
+                    1.Basic Loop / Exit Loop <br>
+
+                    2.While Loop <br>
+                    3.For Loop <br>
+
+                    4.Cursor For Loop <br>
+                </p>
+            </section>
+
+            <section id="frame7">
+                <h1 class="title">
+                    Exit Loop in PL/SQL
+                </h1>
+                <p class="description">
+                    PL/SQL exit loop is used when a set of statements is to be executed at least once before the
+                    termination of the loop. There must be an EXIT condition specified in the loop, otherwise the loop
+                    will get into an infinite number of iterations. After the occurrence of EXIT condition, the process
+                    exits the loop.
+                </p>
+                <p class="description">
+                    PL/SQL also provides the variable in which we can perform the variable deceleration as well as we
+                    can assign the name as well. PL/SQL structure divides into different sections, and we can write the
+                    different queries into an execution section as per user requirement. We can perform the update,
+                    create, insert and delete, etc., as per requirement.
+                </p>
+                <p class="description"><strong>Example:</strong> We can perform the update, create, insert and delete,
+                    etc..</p>
+
+                <img src="../images/plsql.png" alt="" class="content-img">
+            </section>
+            <section id="frame8">
+                <h1 class="title">
+                    While Loop in PL/SQL
+                </h1>
+                <p class="description">
+                    PL/SQL while loop is used when a set of statements has to be executed as long as a condition is
+                    true, the While loop is used. The condition is decided at the beginning of each iteration and
+                    continues until the condition becomes false.
+                </p>
+                <p class="description">
+                    PL/SQL also provides the variable in which we can perform the variable deceleration as well as we
+                    can assign the name as well. PL/SQL structure divides into different sections, and we can write the
+                    different queries into an execution section as per user requirement. We can perform the update,
+                    create, insert and delete, etc., as per requirement.
+                </p>
+                <p class="description"><strong>Example:</strong> We can perform the update, create, insert and delete,
+                    etc..</p>
+
+            </section>
+
+            <section id="frame8">
+                <h1 class="title">
+                    For Loop in PL/SQL
+                </h1>
+                <p class="description">
+                    PL/SQL while loop is used when a set of statements has to be executed as long as a condition is
+                    true, the While loop is used. The condition is decided at the beginning of each iteration and
+                    continues until the condition becomes false.
+                </p>
+                <p class="description">
+                    PL/SQL also provides the variable in which we can perform the variable deceleration as well as we
+                    can assign the name as well. PL/SQL structure divides into different sections, and we can write the
+                    different queries into an execution section as per user requirement. We can perform the update,
+                    create, insert and delete, etc., as per requirement.
+                </p>
+                <p class="description"><strong>Example:</strong> We can perform the update, create, insert and delete,
+                    etc..</p>
+
+            </section>
+
+            <section id="frame9">
+                <p class="description">
+                    PL/SQL while loop is used when a set of statements has to be executed as long as a condition is
+                    true, the While loop is used. The condition is decided at the beginning of each iteration and
+                    continues until the condition becomes false.
+                </p>
+                <p class="description">
+                    PL/SQL also provides the variable in which we can perform the variable deceleration as well as we
+                    can assign the name as well. PL/SQL structure divides into different sections, and we can write the
+                    different queries into an execution section as per user requirement. We can perform the update,
+                    create, insert and delete, etc., as per requirement.
+                </p>
+                <p class="description"><strong>Example:</strong> We can perform the update, create, insert and delete,
+                    etc..</p>
+
+            </section>
+
+            <section id="frame10">
+                <h1 class="title">
+                    IF in PL/SQL
+                </h1>
+                <p class="description">
+                    PL/SQL supports the programming language features like conditional statements and iterative
+                    statements. Its programming constructs are similar to how you use in programming languages like Java
+                    and C++.
+                </p>
+                <p class="description">
+                    There are different syntaxes for the IF-THEN-ELSE statement.
+                </p>
+                <pre class="textbox">
+                Syntax: (IF-THEN statement):
+
+                IF condition   
+                THEN   
+                Statement: {It is executed when condition is true}  
+                END IF;
+               </pre>
+                <p class="description">This syntax is used when you want to execute statements only when condition is
+                    TRUE.</p>
+                <pre class="textbox">
+                Syntax: (IF-THEN-ELSE statement):
+
+                IF condition   
+                THEN  
+                {...statements to execute when condition is TRUE...}  
+                ELSE  
+                {...statements to execute when condition is FALSE...}  
+                END IF;  
+               </pre>
+            </section>
+
+            <section id="frame11">
+                <h1 class="title">
+                    GOTO in PL/SQL
+                </h1>
+                <p class="description">
+                    In PL/SQL, GOTO statement makes you able to get an unconditional jump from the GOTO to a specific
+                    executable statement label in the same subprogram of the PL/SQL block.
+
+                    Here the label declaration which contains the label_name encapsulated within the <<>> symbol and b
+                        must be followed by at least one statement to execute.
+                </p>
+                <p class="description">
+                    Syntax of GOTO: GOTO label_name;
+                </p>
+                <pre class="textbox">
+                Syntax: (IF-THEN statement):
+
+                IF condition   
+                THEN   
+                Statement: {It is executed when condition is true}  
+                END IF;
+               </pre>
+                <p class="description">This syntax is used when you want to execute statements only when condition is
+                    TRUE.</p>
+                <pre class="textbox">
+                Syntax: (IF-THEN-ELSE statement):
+
+                IF condition   
+                THEN  
+                {...statements to execute when condition is TRUE...}  
+                ELSE  
+                {...statements to execute when condition is FALSE...}  
+                END IF;  
+               </pre>
+
+                <img src="../images/technology.png" alt="" class="content-img">
+            </section>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer id="footer">
+            <div class="copyright">
+                <p>copyright &COPY; 2023 | All rights reserved |
+                    Made with <span class="heart-beat">
+                        <i class="fa-solid fa-heart"> </i> </span> by RCcodes </p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fab fa-telegram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

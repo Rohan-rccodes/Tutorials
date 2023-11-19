@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Php-Arrays</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" id="top-heading">Php Data types</h1>
+
+    <hr class="line">
+    <in class="desc"><b>Summary: </b>In this tutorial, you will learn about PHP Data Types.</p>
+    <hr class="line">
+    <h2 class="sub-title">Introduction to PHP Data Types</h2>
+    <p class="desc">
+        <b>Variables can store data of different types, and different data types can do different things.</b>
+    </p>
+    <p class="desc">
+        PHP supports the following data types:
+    </p>
+    <p class="desc">
+        <ol type="1">
+            <li>String</li>
+            <li>Integer</li>
+            <li>Float (also called double)</li>
+            <li>Boolean</li>
+            <li>Array</li>
+            <li>Object</li>
+            <li>Null</li>
+            <li>Resource</li>
+        </ol>
+    </p>
+
+    <p class="desc"><b>PHP String</b></p>
+    <p class="desc">A string is a sequence of characters, like "Hello world!".
+
+        A string can be any text inside quotes. You can use single or double quotes:</p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php 
+
+            $x = "Hello world!";
+            $y = 'Hello world!';
+
+            echo $x;
+            echo "<span><</span>br> ";
+            echo $y;
+        ?>
+    </pre>
+
+    <pre class="output-box">
+        Hello World!
+        Hello World!
+    </pre>
+
+    <img src="../images/php-3.png" alt="" class="content-img">
+
+
+
+
+
+    <p class="desc"><b>PHP Integer</b></p>
+    <p class="desc">An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.</p>
+
+    <p class="desc">
+        <ul>
+            <li>An integer must have at least one digit</li>
+            <li>An integer must not have a decimal point</li>
+            <li>An integer can be either positive or negative</li>
+            <li>Integers can be specified in: decimal (base 10), hexadecimal (base 16), octal (base 8), or binary (base 2) notation</li>
+        </ul>
+    </p>
+
+    <pre class="code-box">
+            <span><</span>?php
+                $x = 5985;
+                var_dump($x);
+            ?>
+    </pre>
+    <p class="desc"><b>Output : </b></p>
+
+    <pre class="output-box">
+        int(5985)
+    </pre>
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+
+    <p class="desc"><b>PHP Float</b></p>
+
+    <p class="desc">A float (floating point number) is a number with a decimal point or a number in exponential form. In the following example $x is a float. The PHP var_dump() function returns the data type and value:</p>
+
+    <pre class="code-box">
+        <span><</span>?php
+            $x = 10.365; 
+            var_dump($x);
+        ?>
+    </pre>
+    <p class="desc"><b>Output:</b></p>
+    <pre class="output-box">
+        float(10.365)
+    </pre>
+
+    <p class="desc"><b>PHP Boolean</b></p>
+
+    <p class="desc">A Boolean represents two possible states: TRUE or FALSE.</p>
+
+    <pre class="code-box">
+        <span><</span>?php
+            $x = true;
+            $y = false;
+        ?>
+    </pre>
+
+
+    <p class="desc"><b>PHP Array</b></p>
+
+    <p class="desc">An array stores multiple values in one single variable. In the following example $cars is an array. The PHP <b>var_dump()</b> function returns the data type and value:</p>
+
+    <pre class="code-box">
+        <span><</span>?php
+            $cars = array("Volvo","BMW","Toyota");
+            var_dump($cars);
+        ?>
+    </pre>
+    <p class="desc"><b>Output:</b></p>
+    <pre class="output-box">
+        array(3) {
+            [0]=>
+            string(5) "Volvo"
+            [1]=>
+            string(3) "BMW"
+            [2]=>
+            string(6) "Toyota"
+          }
+    </pre>
+
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+
+    <p class="desc"><b>PHP Object</b></p>
+
+    <p class="desc">Classes and objects are the two main aspects of object-oriented programming.</p>
+    <p class="desc">A class is a template for objects, and an object is an instance of a class.</p>
+    <p class="desc">When the individual objects are created, they inherit all the properties and behaviors from the class, but each object will have different values for the properties</p>
+    <p class="desc">Let's assume we have a class named Car. A Car can have properties like model, color, etc. We can define variables like $model, $color, and so on, to hold the values of these properties.</p>
+    <p class="desc">When the individual objects (Volvo, BMW, Toyota, etc.) are created, they inherit all the properties and behaviors from the class, but each object will have different values for the properties.</p>
+    <p class="desc">If you create a __construct() function, PHP will automatically call this function when you create an object from a class.
+    </p>
+
+    <pre class="code-box">
+        <span><</span>?php
+        class Car {
+            public $color;
+            public $model;
+            public function __construct($color, $model) {
+              $this->color = $color;
+              $this->model = $model;
+            }
+            public function message() {
+              return "My car is a " . $this->color . " " . $this->model . "!";
+            }
+          }
+          
+          $myCar = new Car("black", "Volvo");
+          echo $myCar -> message();
+          echo "<span><</span>br>";
+          $myCar = new Car("red", "Toyota");
+          echo $myCar -> message();
+        ?>
+    </pre>
+    <p class="desc"><b>Output:</b></p>
+    <pre class="output-box">
+        My car is a black Volvo!
+        My car is a red Toyota!
+    </pre>
+
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+    <p class="desc"><b>PHP NULL Value</b></p>
+
+    <p class="desc">Null is a special data type which can have only one value: NULL.</p>
+    <p class="desc">A variable of data type NULL is a variable that has no value assigned to it.</p>
+    <p class="desc"><b>Tip:</b>  If a variable is created without a value, it is automatically assigned a value of NULL.</p>
+    <p class="desc">Variables can also be emptied by setting the value to NULL:</p>
+    
+
+    <pre class="code-box">
+        <span><</span>?php
+            $x = "Hello world!";
+            $x = null;
+            var_dump($x);
+        ?>
+    </pre>
+    <p class="desc"><b>Output:</b></p>
+    <pre class="output-box">
+        NULL
+    </pre>
+
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+    <p class="desc"><b>PHP Resource</b></p>
+
+    <p class="desc">The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.</p>
+    <p class="desc">A common example of using the resource data type is a database call.</p>
+    <p class="desc">We will not talk about the resource type here, since it is an advanced topic.</p>
+    <p class="desc">Now that you have done data types in Php, let's SuperGlobals in php</p>
+
+    
+    
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+            <a href="php-page-2.html" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

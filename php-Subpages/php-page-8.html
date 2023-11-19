@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Php-Arrays</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" id="top-heading">PHP Strings</h1>
+
+    <hr class="line">
+    <in class="desc"><b>Summary: </b>   In this tutorial, you will learn about PHP strings and how to manipulate strings effectively.</p>
+    <hr class="line">
+    <h2 class="sub-title">Introduction to PHP Strings</h2>
+    <p class="desc">
+        In PHP, a string is a sequence of characters. PHP provides you with four ways to define a literal string, including single-quoted, double-quoted, heredoc syntax, and nowdoc syntax. This tutorial focuses on the single-quoted and double-quoted strings.
+    </p>
+    <p class="desc">
+        To define a string, you wrap the text within single quotes like this:
+    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php 
+
+        $title = 'PHP string is awesome';
+        $title2 = "PHP string is awesome";
+
+        echo '$title';
+        echo '$title2';
+        ?>
+    </pre>
+
+    <pre class="output-box">
+        PHP string is awesome
+        PHP string is awesome
+    </pre>
+
+    <img src="../images/php-3.png" alt="" class="content-img">
+
+
+
+
+
+    <p class="desc"><b>Accessing characters in a string</b></p>
+    <p class="desc">A string has a zero-based index. It means that the first character has an index of 0. The second character has an index of 1 and so on.</p>
+
+    <p class="desc">To access a single character in a string at a specific position, you use the following syntax:</p>
+
+    <p class="desc"><i>$str[index]</i></p>
+
+    <p class="desc"><b>FOR EXAMPLE : </b></p>
+
+    <pre class="code-box">
+            <span><</span>?php
+            $title = 'PHP string is awesome';
+
+            echo $title[0];
+            ?>
+    </pre>
+    <p class="desc"><b>Output : </b></p>
+
+    <pre class="code-box">
+        P
+    </pre>
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+
+    <p class="desc"><b>Getting the length of a string</b></p>
+
+    <p class="desc">To get the length of a string, you use a built-in function strlen(), for example:</p>
+
+    <pre class="code-box">
+        <span><</span>?php
+            $title = 'PHP string is awesome';
+            echo strlen($title);
+        ?>
+    </pre>
+
+
+
+    
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+            <a href="php-page-2.html" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

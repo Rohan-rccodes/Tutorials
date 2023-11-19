@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+}
+
+/*-----Global tags-------*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #edf6f9;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+}
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+.prime {
+  color: orangered;
+  color: (--color1);
+  font-size: 3.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.1px;
+}
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+
+/*--------------navigation-----------------------------*/
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6vw 7vw;
+  box-shadow: 2px 2px 10px rgba(41, 35, 35, 0.15);
+  background-color: #fff;
+  z-index: 2;
+  transition: top 0.3s;
+}
+nav img {
+  width: 220px;
+  cursor: pointer;
+}
+
+/*-----------home links--------- */
+nav .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .navigation ul li {
+  margin-left: 30px;
+  content: "";
+}
+
+nav .navigation ul li a {
+  color: rgb(21, 21, 100);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  letter-spacing: 1.1px;
+}
+
+nav .navigation ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  z-index: -1;
+}
+
+nav .navigation ul li a:hover {
+  color: orangered;
+  border-width: 100%;
+}
+
+#home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.17)),
+    url(../images/ban1.svg);
+
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#home h2 {
+  color: #fff;
+  font-size: 3.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.1px;
+}
+
+#home p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 25px;
+  width: 50%;
+}
+#home a {
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 13px 35px;
+  background-color: #fff;
+  font-weight: 550;
+}
+#home .home-btn {
+  margin-top: 30px;
+}
+#home a.blue {
+  color: #fff;
+  background-color: rgb(59, 0, 251);
+  transition: 0.3s ease;
+}
+#home a.blue:hover {
+  background-color: #fff;
+  color: rgb(59, 0, 251);
+}
+#home a.orange {
+  color: #fff;
+  background-color: orangered;
+  transition: 0.3s ease;
+}
+#home a.orange:hover {
+  background-color: #fff;
+  color: orangered;
+  transition: 0.3s ease;
+}
+
+/*--------------------features section-----------------*/
+
+#features,
+#course {
+  padding: 5vw 8vw 4vw 8vw;
+  text-align: center;
+}
+#features .feature-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+#features .feature-box {
+  padding: 2rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#features .feature-box:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.03);
+  box-shadow: rgb(182, 182, 197) 0px 2px 2px 2px;
+}
+#features .feature-box i {
+  font-size: 3rem;
+  color: orangered;
+}
+#features .feature-box h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  /* padding: 1rem; */
+} 
+#features .feature-box p {
+  padding: 0 1rem;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+}
+
+/* --------------COURSES SECTIONS---------------*/
+
+#course {
+  padding: 5vw 8vw 5vw 8vw;
+  text-align: center;
+}
+#course .course-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 20px;
+  padding: 1rem;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem; */
+}
+
+#course .courses {
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: .3s ease;
+}
+#course .courses:hover {
+  transition: .3s ease;
+  transform: scale(1.07);
+  /* box-shadow: 8px 8px 0 0 rgb(4, 33, 159); */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+}
+#course .courses img {
+  width: 60%;
+}
+#course .courses .details {
+  padding: 10px;
+}
+#course .courses .details h6 {
+  font-size: 1.5rem;
+}
+#course .courses .details i {
+  color: orangered;
+  font-size: 0.9rem;
+}
+
+/*------------FORM SECTION--------*/
+#registration {
+  margin-top: 40px;
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(
+      rgba(99, 112, 168, 1.6),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url(../images/ban2.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#registration .reminder {
+  color: #fff;
+}
+#registration .reminder h1 {
+  color: #fff;
+}
+#registration .reminder .time {
+  display: flex;
+  margin-top: 40px;
+}
+#registration .reminder .time .date {
+  text-align: center;
+  padding: 13px 33px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  margin: 0 5px 10px 5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#registration .form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#registration .form input {
+  margin: 15px 0;
+  padding: 15px 10px;
+  border: 2px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+#registration .form input::placeholder {
+  color: #413c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+#registration .form input {
+  margin-top: 20px;
+}
+#registration .form a {
+  margin: 1rem 2rem 0;
+}
+#registration .form a.yellow {
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  background-color: orangered;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+#registration .form a.yellow:hover {
+  color: #fff;
+  background-color: rgb(59, 0, 251);
+}
+
+/*---------Expert Section---------*/
+/*-------testimonial section----------------- */
+
+#experts {
+  padding: 5vw 8vw 5vw 8vw;
+  text-align: center;
+}
+#experts .expert-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 10px;
+  padding: 2rem;
+}
+#experts .profile {
+  padding: 4vw;
+  text-align: center;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-image: url(../images/port-ban2.svg);
+  background-size: cover;
+}
+.profile h2{
+  color: #fff;
+  font-weight: 800;
+  font-size: 2rem;
+}
+#experts .expert-box .profile img {
+  width: 220px;
+  height: 220px;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+.pro-links {
+  margin-top: 20px;
+}
+.pro-links i {
+  padding: 10px 13px;
+  /* border: 2px solid #fff; */
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+  height: 60px;
+  width: 66px;
+}
+
+.pro-links i:hover {
+  transition: all 0.2s ease;
+  transform: scale(1.3);
+  color: rgb(17, 250, 254);
+  /* box-shadow: 2px 2px rgb(0, 0, 0.3); */
+}
+.btn {
+  margin-top: 210px;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  background-color: orangered;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  color: #fff;
+  background-color: rgb(59, 0, 251);
+}
+
+/*------------ footer section----------*/
+footer {
+  background-color: #101c32;
+  padding: 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .footer-col {
+  padding-bottom: 40px;
+}
+footer h3 {
+  color: #fff;
+  font-weight: 600;
+}
+footer li a {
+  color: #888;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display:block;
+}
+
+footer li a:hover {
+  color: #fff;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+footer p {
+  color: #888;
+}
+footer .subscribe {
+  margin-top: 20px;
+}
+footer input {
+  width: 220px;
+  padding: 12px 15px;
+  background: #334f6c;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+footer .subscribe a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  padding: 12px 15px;
+  background-color: orangered;
+  color: #fff;
+  font-weight: 700;
+}
+footer .subscribe a {
+  margin-top: 30px;
+}
+footer .subscribe a:hover {
+  color: #fff;
+  background-color: rgb(59, 0, 251);
+  transition: 0.3s ease;
+}
+
+/*---------FOOTER COPY RIGHT SECTION ----------*/
+
+footer .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.pro-links-2 i {
+  padding: 10px 13px;
+  /* border: 2px solid orangered; */
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+footer .copyright .pro-links i {
+  font-size: 1rem;
+  background-color: #5f7190;
+}
+footer .copyright .pro-links-2 i:hover {
+  /* background-color: orangered; */
+  color: orangered;
+}
+/*--- heart beating animation----*/
+
+.heart-beat i {
+  font-size: 1rem;
+  animation: beat 1s infinite linear;
+  color: red;
+}
+@keyframes beat {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/*------MAIN MENU HAM BURGER-------*/
+
+nav .navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#menu-btn {
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+#menu-close {
+  display: none;
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 30px 5px 20px 20px;
+}
+
+/*------ RESPONSIVE SECTION ------*/
+
+/*-------Tablet------*/
+
+@media (max-width: 769px) {
+  nav {
+    padding: 15px 30px;
+  }
+  nav img {
+    width: 100px;
+    cursor: pointer;
+  }
+
+  nav .navigation {
+    display: flex;
+  }
+  #menu-btn {
+    display: initial;
+  }
+  #menu-close {
+    display: initial;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 30px;
+  }
+
+  nav .navigation ul {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background: rgb(59, 0, 251);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  nav .navigation ul.active {
+    right: 0;
+  }
+  nav .navigation ul li {
+    padding: 20px 0 20px 40px;
+    margin-left: 10px;
+  }
+
+  nav .navigation ul li a {
+    color: #fff;
+  }
+  #home {
+    padding: 5px;
+  }
+
+  #home p {
+    width: 90%;
+  }
+
+  #features {
+    padding: 8vw 4vw 0 4vw;
+  }
+
+  #course {
+    padding: 8vw 4vw 0 4vw;
+    text-align: center;
+  }
+  #registration {
+    margin-top: 8vw;
+    padding: 6vw 4vw 6vw 6vw;
+  }
+  #registration .reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  #experts {
+    padding: 8vw 8vw 4vw 8vw;
+    text-align: center;
+  }
+}
+
+/* -------mobile------  */
+@media (max-width: 475px) {
+  #registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #registration .reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+.dotRed{
+  background: red;
+}

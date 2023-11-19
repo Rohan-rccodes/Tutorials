@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="Port.css">
+        <link rel="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: #edf2ed;
+  font-family: sans-serif;
+  position: relative;
+}
+nav {
+  width: 84%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #606060;
+  transition: 0.3s ease;
+}
+nav ul li a:hover {
+  color: #ff4321;
+  border-bottom: 2px solid blue;
+  transition: 0.3s ease;
+}
+.info {
+  margin-left: 8%;
+  margin-top: 15%;
+}
+.info h1 {
+  font-size: 70px;
+  color: #212121;
+  margin-bottom: 20px;
+}
+span {
+  color: #ff4321;
+}
+.info {
+  color: #606163;
+  line-height: 22px;
+}
+.info a {
+  background: #212121;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin: 30px 0;
+  border-radius: 5px;
+}
+.img-box {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+.img-box img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+  border-radius: 50%;
+}
+.img-box .main {
+  width: 400px;
+  height: 400px;
+  margin: 4% 4% 15% 5%;
+}
+.img-box .back {
+  width: 600px;
+  height: 600px;
+  margin: 4% 4% 15% 5%;
+}
+.img-box:hover .back {
+  bottom: 40px;
+}
+.img-box:hover .main {
+  left: 54%;
+}
+.social-links {
+  margin-left: 8%;
+  margin-top: 100%;
+}
+.social-links a {
+  font-size: 30px;
+  color: #606163;
+  margin-right: 20px;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">HIRE ME</a></li>
+                </ul>
+            </nav>
+            <div class="info">
+                <h1>I'm <span>Rohan</span> Chauhan</h1>
+                <p>This is my official portfolio website to showcase my all
+                   works related to<br> web development.
+                </p>
+                <a href="https://docs.google.com/document/d/1dvePywr0j7TBVzryGoDCf9sZrCh4abkF/edit?usp=sharing">Download CV</a>
+            </div>
+            <div class="img-box">
+                <!-- <img src="Images/blob.svg" class="back"> -->
+                <img src="" class="main">
+            </div>
+            <div class="social">
+                <ul>
+                 <li><i class="fab fa-facebook"></i></li>
+                 <li><i class="fab fa-instagram"></i></li> 
+                 <li><i class="fab fa-twitter"></i></li> 
+                 <li><i class="fab fa-discord"></i></li> 
+                 <li><i class="fab fa-github"></i></li>
+                 <li><i class="fab fa-dribbble"></i></li>
+                 <li></li>   
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

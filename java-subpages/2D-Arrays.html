@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> Home - RC Codes </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>2D ARRAYS</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.Enter the Matrix of rows and columns entered by the user and print in matrix format
+              </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                class Print2DArray {
+                    public static void main(String[] args) {
+                       final int[][] matrix = {
+                          { 1, 2, 3 },
+                          { 4, 5, 6 },
+                          { 7, 8, 9 }
+                       };
+                       for (int i = 0; i < matrix.length; i++) 
+                       { 
+                          for (int j = 0; j < matrix[i].length; j++) 
+                       { 
+                             System.out.print(matrix[i][j] + " ");
+                       }
+                          System.out.println();
+                       }
+                    }
+                 }
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/2D array/2darray_1_7014.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2. Program to Add Two Matrices</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class MatrixAddition
+                    {  
+                            public static void main(String args[])
+                            {     
+                            int arr1[][]={{15,3,4},{5,4,3},{3,4,5}
+                        };    
+                            int arr2[][]={{1,8,4},{2,4,3},{1,2,4}
+                        };    
+                            int arr3[][]=new int[3][3];  
+                            for(int i=0;i<3;i++)
+                            {    
+                            for(int j=0;j<3;j++){    
+                                arr3[i][j]=arr1[i][j]+arr2[i][j];     
+                            }    
+                        } 
+                            for(int i=0;i<3;i++){    
+                            for(int j=0;j<3;j++){  
+                            System.out.print(arr3[i][j]+" ");     
+                            }
+                            System.out.print("\n");
+                            }  
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_2_7020.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3. Program to left rotate the elements of an array.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    /*Program to Multiply Two Matrices*/
+                    class MatrixMultiplication{
+                      
+                    public static void main(String args[]){  
+                    
+                    int a[][]={{1,1,1},{2,2,2},{3,3,3}};    
+                    int b[][]={{1,1,1},{2,2,2},{3,3,3}};    
+                           
+                    int c[][]=new int[3][3]; 
+                        
+                    //multiplying and printing multiplication of 2 matrices    
+                    for(int i=0;i<3;i++){    
+                    for(int j=0;j<3;j++){    
+                    c[i][j]=0;   
+                      
+                    for(int k=0;k<3;k++)      
+                    {      
+                    c[i][j]+=a[i][k]*b[k][j];      
+                    }
+                    //end of k loop  
+                    System.out.print(c[i][j]+" ");
+                      //printing matrix element  
+                    }
+                    //end of j loop  
+                    System.out.println();//new line    
+                    }    
+                    }}  
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2darray_3_7007.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Program to subtract the two matrices</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+
+                    class MatrixSubtraction {
+                        public static void main(String[] args) {
+                            Scanner input = new Scanner(System.in);
+                    
+                            System.out.print("Enter the number of rows: ");
+                            int rows = input.nextInt();
+                            System.out.print("Enter the number of columns: ");
+                            int columns = input.nextInt();
+                    
+                            int[][] matrix1 = new int[rows][columns];
+                            int[][] matrix2 = new int[rows][columns];
+                            int[][] result = new int[rows][columns];
+                    
+                            // Input for the first matrix
+                            System.out.println("Enter elements of the first matrix:");
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns; j++) {
+                                    matrix1[i][j] = input.nextInt();
+                                }
+                            }
+                    
+                            // Input for the second matrix
+                            System.out.println("Enter elements of the second matrix:");
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns; j++) {
+                                    matrix2[i][j] = input.nextInt();
+                                }
+                            }
+                    
+                            // Subtract the matrices
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns; j++) {
+                                    result[i][j] = matrix1[i][j] - matrix2[i][j];
+                                }
+                            }
+                    
+                            // Display the result
+                            System.out.println("Result of matrix subtraction:");
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns; j++) {
+                                    System.out.print(result[i][j] + " ");
+                                }
+                                System.out.println();
+                            }
+                    
+                            input.close();
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_4_7006.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5. Program to determine whether two matrices are equal</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class MatrixEqualOrNot {
+                        public static void main(String[] args) {
+                                           int[][] x = {{1, 2}, {3, 4}};
+                   int[][] y = {{1, 2}, {3, 4}};
+                   int i, j, isEqual = 1;
+                   for(i = 0; i < x.length; i++)
+                   {
+                   for(j = 0; j < x[0].length; j++)
+                   {
+                   if(x[i][j] != y[i][j]) {
+                   isEqual = 0;
+                   break;
+                   }
+                   }
+                   }
+                   if(isEqual == 1) {
+                   System.out.println("\nMatrix x is Equal to Matrix y");
+                   }
+                   else {
+                   System.out.println("\nMatrix x is Not Equal to Matrix y");
+                   }
+                   }
+               }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/7073_1Darray5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6.Program to display the lower triangular matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class LowerTriangular    
+                    {    
+                        public static void main(String[] args) {    
+                        int rows, cols;    
+                        int a[][] = {       
+                                     {1, 2, 3},    
+                                     {8, 6, 4},    
+                                     {4, 5, 6}    
+                                        };        
+                              rows = a.length;    
+                              cols = a[0].length;    
+                                
+                              if(rows != cols){    
+                                  System.out.println("Matrix should be a square matrix");    
+                              }    
+                              else {      
+                                  System.out.println("Lower triangular matrix: ");    
+                                  for(int i = 0; i < rows; i++){    
+                                      for(int j = 0; j < cols; j++){    
+                                        if(j > i)    
+                                          System.out.print("0 ");    
+                                        else    
+                                          System.out.print(a[i][j] + " ");    
+                                    }    
+                                    System.out.println();    
+                                }    
+                            }    
+                        }    
+                    }    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_6_7014.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Program to display the upper triangular matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                
+            import java.util.Scanner;
+
+                class uppertriangularmatrix {
+                public static void main(String[] a) {
+                
+                Scanner s = new Scanner(System.in);
+
+                    System.out.print("Enter the number of rows and columns for the square matrix: ");
+                    int n = s.nextInt();
+
+                    int[][] matrix = new int[n][n];
+
+                System.out.println("Enter matrix elements:");
+                    for (int i = 0; i < n; i++) {
+                        for (int j = 0; j < n; j++) {
+                        matrix[i][j] = s.nextInt();
+                        }
+                    }
+
+                    System.out.println("Upper Triangular Matrix:");
+                        for (int i = 0; i < n; i++) {
+                            for (int j = 0; j < n; j++) {
+                                if (j >= i) {
+                                System.out.print(matrix[i][j] + " ");
+                            } else {
+                        System.out.print("  ");
+                        }
+                    }
+                    System.out.println(" ");
+                } 
+
+            }
+        }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_7_7003.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.Program to find the frequency of odd & even numbers in the given matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Program to find the sum of each row and each column of a matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ary2 {
+                        public static void main(String[] args) {
+                            int[][] matrix = {
+                                {1, 2, 3},
+                                {4, 5, 6},
+                                {7, 8, 9}
+                            };
+                    
+                            int rows = matrix.length;
+                            int columns = matrix[0].length;
+                    
+                            int[] rowSums = new int[rows];
+                            int[] columnSums = new int[columns];
+                    
+                            // Calculate row sums
+                            for (int i = 0; i < rows; i++) {
+                                for (int j = 0; j < columns; j++) {
+                                    rowSums[i] += matrix[i][j];
+                                }
+                            }
+                    
+                            // Calculate column sums
+                            for (int j = 0; j < columns; j++) {
+                                for (int i = 0; i < rows; i++) {
+                                    columnSums[j] += matrix[i][j];
+                                }
+                            }
+                    
+                            // Print row sums
+                            System.out.println("Sum of each row:");
+                            for (int i = 0; i < rows; i++) {
+                                System.out.println("Row " + (i + 1) + ": " + rowSums[i]);
+                            }
+                    
+                            // Print column sums
+                            System.out.println("\nSum of each column:");
+                            for (int j = 0; j < columns; j++) {
+                                System.out.println("Column " + (j + 1) + ": " + columnSums[j]);
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2DArray_9_7012.java.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10. Program to find the transpose of a given matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>  
+                class Arr2 {
+                public static void main(String[] args) {
+
+                int a[][] = {
+                { 1, 2, 4, 5 },
+                { 6, 7, 8, 9 },
+                { 10, 11, 12, 13 }
+                    };
+
+                int rows = a.length;
+                int columns = a[0].length;
+                int transpose[][] = new int[columns][rows];
+
+                    System.out.println("_____________Printing matrix__________________");
+                        for (int i = 0; i < rows; i++) {
+                            for (int j = 0; j < columns; j++) {
+                            System.out.print("   " + a[i][j]);
+                            transpose[j][i] = a[i][j];
+                            }
+                            System.out.println("\n");
+                        }
+
+                    System.out.println("_____________Printing Transpose matrix__________________");
+
+                        for (int i = 0; i < columns; i++) {
+                            for (int j = 0; j < rows; j++) {
+
+                        System.out.print("  " + transpose[i][j]);
+
+                        }
+                    System.out.println("\n");
+                }
+
+            }
+        }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_10_7044.png" alt=""> 
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11.Program to determine whether a given matrix is an identity matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                class Identity
+                {    
+                    public static void main(String[] args) {    
+                    int rows, cols;    
+                    boolean flag = true;    
+            
+                    int a[][] = {       
+                        {1, 0, 0},    
+                        {0, 1, 0},    
+                        {0, 0, 1}    
+                    };    
+            
+                    rows = a.length;    
+                    cols = a[0].length;    
+            
+                    if(rows != cols){    
+                            System.out.println("Matrix should be a square matrix");    
+                        }    
+                        else {    
+                
+                        for(int i = 0; i < rows; i++){    
+                                for(int j = 0; j < cols; j++){    
+                            if(i == j && a[i][j] != 1){    
+                            flag = false;    
+                                break;    
+                            }    
+                        if(i != j && a[i][j] != 0){    
+                        flag = false;    
+                        break;    
+                            }    
+                        }    
+                    }    
+                
+                    if(flag)    
+                        System.out.println("Given matrix is an identity matrix");    
+                    else    
+                        System.out.println("Given matrix is not an identity matrix");    
+                            }    
+                    }    
+                }    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_11_7057.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12.Program to Transpose matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                 import java.util.Scanner;
+
+                class transposematrix {
+                public static void main(String[] a) {
+                 Scanner s = new Scanner(System.in);
+
+                 System.out.print("Enter number of rows: ");
+                    int rows = s.nextInt();
+                     System.out.print("Enter number of columns: ");
+                        int columns = s.nextInt();
+
+                        int[][] matrix = new int[rows][columns];
+
+                 System.out.println("Enter elements of the matrix:");
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                            matrix[i][j] = s.nextInt();
+                        }
+                    }
+
+                int[][] transpose = new int[columns][rows];
+
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                        transpose[j][i] = matrix[i][j];
+                        }
+                    }
+
+                    System.out.println("Original Matrix:");
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                            System.out.print(matrix[i][j] + " ");
+                                }
+                        System.out.println();
+                            }
+
+                    System.out.println("Transposed Matrix:");
+                    for (int i = 0; i < columns; i++) {
+                            for (int j = 0; j < rows; j++) {
+                            System.out.print(transpose[i][j] + " ");
+                            }
+                            System.out.println();
+                        }
+
+                    }
+                }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_12_7044.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13.Program to determine whether a given matrix is a sparse matrix</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <pre>
+                    <code>
+                     import java.util.Scanner;
+    
+                    class transposematrix {
+                    public static void main(String[] a) {
+                     Scanner s = new Scanner(System.in);
+    
+                     System.out.print("Enter number of rows: ");
+                        int rows = s.nextInt();
+                         System.out.print("Enter number of columns: ");
+                            int columns = s.nextInt();
+    
+                            int[][] matrix = new int[rows][columns];
+    
+                     System.out.println("Enter elements of the matrix:");
+                        for (int i = 0; i < rows; i++) {
+                            for (int j = 0; j < columns; j++) {
+                                matrix[i][j] = s.nextInt();
+                            }
+                        }
+    
+                    int[][] transpose = new int[columns][rows];
+    
+                        for (int i = 0; i < rows; i++) {
+                            for (int j = 0; j < columns; j++) {
+                            transpose[j][i] = matrix[i][j];
+                            }
+                        }
+    
+                        System.out.println("Original Matrix:");
+                        for (int i = 0; i < rows; i++) {
+                            for (int j = 0; j < columns; j++) {
+                                System.out.print(matrix[i][j] + " ");
+                                    }
+                            System.out.println();
+                                }
+    
+                        System.out.println("Transposed Matrix:");
+                        for (int i = 0; i < columns; i++) {
+                                for (int j = 0; j < rows; j++) {
+                                System.out.print(transpose[i][j] + " ");
+                                }
+                                System.out.println();
+                            }
+    
+                        }
+                    }
+                    </code>
+                </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/2D array/2Darray_12_7044.png" alt="">  
+            </div>
+        </details>
+       
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

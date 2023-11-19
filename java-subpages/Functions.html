@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>RC-Codes Functions </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>1D ARRAYS</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.Write a Java method to find the smallest number among three numbers.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                class function1{
+                    public static void main(String[] args) {
+                        int num1 = 3;
+                        int num2 = 17;
+                        int num3 = 5;
+                        int smallest = findSmallestNumber(num1, num2, num3);
+                        System.out.println("The smallest number is: " + smallest);
+                    }
+                    public static int findSmallestNumber(int num1, int num2, int num3) {
+                        int smallest = num1;
+                        if (num2 < smallest) {
+                            smallest = num2;
+                        }
+                        if (num3 < smallest) {
+                            smallest = num3;
+                        }
+                        return smallest;
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Functions/function1_7024.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2. Write a Java method to compute the average of three numbers.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class AverageCalculator {
+                        static double computeAverage(double num1, double num2, double num3) {
+                           return (num1 + num2 + num3) / 3.0;
+                       }
+                      
+                       public static void main(String[] args) {
+                           double number1 = 10.0;
+                           double number2 = 5.0;
+                           double number3 = 8.0;
+                      
+                           double average = computeAverage(number1, number2, number3);
+                      
+                           System.out.println("The average is: " + average);
+                       }
+                      }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/g" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3.3. Write a Java method to display the middle character of a string. Note: 
+                    <br>
+                    a) If the length of the string is odd there will be two middle characters. 
+                    <br>
+                    b) If the length of the string is even there will be one middle character.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.util.Scanner;
+
+                    //Write a Java method to display the middle character of a string. Note:
+                    //a) If the length of the string is odd there will be two middle characters. b) 
+                    //If the length of the string is even there will be one middle character.
+                    
+                      class function3 {
+                      public static void main(String[] args)
+                        {
+                            Scanner in = new Scanner(System.in);
+                            System.out.print("Input a string: ");
+                            String str = in.nextLine();
+                            System.out.print("The middle character in the string: " + middle(str)+"\n");
+                        }
+                     public static String middle(String str)
+                        {
+                            int position;
+                            int length;
+                            if (str.length() % 2 == 0)
+                            {
+                                position = str.length() / 2 - 1;
+                                length = 2;
+                            }
+                            else
+                            {
+                                position = str.length() / 2;
+                                length = 1;
+                            }
+                            return str.substring(position, position + length);
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/function3_7019.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Write a Java method to count all the words in a string.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    /*Write a java method to count all the words in a string.*/
+                    class a
+                    {
+                    static int countWord(String s)
+                    {
+                    int t=1;
+                    for(int i=0; i < s.length(); i++)
+                    {
+                    if((s.charAt(i) == ' ') && (s.charAt(i+1) != ' '))
+                    {
+                    t++;
+                    }
+                    }
+                    return t;
+                    }
+                    public static void main(String args[])
+                    {
+                    System.out.println(countWord("Hello How are you"));
+                    }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/functions4_7007.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.Write a Java method to compute the future investment value at a given interest rate for a specified number of years.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class FutureInvestment {
+                    
+                    public static void main(String[] args) {
+                       Scanner in = new Scanner(System.in); 
+                       System.out.print("Input the investment amount: ");
+                        double investment = in.nextDouble();
+                        System.out.print("Input the rate of interest: ");
+                       double rate = in.nextDouble();
+                       System.out.print("Input number of years: ");
+                       int year = in.nextInt();
+                       
+                       rate *= 0.01;
+                       
+                       System.out.println("Years    FutureValue");
+                       for(int i = 1; i <= year; i++) {
+                           int formatter = 19;
+                           if (i >= 10) formatter = 18;
+                           System.out.printf(i + "%"+formatter+".2f\n", futureInvestmentValue(investment, rate/12, i));
+                          }
+                        }
+                    public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years) {
+                           return investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);
+                       }
+                   }                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/Function5_7057.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6. Write a Java method to print characters between two characters (i.e. A to P).</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class CharacterPrinter {
+                        static void printCharactersBetween(char startChar, char endChar) {
+                           if (startChar > endChar) {
+                               char temp = startChar;
+                               startChar = endChar;
+                               endChar = temp;
+                           }
+                   
+                           for (char ch = startChar; ch < endChar; ch++) {
+                               System.out.print(ch + " ");
+                           }
+                           System.out.println(endChar); 
+                       }
+                   
+                       public static void main(String[] args) {
+                           char startChar = 'A';
+                           char endChar = 'F';
+                   
+                           System.out.println("Characters between " + startChar + " and " + endChar + ":");
+                           printCharactersBetween(startChar, endChar);
+                       }
+                   }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/Functions6_7100.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Write a Java method to check whether a string is a valid password.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+
+                    class Password {       
+                   public static final int PASSWORD_LENGTH = 8;  
+                   public static void main(String[] args) {
+                   
+                           Scanner input = new Scanner(System.in);
+                           System.out.print(
+                                   "1. A password must have at least eight characters.\n" +
+                                   "2. A password consists of only letters and digits.\n" +
+                                   "3. A password must contain at least two digits \n" +
+                                   "Input a password (You are agreeing to the above Terms and Conditions.): ");
+                           String s = input.nextLine();
+                   
+                           if (is_Valid_Password(s)) {
+                               System.out.println("Password is valid: " + s);
+                           } else {
+                               System.out.println("Not a valid password: " + s);
+                           }
+                       }
+                       public static boolean is_Valid_Password(String password) {
+                   
+                           if (password.length() < PASSWORD_LENGTH) return false;
+                   
+                           int charCount = 0;
+                           int numCount = 0;
+                           for (int i = 0; i < password.length(); i++) {
+                   
+                               char ch = password.charAt(i);
+                   
+                               if (is_Numeric(ch)) numCount++;
+                               else if (is_Letter(ch)) charCount++;
+                               else return false;
+                           }
+                           return (charCount >= 2 && numCount >= 2);
+                       }
+                       public static boolean is_Letter(char ch) {
+                           ch = Character.toUpperCase(ch);
+                           return (ch >= 'A' && ch <= 'Z');
+                       }
+                       public static boolean is_Numeric(char ch) {
+                           return (ch >= '0' && ch <= '9');
+                      }                   
+                   }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/7102function7.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8. Write a Java method to display the current date and time.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Date;
+                class Test
+                {
+                    static void apnaTimeAgya(Boolean check)
+                    {
+                        if (check)
+                        {
+                            Date d = new Date();
+                
+                            System.out.println(" hero time "+d);
+                        }
+                        else
+                        {
+                            System.out.println("ja me nahi btata");
+                        }
+                    }
+                    public static void main(String args[])
+                    {
+                        Test t = new Test();
+                        
+                        t.apnaTimeAgya(false);
+                        t.apnaTimeAgya(true);
+                    }
+                }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/7077Function8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Write a Java method to find all twin prime numbers less than 100.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Function9 {
+                        public static void main(String[] args) {
+                            findTwinPrimes(100);
+                        } 
+                        private static boolean isPrime(int num) {
+                            if (num < 2) {
+                                return false;
+                            }
+                            for (int i = 2; i <= Math.sqrt(num); i++) {
+                                if (num % i == 0) {
+                                    return false;
+                                }
+                            }
+                            return true;
+                        }
+                        private static void findTwinPrimes(int limit) {
+                            System.out.println("Twin Prime Numbers less than " + limit + ":");
+                            for (int i = 3; i < limit; i++) {
+                                if (isPrime(i) && isPrime(i + 2)) {
+                                    System.out.println("(" + i + ", " + (i + 2) + ")");
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/7025function9.png alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10.Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    public class DigitCounter {
+                        public static int countTwos(int number) {
+                            String numberStr = String.valueOf(number);
+                            int count = 0;
+                    
+                            for (int i = 0; i < numberStr.length(); i++) {
+                                if (numberStr.charAt(i) == '2') {
+                                    count++;
+                                }
+                            }
+                    
+                            return count;
+                        }
+                    
+                        public static void main(String[] args) {
+                            int number = 22253;
+                            int numberOfTwos = countTwos(number);
+                    
+                            System.out.println("The number of 2s in " + number + " is: " + numberOfTwos);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/7077Function8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11.Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class check_consecutive { 
+                    public static void main(String s[] )
+                       {
+                           Scanner in = new Scanner(System.in);
+                           System.out.print("Input the first number: ");
+                           int x = in.nextInt();
+                           System.out.print("Input the second number: ");
+                           int y = in.nextInt();
+                           System.out.print("Input the third number: ");
+                           int z = in.nextInt();
+                           System.out.print("The three given numbers are consecutive(true or false) : ") ;
+                           System.out.println(test(x,y,z));
+                           }
+                   
+                    public static boolean test(int x, int y, int z){
+                       int max_num = Math.max(x, Math.max(y, z));
+                       int min_num = Math.min(x, Math.min(y, z));
+                       int middle_num = x+y+z - max_num - min_num;
+                       return (max_num - middle_num) == 1 && (middle_num - min_num == 1);
+                     }
+                   } 
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/7083Functions11.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12.Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/function2_7100.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13. Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Test
+                    {
+                        static boolean isVowel(char c)
+                    {
+                        if (c == 'a')
+                        {
+                            return true;
+                        }
+                        else if (c == 'a')
+                        {
+                            return true;
+                        }
+                        else if (c == 'u')
+                        {
+                            return true;
+                        }
+                        else if (c == 'e')
+                        {
+                            return true;
+                        }
+                        else if (c == 'i')
+                        {
+                            return true;
+                        }
+                        else if (c == 'o')
+                        {
+                            return true;
+                        }
+                        else
+                            {
+                            return false;
+                            }
+                        }
+                        static boolean isStringInsideVowel(String line)
+                        {
+                        for (int i = 0; i < line.length(); i++)
+                        {
+                            if(isVowel(line.charAt(i)))
+                            {
+                                return true;
+                            }
+                        }
+                            return false;
+                            }
+                            public static void main(String args[])
+                        {
+                        System.out.println(Test.isStringInsideVowel("hello"));
+                                System.out.println(Test.isStringInsideVowel("kmnpdk"));
+                            }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Functions/7025function13.png" alt="">  
+            </div>
+        </details>
+
+       
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

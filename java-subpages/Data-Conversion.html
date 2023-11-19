@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>RC-Data-Conversion</title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+
+
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>DATA CONVERSION</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.How to convert String to int.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                public class StrToInt 
+                {
+                    public static void main(String[] args) 
+                    {
+                        String str = "123";
+                        int i=Integer.parseInt(str);
+                        System.out.println("String is : "+str);
+                        System.out.println("Str Convert to a int: "+ i);
+                        System.out.println(1+i);		
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc1.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2.How to convert int to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.util.HashMap;
+                    import java.util.Map;
+
+                    class FrequencyCounter
+                    {
+                        public static void main(String[] args) {
+       
+                        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 5, 4, 6, 7, 6, 8, 9, 9};
+        
+                        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        
+                        for (int element : array) {
+           
+                        if (frequencyMap.containsKey(element)) {
+                        frequencyMap.put(element, frequencyMap.get(element) + 1);
+                        } else {
+               
+                        frequencyMap.put(element, 1);
+                        }
+                    }
+                        System.out.println("Element frequencies:");
+                        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+                        System.out.println(entry.getKey() + ": " + entry.getValue());
+                        }
+                    }
+                }  
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/70711Darray2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3.How to convert String to long.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    public class StringToLongExample {
+                        public static void main(String[] args) {
+                            // Sample String
+                            String numberString = "123456789";
+                    
+                            try {
+                                // Convert String to long
+                                long number = Long.parseLong(numberString);
+                    
+                                // Print the result
+                                System.out.println("Converted long value: " + number);
+                            } catch (NumberFormatException e) {
+                                System.err.println("Error: Unable to parse the string as a long.");
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.How to convert long to String.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    public class DataConversion4 {
+
+                        public static void main(String[] args) {
+                            long myLong = 123456L;
+                        String str = Long.toString(myLong);
+                        System.out.println(str);
+                        
+                            }     
+                               
+                        }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="..//javapro/data-conversion/dc4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.How to convert String to float</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class StringToFloatExample {
+                        public static void main(String[] args) {
+                            // Example String containing a floating-point number
+                            String floatString = "3.14";
+                    
+                            // Convert String to float using Float.parseFloat()
+                            try {
+                                float floatValue = Float.parseFloat(floatString);
+                                System.out.println("Converted float value: " + floatValue);
+                            } catch (NumberFormatException e) {
+                                System.out.println("Error: Invalid float format in the input string");
+                                e.printStackTrace();
+                            }
+                        }
+                    }                                        
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6.How to convert float to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    public class FloatToString 
+                    {
+                        public static void main(String[] args) 
+                        {
+                            float f = 10.4f;
+                            System.out.println(f + 2);
+                            String stringValue = "" + f;
+                            System.out.println(stringValue + 2);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.How to convert String to double</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    public class StringToDouble 
+                    {
+                        public static void main(String[] args) 
+                        {
+                            String str = "0.5";
+                            double D=Double.parseDouble(str);
+                            System.out.println("String is "+str);
+                            System.out.println("String Converted to an Double "+ D);
+                            System.out.println("Showing the String was converted to Double above "+(1+D));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.How to convert double to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class ja{
+                    public static void main(String[] args){
+                    Scanner sc = new Scanner(System.in);
+                    System.out.print("Enter a double number: "); 
+                    double num = sc.nextDouble();
+                    String str = Double.toString(num);
+                    System.out.println("Converted String: " + str);   
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.How to convert String to Date</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.text.SimpleDateFormat;
+                    import java.util.Date;
+
+                    public class convert {
+                    public static void main(String[] args) {
+                    Date date = new Date();
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    String strDate = formatter.format(date);
+                    System.out.println("Date converted to string: " + strDate);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc9.png">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10.How to convert Date to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Date;
+                    import java.text.SimpleDateFormat;
+                    class DateToString{
+                    public static void main(String a[])
+                    {
+                    Date date=new Date();
+                    System.out.println(date);
+                    SimpleDateFormat s=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    String str=s.format(date);
+                    System.out.println(str);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc10.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11.How to convert String to char</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.*;
+                    class STC{
+                    public static void main(String args[]){
+   
+                    String str="Aryan";
+  
+                    char [] chr= new char[str.length()];
+     
+                    for(int i=0;i<str.length();i++){
+   
+                    chr[i]=str.charAt(i);
+                        }
+                        for (char c : chr){
+                        System.out.println(c);
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc11.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12.How to convert char to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.io.*;
+                    import java.util.*;
+                    
+                    class CTS{
+                    public static void main(String args[]){
+                        char d='A';
+                        String str=Character.toString(d);
+                    System.out.println("Char is converted to string:- "+str);
+                    }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc12.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13.How to convert String to Object</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class prog13{
+                        public static void main(String[] args) {
+                            // Convert String to Integer
+                            String intStr = "123";
+                            int intValue = Integer.parseInt(intStr);
+                            System.out.println("Converted Integer: " + intValue);
+                    
+                            // Convert String to Double
+                            String doubleStr = "3.14";
+                            double doubleValue = Double.parseDouble(doubleStr);
+                            System.out.println("Converted Double: " + doubleValue);
+                    
+                            // Convert String to Boolean
+                            String boolStr = "true";
+                            boolean boolValue = Boolean.parseBoolean(boolStr);
+                            System.out.println("Converted Boolean: " + boolValue);
+                    
+                            // Convert String to Custom Object (using Constructor)
+                            String customStr = "Hello, World!";
+                            CustomObject customObject = new CustomObject(customStr);
+                            System.out.println("Converted Custom Object: " + customObject.getData());
+                        }
+                        // Example Custom Object
+                        static class CustomObject {
+                            private String data;
+                    
+                            public CustomObject(String data) {
+                                this.data = data;
+                            }
+                    
+                            public String getData() {
+                                return data;
+                            }
+                        }
+                    }  
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc13.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>14.How to convert Object to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    //Program name : How to convert Object to String
+                    class dConversion{
+
+                    public static void main(String[] args) {
+                    Object obj = new Integer(100);
+                    String s = String.valueOf(obj);
+
+                    System.out.println(s);
+
+                    if(s instanceof String){
+                            System.out.println("It is string type...");
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc14.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>15.How to convert int to long</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>16.How to convert long to int</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>17. How to convert int to double</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Conversion {
+                        public static void main(String[] args) {
+                            int x = 10;              
+                            double y = x;  
+                    
+                            System.out.println("Original int value: " + x);
+                            System.out.println("Converted double value: " + y);
+                            double square = y * y;
+                            System.out.println("Square of the converted double value: " + square);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc17.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>18.How to convert double to int</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class DoubleToInt
+                    {
+                        public static void main(String args[])
+                        {
+                            System.out.println("\n How to Convert Double To Int.\n");
+                            System.out.print(" Enter a double value one  : ");
+                            Scanner sc=new Scanner(System.in);
+                            double num1 = sc.nextDouble();
+                            System.out.print(" Enter a double value Two : ");
+                            double num2 = sc.nextDouble();
+
+                            int value1 =(int)num1;
+                            int value2=(int)num2;
+
+                            System.out.println("\n Convert Double value To Integer value is  : "+value1);
+                            System.out.println(" Convert Double value To Integer value is  : "+value2);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc18.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>19.How to convert char to int</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class chartoint
+                    {
+                        public static void main(String a[])
+                        {
+                            char myChar = 'A'; 
+                            int myInt = myChar;
+
+                            System.out.println("Character value: "+ myChar);
+                            System.out.println();
+                            System.out.println("Value after convert to Int: "+ myInt);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc19.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>20.How to convert int to char</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    // Using Concept of Type-casting 
+                    import java.util.*; 
+                    class A 
+                    { 
+                        public static void main(String[] args) 
+                        {    
+                            int i = 97; 
+                    
+                            // Type casting character to integer 
+                            char ch = (char)i; 
+                    
+                            System.out.println(ch); 
+                        } 
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc20.png " alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>21.How to convert String to boolean</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>   
+                import java.util.Scanner;
+                class convertStringToBoolean
+                {
+                    public static void main(String args[])
+                    {
+                        System.out.println("\n How to convert String To Boolean.");
+                        Scanner sc= new Scanner(System.in);
+                        System.out.println(" ");
+                        System.out.print(" Enter the String1 = ");
+                        String str1 = sc.nextLine();
+                        System.out.print(" Enter the String2 = ");
+                        String str2 = sc.nextLine();
+                        System.out.print(" Enter the String3 = ");
+                        String str3 = sc.nextLine();
+        
+                        boolean b1 = Boolean.valueOf(str1); 
+                        boolean b2 = Boolean.valueOf(str2);
+                        boolean b3 = Boolean.valueOf(str3);
+
+                        System.out.println("");
+                        System.out.println(" The convert String To Boolean Value is : "+b1);
+                        System.out.println(" The convert String To Boolean Value is : "+b2);
+                        System.out.println(" The convert String To Boolean Value is : "+b3);
+                    }
+                }               
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc21.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>22. How to convert boolean to String</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class booleantostring {
+                        public static void main(String[] a) {
+                            Scanner s = new Scanner(System.in);
+
+                            System.out.print("Enter a boolean value (true or false): ");
+                            String booleanInput = s.nextLine();
+
+                            boolean booleanValue = Boolean.parseBoolean(booleanInput);
+                            String stringResult = booleanToString(booleanValue);
+
+                            System.out.println("String equivalent: " + stringResult);
+                        }
+                            private static String booleanToString(boolean booleanValue) {
+                            return String.valueOf(booleanValue);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/22.java" alt="">  
+            </div>
+        </details>
+        
+        <details>
+            <summary>
+              <h3>23.How to convert Date to Timestamp</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.sql.Timestamp;
+                    import java.util.Date;
+                    
+                    class DateToTimestampExample {
+                        public static void main(String[] args) {
+                            // Create a Date object
+                            Date date = new Date();
+                    
+                            // Convert the Date to a Timestamp
+                            Timestamp timestamp = new Timestamp(date.getTime());
+                    
+                            System.out.println("Date: " + date);
+                            System.out.println("Timestamp: " + timestamp);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc23.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>24.How to convert Timestamp to Date</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>25. How to convert Binary to Decimal</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class binarytodecimal {
+                        static void main(String[] args) {
+                        Scanner scanner = new Scanner(System.in);
+
+                        System.out.print("Enter a binary number: ");
+                        String binaryInput = scanner.nextLine();
+
+                        if (!isValidBinary(binaryInput)) {
+                            System.out.println("Invalid binary number. Please enter a valid binary number.");
+                            return;
+                            }
+                        int decimalResult = binaryToDecimal(binaryInput);
+                        System.out.println("Decimal equivalent: " + decimalResult);
+                        }
+                        private static boolean isValidBinary(String binaryInput) {
+                         binaryInput.matches("[01]+");
+                        }
+                        private static int binaryToDecimal(String binaryInput) {
+                        int decimalResult = 0;
+                        int binaryLength = binaryInput.length();
+
+                        for (int i = binaryLength - 1; i >= 0; i--) {
+                            int digit = binaryInput.charAt(i) - '0';
+                            decimalResult += digit * Math.pow(2, binaryLength - 1 - i);
+                        }
+                        return decimalResult;
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc25.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>26. How to convert Decimal to Binary</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class DecimalToBinary {
+                        public static void main(String[] args) {
+                            int decimalNumber =9;
+                            
+                            StringBuilder binary = new StringBuilder();
+                            
+                            if (decimalNumber == 0) {
+                                binary.append(0);
+                            } else {
+                                while (decimalNumber > 0) {
+                                    int remainder = decimalNumber % 2;
+                                    binary.insert(0, remainder);
+                                    decimalNumber = decimalNumber / 2;
+                                }
+                            }
+                            System.out.println("Binary representation: "+ binary.toString());
+                        }
+                    }                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc26.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>27.How to convert Hex to Decimal</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>    
+                import java.util.Scanner;
+                class ` 
+                {
+                public static void main(String args[]) 
+                { 
+                    System.out.println("\n How to convert Hex to Decimal.\n");
+                    Scanner sc=new Scanner(System.in);
+                    System.out.print(" Enter a Hex Value one  : ");
+                    String Hex1 = sc.nextLine();
+
+                    System.out.print(" Enter a Hex Value two  : ");
+                    String Hex2 = sc.nextLine();
+
+                    int dec1 = Integer.parseInt(Hex1, 16);
+                    int dec2 = Integer.parseInt(Hex2, 16);
+
+                    System.out.println("\n Convert Hex To Decimal value  is : " + dec1);
+                    System.out.println(" Convert Hex To Decimal value is : " + dec2);
+                }
+                }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc27.png alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>28. How to convert Decimal to Hex</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>29. How to convert Octal to Decimal</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class GFG {
+                        public static void main(String args[])
+                        {    
+                            String onum = "157";
+                            int num = Integer.parseInt(onum, 8);
+                            System.out.println(
+                                "Decimal equivalent of Octal value 157 is: "
+                                + num);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc29.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>30. How to convert Decimal to Octal</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class DecimalToOctal
+                    {
+                      public static void main(String args[])
+                      {
+                        Scanner input = new Scanner( System.in );
+                        System.out.print("Enter a decimal number : ");
+                        int num =input.nextInt();
+                     
+                        String octalString = Integer.toOctalString(num);
+                        System.out.println("Method 1: Decimal to octal: " + octalString);
+                      }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/data-conversion/dc30.png" alt="">  
+            </div>
+        </details>
+
+       
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

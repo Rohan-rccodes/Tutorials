@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> Home - RC Codes </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>BASIC PROGRAMMING CONSTRUCTS</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.Write a Java program to print ‘Hello World!’ on screen
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                class Hello{
+                    public static void main(String a[]){
+                        System.out.print("Hello World!");
+                    }
+                }
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/basic program construct/bpc1.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2.Write a Java program to print the sum of two numbers
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class SumOfTwoNumbers{
+                        static int sumOfTwoNumbers(int a, int b){
+                            return (a+b);
+                        }
+                        
+                        public static void main(String a[]){
+                            System.out.print("Sum of Two numbers: "+ sumOfTwoNumbers(2,5));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/basic program construct/bpc2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3.Write a Java program that takes two numbers and display the product of two numbers.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class ProductOfTwoNumbers{
+                        static int productOfTwoNumbers(int a, int b){
+                            return (a+b);
+                        }
+                    
+                        public static void main(String a[]){
+                            System.out.print("Sum of Two numbers: "+ productOfTwoNumbers(2,5));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/7007_1dArray3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Write a Java program to print the sum, multiply, subtract, divide and remainder of two numbers.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Calculate{
+                        static int SumTwoNumbers(int a, int b){
+                            return (a+b);
+                        }
+                    
+                        static int SubstractTwoNumbers(int a, int b){
+                            return (a-b);
+                        }
+                    
+                        static int MultiplyTwoNumbers(int a, int b){
+                            return (a*b);
+                        }
+                    
+                        static int DivideTwoNumbers(int a, int b){
+                            return (a/b);
+                        }
+                    
+                        static int RemainderTwoNumbers(int a, int b){
+                            return (a%b);
+                        }
+                    
+                        public static void main(String a[]){
+                            System.out.print("Sum of Two numbers: "+ SumTwoNumbers(6,5));
+                            System.out.print("\nSubstract of Two numbers: "+ SubstractTwoNumbers(6,5));
+                            System.out.print("\nMultiply of Two numbers: "+ MultiplyTwoNumbers(6,5));
+                            System.out.print("\nDivide Two numbers: "+ DivideTwoNumbers(6,5));
+                            System.out.print("\nRemaider of Two numbers: "+ RemainderTwoNumbers(6,5));
+                    
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.Write a Java program that takes five numbers as input to calculate and print the average of the numbers</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class Average{
+                        public static void main(String a[]){
+                            Scanner in = new Scanner(System.in);
+                       
+                            System.out.print("Input first number: ");
+                            int num1 = in.nextInt();
+                            
+                            System.out.print("Input second number: ");
+                            int num2 = in.nextInt();
+                            
+                            System.out.print("Input third number: ");
+                            int num3 = in.nextInt();
+                            
+                            System.out.print("Input fourth number: ");
+                            int num4 = in.nextInt();
+                            
+                            System.out.print("Enter fifth number: ");
+                            int num5 = in.nextInt();
+                            
+                            int avg = ((num1 + num2 + num3 + num4 + num5) / 5);
+                            
+                            System.out.println("Average of five numbers is: " + avg);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/7073_1Darray5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6.Write a Java program to swap two variables</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class SwapTwoVariables{
+                        public static void main(String a[]){
+                    
+                            int x = 1, y = 2;
+                            
+                            System.out.println("Before swap");
+                            System.out.println("x = " + x + "\ny = " + y);
+                    
+                            int temp = x;
+                            x = y;
+                            y=temp;
+                    
+                            System.out.println("\n\nAfter swap");
+                            System.out.println("x = " + x + "\ny = " + y);
+                        }
+                    }                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/7059onedarray6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Write a Java program to convert a decimal number to binary numbers</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class DecimalToBinaryNumber{
+                        static void decToBinary(int n)
+                        {
+                            for (int i = 3; i >= 0; i--) {
+                                int k = n >> i;
+                                if ((k & 1) > 0)
+                                    System.out.print("1");
+                                else
+                                    System.out.print("0");
+                            }
+                        }
+                        public static void main(String[] args)
+                        {
+                            int n = 1;
+                            System.out.println("Decimal - " + n);
+                            System.out.print("Binary - ");
+                            decToBinary(n);
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.Write a Java program to convert a binary number to decimal number</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class BinaryToDecimal
+                    {
+                        public static void main(String argsp[]) throws NumberFormatException
+                        {
+                            // int ans =0;
+                            java.util.Scanner sc = new java.util.Scanner(System.in);
+                            System.out.print("Enter your binary number : ");
+                            String binary=sc.next();
+                    
+                            //Using inbuilt functions.
+                            int decimal=Integer.parseInt(binary,2);
+                    
+                            //Using while loop.
+                    
+                            /* while(binary!=0)
+                            {
+                                int digit = binary % 10;
+                                if(digit == 1)
+                                ans = ans + (int)(Math.pow(2,i));
+                                binary = binary / 10;
+                                i++;
+                            }*/
+                            System.out.println("Decimal number for Binary "+binary+" is "+decimal);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Write a Java program to check whether Java is installed on your computer or not</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Version{
+                        public static void main(String a[]){
+                            System.out.println("Java version: "+ System.getProperty("java.version"));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10.Write a Java program and compute the sum of the digits of an integer</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SumOfDigitNumbers{
+                        public static void main(String[] args){
+                            int num = 123;
+                            int digit;
+                            int sum = 0;
+                    
+                            while(num > 0){
+                                digit = num % 10;
+                                sum = sum + digit;
+                                num = num/10;
+                            }
+                            System.out.println("Sum of digits: "+sum);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11.Write a Java program to compare two numbers</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class CompareTwoNumbers{
+                        public static void main(String args[]){
+                            int num1 = 3;
+                            int num2 = 5;
+                    
+                            if(num1 > num2){
+                                System.out.println(num1 + " greater than " + num2);
+                            }
+                            else if(num1 < num2){
+                                System.out.println(num1 + " less than " + num2);
+                            }
+                            else{
+                                System.out.println("equal numbers");
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12.Write a Java program to count the letters, spaces, numbers and other characters of an input string
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class TestInput{
+                        public static void main(String[] args){
+                            String test = "Aa kiu, I swd skieo 236587. GH kiu: sieo?? 25.33";
+                            System.out.println("The string is : "+test);
+                            count(test);
+                        }
+                    
+                            public static void count(String x){
+                                char[] ch = x.toCharArray();
+                                int letter = 0;
+                                int space = 0;
+                                int num = 0;
+                                int other = 0;
+                                for(int i = 0; i < x.length(); i++){
+                                    if(Character.isLetter(ch[i])){
+                                        letter ++ ;
+                                    }
+                                    else if(Character.isDigit(ch[i])){
+                                        num ++ ;
+                                    }
+                                    else if(Character.isSpaceChar(ch[i])){
+                                        space ++ ;
+                                    }
+                                    else{
+                                        other ++;
+                                    }
+                                }
+                            
+                            System.out.println("letter: " + letter);
+                            System.out.println("space: " + space);
+                            System.out.println("number: " + num);
+                            System.out.println("other: " + other);
+                        }  
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13.Write a Java program to print the ascii value of a given character
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ASCII{
+                        static int fuc(char s){
+                            int num = s;
+                            return num; 
+                        }
+                        public static void main(String a[]){
+                            System.out.println(fuc('A'));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>14.Write a Java program that accepts an integer (n) and computes the value of n+nn+nnn
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class NValue{
+                        public static void main(String args[]){
+                            int num = 5;
+                            System.out.println(num+num*num+num*num*num);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>15.Write a Java program to display the system time
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    // import java.lang.System;
+                    import java.util.Calendar;
+                    class CurrentTime{
+                        public static void main(String a[]){
+                            Calendar cal = Calendar.getInstance();
+                            int hour=cal.get(Calendar.HOUR);
+                            int minute=cal.get(Calendar.MINUTE);
+                            System.out.println("Current Time is : "+hour+":"+minute);
+                            // System.out.print(System.currentTimeMillis());
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>16.Write a Java program to print the odd numbers from 1 to 20
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class PrintOddNumbers{
+                        static void printOddNumbers(int n){
+                            System.out.println("Odd Numbers:");
+                            for(int i=1; i<=n; i++){
+                                if (i%2 != 0){
+                                    System.out.println(i);
+                                }
+                            }
+                        }
+                    
+                        public static void main(String a[]){
+                            printOddNumbers(20);
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>17.Write a Java program to print the even numbers from 1 to 20
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class PrintEvenNumbers{
+                        static void printEvenNumbers(int n){
+                            System.out.println("Odd Numbers:");
+                            for(int i=1; i<=n; i++){
+                                if (i%2 == 0){
+                                    System.out.println(i);
+                                }
+                            }
+                        }
+                    
+                        public static void main(String a[]){
+                            printEvenNumbers(20);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>18.Write a Java program to convert a string to an integer
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class StringToInteger{
+                        public static void main(String a[]){
+                            String str = "7111";
+                            int val = Integer.valueOf(str);
+                            System.out.println(" Integer value = " + val);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>19.Write a Java program to convert seconds to hour, minute and seconds
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SecondsConveter{
+                        public static void main(String args[]){
+                            java.util.Scanner input = new java.util.Scanner(System.in);
+                            System.out.print("Enter the number of seconds: ");
+                            int totalSeconds = input.nextInt();
+                    
+                            int hours = totalSeconds / 3600;
+                            System.out.println("Hours: " + hours);
+                    
+                            int remainingSeconds = totalSeconds % 3600;
+                    
+                            int minutes = remainingSeconds / 60;
+                            System.out.println("Minutes: " + minutes);
+                            
+                            int seconds = remainingSeconds % 60;       
+                            System.out.println("Seconds: " + seconds);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>20.Write a Java program to compute the sum of the first 100 prime numbers
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SumPrime{
+                        public static void main(String a[]){
+                            int sum = 0;
+                            for(int i=2;i<=100;i++){
+                                boolean flag=true;
+                                for(int j=2;j<=i/2;j++){
+                                    if(i%j==0){
+                                        flag=false;
+                                        break;
+                                    }
+                                }
+                                if(flag){
+                                    sum+=i;
+                                }
+                            }
+                            System.out.println(sum);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>21.Write a Java program to swap the first and last elements of an array and create a new array
+            </h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SwapArrayElements{
+                        public static void main(String a[]){
+                            int arr[] = {1,2,3,4,3};
+                    
+                            System.out.println("Before swap");
+                            for(int x: arr){
+                                System.out.print(x);
+                            }
+                            System.out.println();
+                    
+                            int l = arr.length;
+                            int s = l-1;
+                    
+                            int temp = 0 ;
+                            temp = arr[0];
+                            arr[0]=arr[s];
+                            arr[s]=temp;
+                    
+                            System.out.println("\nAfter swapping");
+                            for (int j:arr)System.out.print(j + " ");
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>22. Program to Print Odd and Even Numbers from an array</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class CountEvenOdd{
+                        public static void main(String[] args) {
+                            Scanner scanner = new Scanner(System.in);
+                    
+                            System.out.print("Enter the size of the array: ");
+                            int size = scanner.nextInt();
+                    
+                            int[] arr = new int[size];
+                    
+                            System.out.println("Enter the elements of the array:");
+                            for (int i = 0; i < size; i++) {
+                                arr[i] = scanner.nextInt();
+                            }
+                    
+                            int even = 0;
+                            int odd = 0;
+                    
+                            for (int i = 0; i < size; i++) {
+                                if (arr[i] % 2 == 0) {
+                                    even++;
+                                } else {
+                                    odd++;
+                                }
+                            }
+                            System.out.println("Number of even elements: " + even);
+                            System.out.println("Number of odd elements: " + odd);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>24. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class PalindromeNumber{
+                        public static void main(String args[]){
+                            int new_num = 0;
+                            java.util.Scanner input = new java.util.Scanner(System.in);
+                    
+                            System.out.print("Enter a positive number: ");
+                            int num = input.nextInt();
+                    
+                            int Original_num = num;
+                    
+                            if(num<0){
+                                System.out.println("Please enter a positive number.");
+                            }
+                            else{
+                                while(num>0){
+                                    int digit = num % 10;
+                                    new_num = new_num * 10 + digit;
+                                    num /= 10;
+                                }
+                                if(Original_num == new_num){
+                                    System.out.println(Original_num+" is palindrome");
+                                }
+                                else{
+                                    System.out.println(Original_num+" is not palindrome");
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>25. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>26. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class DigitSum{
+                        public static void main(String a[]){
+                            int x =1453;
+                            int sum =0;
+                            while(x!=0){
+                                int i=x%10;
+                                sum+=i;
+                                x=x/10;
+                            }
+                            System.out.println(sum);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class CircleArea{
+                        public static void main(String[] args)
+                        {
+                            int radius;
+                            double pi = 3.142, area;
+                            radius = 5;
+                            area = pi * radius * radius;
+                            System.out.println("Area of circle is :" + area);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfRectangle{
+                        public static void main(String args[]) {  
+                         int l= 5; 
+                         System.out.println("The value of length: "+l);
+                              
+                         int b= 10;
+                         System.out.println("The value of Breadth: "+b);
+                              
+                         int area=l*b;
+                         System.out.println("Area of Rectangle is: " + area);   
+                         }
+                     }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfTriangle{
+                        double area(double height, double base){
+                            return 0.5*height*base;
+                        }
+                    }
+                    class Triangle{
+                        public static void main(String a[]){
+                            double h = 3;
+                            double b = 7;
+                            System.out.println("Height of triangle: "+h);
+                            System.out.println("Base of triangle: "+b);
+                            AreaOfTriangle obj = new AreaOfTriangle();
+                            System.out.println("Area of triangle is "+obj.area(h,b));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfEquilateralTriangle{
+                        double area(double side){
+                            double a = (Math.sqrt(3)/4*(side*side));
+                            return a;
+                        }
+                    }
+                    class EquilateralTriangle{
+                        public static void main(String a[]){
+                            double side = 7;
+                            System.out.println("Side of triangle: "+side);
+                            AreaOfEquilateralTriangle obj = new AreaOfEquilateralTriangle();
+                            double ans = obj.area(side);
+                            System.out.println("Area of triangle is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfRhombus{
+                        double area(double d1,double d2){
+                            return ((d1*d2)/2);
+                        }
+                    }
+                    class Rhombus{
+                        public static void main(String a[]){
+                            double d1 = 6;
+                            double d2 = 12;
+                            System.out.println("Side of triangle: "+d1);
+                            System.out.println("Side of triangle: "+d2);
+                            AreaOfRhombus obj = new AreaOfRhombus();
+                            double ans = obj.area(d1,d2);
+                            System.out.println("Area of Rhombus is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Parallelogram{
+                        public static void main(String a[]){
+                            double b = 30;
+                            double h = 40;
+                            System.out.println("Base of parallelogram is "+b);
+                            System.out.println("Height of parallelogram is "+h);
+                            System.out.println("Area of parallelogram is "+(b*h));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Squre_Prism{
+                        public static double Prism_Area(int side, int height){
+                            double SA = 2*side*side + 4*side*height;
+                            return SA;
+                        }
+                    
+                        public static void main(String args[]){
+                            int s = 7,
+                            h = 11;
+                            System.out.println("The area of the squre prism is: " + Prism_Area(s,h));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ValumeOfSphere{
+                        double area(double radius){
+                            return (4/3 * Math.PI * radius * radius * radius);
+                        }
+                    }
+                    class Sphere{
+                        public static void main(String a[]){
+                            double r = 3;
+                            System.out.println("Radius of Sphere: "+r);
+                            ValumeOfSphere obj = new ValumeOfSphere();
+                            double ans = obj.area(r);
+                            System.out.println("Valume of Sphere is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ValumeOfCylinder{
+                        double area(double radius, double height){
+                            return (Math.PI * radius * radius * height);
+                        }
+                    }
+                    class Cylinder{
+                        public static void main(String a[]){
+                            double r = 14;
+                            double h=20 ;
+                            System.out.println("Radius of Cylinder: "+r);
+                            System.out.println("Height of Cylinder: "+h);
+                            ValumeOfCylinder obj = new ValumeOfCylinder();
+                            double ans = obj.area(r,h);
+                            System.out.println("Valume of Cylinder is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ValumeOfCuboid{
+                        double area(double l, double h, double b){
+                            return l*b*h;
+                        }
+                    }
+                    class V_Cuboid{
+                        public static void main(String a[]){
+                            double l = 12;
+                            double b = 7;
+                            double h = 5;
+                            System.out.println("Length of Cuboid: "+l);
+                            System.out.println("Width of Cuboid: "+b);
+                            System.out.println("Height of Cuboid: "+h);
+                            AreaOfCuboid obj = new AreaOfCuboid();
+                            double ans = obj.area(l,b,h);
+                            System.out.println("Valume of Cuboid is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ValumeOfCone{
+                        double area(double radius, double height){
+                            return (1/3 * Math.PI * radius * radius * height);
+                        }
+                    }
+                    class Cone{
+                        public static void main(String a[]){
+                            double r = 2;
+                            double h = 5;
+                            System.out.println("Radius of Cone: "+r);
+                            System.out.println("Height of Cone: "+h);
+                            ValumeOfCone obj = new ValumeOfCone();
+                            double ans = obj.area(r,h);
+                            System.out.println("Valume of cone is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfCuboid{
+                        double area(double l, double h, double b){
+                            double a = 2*(l*b+b*h+h*l);
+                            return a;
+                        }
+                    }
+                    class Cuboid{
+                        public static void main(String a[]){
+                            double l = 12;
+                            double b = 7;
+                            double h = 5;
+                            System.out.println("Length of Cuboid: "+l);
+                            System.out.println("Width of Cuboid: "+b);
+                            System.out.println("Height of Cuboid: "+h);
+                            AreaOfCuboid obj = new AreaOfCuboid();
+                            double ans = obj.area(l,b,h);
+                            System.out.println("Area of Cylinder is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfCylinder{
+                        double area(double r, double h){
+                            double a = 2*Math.PI*r*h;
+                            double b = 2*Math.PI*r*r;
+                            return a+b;
+                        }
+                    }
+                    class Cylinder{
+                        public static void main(String a[]){
+                            double r = 5;
+                            double h = 10;
+                            System.out.println("Radius of Cylinder: "+r);
+                            System.out.println("Height of Cylinder: "+h);
+                            AreaOfCylinder obj = new AreaOfCylinder();
+                            double ans = obj.area(r,h);
+                            System.out.println("Area of Cylinder is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AreaOfCube{
+                        double area(double s){
+                            double a = 6*Math.pow(s,2);
+                            return a;
+                        }
+                    }
+                    class Cube{
+                        public static void main(String a[]){
+                            double s = 10;
+                            // System.out.println("length = width = height");
+                            System.out.println("side of CUbe: "+s);
+                            AreaOfCube obj = new AreaOfCube();
+                            double ans = obj.area(s);
+                            System.out.println("Area of CUbe is "+ ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class AverageMarks{
+                        public static void main(String[] args) {
+                            java.util.Scanner input = new java.util.Scanner(System.in);
+                            System.out.print("Enter the number of subjects: ");
+                            int n=input.nextInt();
+                            
+                            double[] mark=new double[n];
+                    
+                            for(int i=0;i<n;i++){
+                                System.out.printf("Enter Marks %d : ",i+1);
+                                mark[i]=input.nextDouble();
+                            }
+                    
+                            double sum=0,average;
+                    
+                            for (double m:mark){sum+=m;}
+                    
+                            average=(float)(sum/n);
+                    
+                            System.out.println("Your Average marks is "+average);
+                    
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class CheckAlphabets{
+                        public static void main(String[ ] arg){
+                         // int i = 0;
+                         java.util.Scanner sc=new java.util.Scanner(System.in);
+                         System.out.println("Enter a character : ");
+                         char ch=sc.next( ).charAt(0);
+                                      
+                         if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+                         System.out.println("Entered character "+ch+" is  Vowel"); 
+                         }
+                         else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
+                             System.out.println("Entered character "+ch+" is Consonant");
+                               else
+                             System.out.println("Not an alphabet");		
+                         }
+                     }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class SumOfN_Numbers{
+                        public static void main(String[] args) {
+                            int sum = 0;
+                            Scanner Input = new Scanner (System.in);
+                            System.out.println("Enter the number of terms you want sum");
+                            int n=Input.nextInt();
+                            int arr[] = new int[n];
+                            System.out.println("enter the "+n+" numbers ");
+                            for(int i=0;i<n;i++){ 
+                                System.out.print("Enter number "+(i+1)+" : ");
+                                arr[i] = Input.nextInt();
+                            }
+                    
+                            for(int i=0;i<n;i++){
+                                sum +=arr[i];
+                            }
+                     
+                            System.out.println("sum of "+n+" numbers is "+sum); 
+                            
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Factorial{  
+                        public static void main(String args[]){  
+                            int i,fact=1;
+                            
+                            java.util.Scanner Input = new java.util.Scanner(System.in);
+                            System.out.print("Enter a number for factorial: ");
+                            int number= Input.nextInt();
+                            for(i=1;i<=number;i++){    
+                                fact=fact*i;    
+                            }    
+                            System.out.println("Factorial of "+number+" is: "+fact);    
+                        } 
+                    }  
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>45.Java Program to calculate electricity bill</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class ElectricityBill{
+                        public static void main(String a[]){
+                            float oldReading = 18;
+                            float newReading = 118;
+                            float units = newReading-oldReading;
+                            float fixedCharges = 40;
+                            float eneryDuty = 0.15f;
+                            float bill=0;
+                            if(units<=100){
+                                bill+=units*4;
+                            }
+                            else{
+                                bill+=units*5;
+                            }
+                            float totalBill = bill + fixedCharges + eneryDuty*units;
+                            System.out.println(totalBill);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>46. Java Program To Calculate CGPA Percentage</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class CGPAPercentageCalculator {
+                        public static void main(String[] args) {
+                            Scanner input = new Scanner(System.in);
+                    
+                            System.out.print("Enter the number of Subject: ");
+                            int numCourses = input.nextInt();
+                    
+                            double totalCGPA = 0.0;
+                            double totalCredits = 0.0;
+                    
+                            for (int i = 1; i <= numCourses; i++) {
+                                System.out.printf("Enter CGPA for Subject %d: ", i);
+                                double cgpa = input.nextDouble();
+                    
+                                System.out.printf("Enter Credits for Subject %d: ", i);
+                                int credits = input.nextInt();
+                    
+                                totalCGPA += cgpa * credits;
+                                totalCredits += credits;
+                            }
+                    
+                            if (totalCredits == 0) {
+                                System.out.println("Error: Total credits cannot be zero.");
+                            } else {
+                                double cgpaPercentage = (totalCGPA / totalCredits) * 10;
+                                System.out.printf("CGPA Percentage: %.2f%%\n", cgpaPercentage);
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>47. Java Program to calculate compound interest</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Calculate_Compound_Interest{
+                        double formula(double p, double r, double t){
+                            double CI = p*(Math.pow((1+r/100),t));
+                            return CI;
+                        }
+                    }
+                    
+                    class CompoundInterest{
+                        public static void main(String args[]) {
+                            double p;
+                            double r;
+                            double t;
+                            java.util.Scanner Input = new java.util.Scanner(System.in);
+                            //Input the Principal Amount:
+                            System.out.print("Enter principle: ");
+                            p = Input.nextDouble();
+                            System.out.print("\nEnter Rate: ");
+                            r = Input.nextDouble();
+                            System.out.print("\nEnter Time(In Year): ");
+                            t = Input.nextDouble();
+                    
+                            System.out.println("Principle is "+p+" , "+"Rate is "+r+" and time is "+t);
+                    
+                            Calculate_Compound_Interest CI = new Calculate_Compound_Interest();
+                            double ans = CI.formula(p,r,t);
+                            System.out.println("Compound Interest: "+ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>48. Java Program To Calculate Batting Average</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class calculateBattingAverage{
+                       public static void main(String[] args) {
+                           Scanner scanner = new Scanner(System.in);
+                    
+                           System.out.println("Enter the total number of hits:");
+                           int totalHits = scanner.nextInt();
+                    
+                           System.out.println("Enter the total number of at-bats:");
+                           int totalAtBats = scanner.nextInt();
+                    
+                           double battingAverage = Average(totalHits, totalAtBats);
+                           System.out.println("The calculated batting average is: " + battingAverage);
+                    
+                           scanner.close();
+                       }
+                    
+                       private static double Average(int totalHits, int totalAtBats) {
+                           return (double) totalHits / totalAtBats;
+                       }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>49. Java Pogram to Calculate Commission Percentage</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Calculate_Commission{
+                        float formula(float cp, float a){
+                            return ((cp/100)*a);
+                        }
+                    }
+                    
+                    class CommissionValue{
+                        public static void main(String args[]){
+                            float cp;
+                            float a;
+                    
+                            java.util.Scanner Input = new java.util.Scanner(System.in);
+                    
+                            System.out.println("Enter the commision percentage: ");
+                            cp = Input.nextFloat();
+                    
+                            System.out.println("Enter the Amount: ");
+                            a = Input.nextFloat();
+                    
+                            Calculate_Commission CA = new Calculate_Commission();
+                            float ans = CA.formula(cp,a);
+                    
+                            System.out.println("Commission amount: "+ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>50. Java Pogram To Find Distance Between Two Points</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code> 
+                    class DistanceFormula{
+                        int Formula(double x1, double x2, double y1, double y2){
+                            int sol = (int)Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+                            return sol;
+                        }
+                    }
+                    class Points{
+                        public static void main(String a[]){
+                            double x1, x2, y1, y2;
+                            x1 = 4;
+                            x2 = 0;
+                            y1 = 3;
+                            y2 = 0;
+                            DistanceFormula obj = new DistanceFormula();
+                            int ans = obj.Formula(x1,x2,y1,y2);
+                    
+                            System.out.println("Distance Between Two Points is "+ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>51. Java Program To Calculate Power Of Number</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Power_Of_Number{
+                        public static void main(String args[]){
+                            int base = 2,
+                            exponent = 3;
+                    
+                            double ans = java.lang.Math.pow(base, exponent);
+                    
+                            System.out.println("Answer = "+ans);
+                    
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>52. Write a Java program to take three numbers from the user and print the greatest number</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class LargestNumber{
+                        public static void main(String[] args){
+                            java.util.Scanner input = new java.util.Scanner(System.in);
+                            int num1,num2,num3;
+                            System.out.println("Enter First number:");
+                            num1=input.nextInt();
+                            System.out.println("\nEnter Second number:");
+                            num2=input.nextInt();
+                            System.out.println("\nEnter third number:");
+                            num3=input.nextInt();
+                            System.out.println("\n\n");
+                            if( num1 >= num2 && num1 >= num3)
+                                System.out.println(num1 + " is the largest number.");
+                    
+                            else if (num2 >= num1 && num2 >= num3)
+                                System.out.println(num2 + " is the largest number.");
+                    
+                            else
+                                System.out.println(num3 + " is the largest number.");
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>53. Write a Java program to find the number of days in a month</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class DaysInMonth {
+                        public static void main(String[] args) {
+                            Scanner input = new Scanner(System.in);
+                    
+                            System.out.print("Enter a month (1-12): ");
+                            int month = input.nextInt();
+                    
+                            System.out.print("Enter a year: ");
+                            int year = input.nextInt();
+                    
+                            int daysInMonth = getDaysInMonth(month, year);
+                    
+                            if (daysInMonth == -1) {
+                                System.out.println("Invalid month input. Please enter a number between 1 and 12.");
+                            } else if (daysInMonth == -2) {
+                                System.out.println("Invalid year input. Please enter a positive year.");
+                            } else {
+                                System.out.println("Number of days in the selected month: " + daysInMonth);
+                            }
+                        }
+                    
+                        public static int getDaysInMonth(int month, int year) {
+                            if (month < 1 || month > 12) {
+                                return -1; // Invalid month input
+                            }
+                    
+                            if (year < 1) {
+                                return -2; // Invalid year input
+                            }
+                    
+                            switch (month) {
+                                case 4:
+                                case 6:
+                                case 9:
+                                case 11:
+                                    return 30;
+                                case 2:
+                                    if (isLeapYear(year)) {
+                                        return 29;
+                                    } else {
+                                        return 28;
+                                    }
+                                default:
+                                    return 31;
+                            }
+                        }
+                    
+                        public static boolean isLeapYear(int year) {
+                            return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+
+
+
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details><details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class SquareRoot{
+                        public static void main(String a[]){
+                            double n = 2;
+                            double sqr = Math.sqrt(n);
+                            float ans = (float)sqr;
+                            System.out.println(ans);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

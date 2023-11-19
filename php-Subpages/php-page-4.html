@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Page-4 Php-Intro</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title">PHP Echo and Print Statements</h1>
+    <hr class="line">
+    <h2 class="sub-title">The PHP echo Statement</h2>
+    <p class="desc">
+        The echo statement can output one or more strings. In general terms, the echo statement can display anything that can be displayed to the browser, such as string, numbers, variables values, the results of expressions etc.
+    </p>
+    <p class="desc">
+        Since echo is a language construct not actually a function (like if statement), you can use it without parentheses e.g. echo or echo(). However, if you want to pass more than one parameter to echo, the parameters must not be enclosed within parentheses.
+    </p>
+    
+    <p class="desc">
+        <b>Display Strings of Text : </b> following example will show you how to display a string of text with the echo statement
+    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+        <span class="comment">// Displaying HTML code</span>
+            echo "<span><</span>h4>This is a simple heading. <span><</span>/h4>";
+            echo "<span><</span>h4> style= '<span>color:red;</span>'>This is heading with style.<span> <</span>/h4>";
+        ?> 
+    </pre>
+
+    <p><b>The output of the above PHP code will look something like this:</b></p>
+
+    <pre class="output-box">
+        <span class="highlight">This is a simple heading.</span> 
+        This is heading with style.
+    </pre>
+  <!--------------------------------------------------------------------------->
+
+  <img src="../images/web-development.png" alt="" class="content-img-2">
+  <h2 class="sub-title">The PHP print Statement</h2>
+  <p class="desc">
+    You can also use the print statement (an alternative to echo) to display output to the browser. Like echo the print is also a language construct not a real function. So you can also use it without parentheses like: print or print().
+  </p>
+  
+  <p class="desc">Both echo and print statement works exactly the same way except that the print statement can only output one string, and always returns 1. That's why the echo statement considered marginally faster than the print statement since it doesn't return any value.</p>
+
+  
+
+  <p><b>Display Strings of Text</b></p>
+
+  <p class="desc">The following example will show you how to display a string of text with the print statement:</p>
+
+  <pre class="code-box">
+    <span><</span>?php
+           <span class="comment">// Displaying string of text</span>
+           print "Hello World!";
+    ?>
+  </pre>
+  <p><b>Output:</b></p>
+  <pre class="output-box">
+    <span class="highlight">This is a simple heading.</span> 
+    This is heading with style.
+</pre>
+ 
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+</body>
+</html>
+

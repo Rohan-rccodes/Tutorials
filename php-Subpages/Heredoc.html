@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/programs-style.css">
+    <title>Php-Heredoc</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" id="top-heading">PHP Heredoc</h1>
+
+    <hr class="line">
+    <in class="desc"><b>Summary: </b> In this tutorial, you’ll learn how to use PHP heredoc and nowdoc strings to improve the readability of the code.</p>
+    <hr class="line">
+    <h2 class="sub-title">Introduction to the PHP heredoc string</h2>
+    <p class="desc">
+        When you place variables in a double-quoted string, PHP will expand the variable names. If a string contains the double quotes (“), you need to escape them using the backslash character(\). For example:
+    </p>
+    <p class="desc">
+        To define a string, you wrap the text within single quotes like this:
+    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php 
+            $he = 'Bob';
+            $she = 'Alice';
+            $text = "$he said, \"PHP is awesome\".
+            \"Of course.\" $she agreed.";
+            echo $text;
+        ?>
+    </pre>
+
+    <pre class="output-box">
+        Bob said,<span class="comment"> "PHP is awesome".</span>
+        "Of course." Alice agreed.
+    </pre>
+
+    <img src="../images/php-3.png" alt="" class="content-img">
+
+
+
+
+
+    <h2 class="sub-title">PHP Heredoc syntax</h2>
+
+    <p class="desc"><b>The following shows the syntax of a heredoc string:</b></p>
+    <p class="desc"><b>FOR EXAMPLE : </b></p>
+
+    <pre class="code-box">
+        <code>
+            <span><</span>?php
+
+            $str =<span><<<</span>IDENTIFIER
+            place a string here
+            it can span multiple lines
+            and include single quote ' and double quotes "
+            IDENTIFIER;
+
+            ?>
+        </code>
+    </pre>
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+
+    <h2 class="sub-title">PHP heredoc strings’ use cases</h2>
+    <p class="desc"><b>Getting the length of a string</b></p>
+
+    <p class="desc">To get the length of a string, you use a built-in function strlen(), for example:</p>
+
+    <pre class="code-box">
+        <span><</span>?php
+        <code>
+            $title = 'My site';
+            $header = <span><<<</span>HEADER
+              <header>
+                <span><</span>h1>$title <span><</span>/h1> </header>
+                HEADER;
+            echo $header;
+        </code>
+        ?>
+    </pre>
+
+    
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+            <a href="php-page-2.html" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

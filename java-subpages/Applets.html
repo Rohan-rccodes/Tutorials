@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> Home - RC Codes </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>JAVA APPLETS</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.Create an applet showing the string "Hello World" which is embedded in the HTML page.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import java.applet.Applet;
+                import java.awt.Graphics;
+                public class pro1 extends Applet
+                {
+                    public void paint (Graphics g)
+                    {
+                        g.drawString ("Hello World", 20, 20);
+                    }
+                }
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/applets/j1.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2.Create an applet showing the string "Hello World" which is executed by an appletviewer.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.applet.Applet;
+                    import java.awt.Color;
+                    import java.awt.Graphics;
+                    
+                    // <applet code = Applet2.java width ="200" height = "200">
+                    //  </applet>
+                    
+                    public class Applet2 extends Applet {
+                       
+                        public void paint(Graphics g){
+                            g.setColor(Color.red);
+                            g.drawString("hello world", 20, 20);
+                        }
+                        
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3.Create an applet in Java to draw a circle.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.applet.*;
+                    import java.awt.*;
+                    
+                    public class  pro3 extends Applet
+                    {
+                        int x=300,y=100,r=50;
+                        public void paint(Graphics g)
+                        {
+                            g.drawOval(x-r,y-r,100,100);
+                            g.drawString("Circle",275,100);
+                            
+                           
+                       }
+                    }
+                    //<applet code= pro3 width= 600 height=500 ></applet>
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Create an applet in Java to draw a polygon.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.applet.Applet;
+                    import java.awt.*;
+                     public class pro4 extends Applet
+                     {
+                     
+                    public void paint( Graphics g )
+                    {
+                    int x[] = { 20, 40, 50, 30, 20, 15 }; 
+                    int y[] = { 50, 50, 60, 80, 80, 60 }; 
+                    int num=5;
+                    g.setColor(Color.blue); 
+                    g.drawPolygon(x,y, num);
+                     
+                    }
+                    }
+                    //<applet code= pro4 width= 600 height=500 ></applet>
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.Create an applet in Java to draw a rectangle</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class RectangleApplet extends java.applet.Applet {
+                        public void paint(java.awt.Graphics g) {
+                            g.drawRect(50, 50, 200, 100);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6. Create an applet in Java to draw a square.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class ReverseArray {
+                        public static void main(String[] args) {
+                            int[] array = {1, 2, 3, 4, 5};
+                            
+                            for (int i = array.length - 1; i >= 0; i--) {
+                                System.out.println(array[i]);
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/7059onedarray6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Create an applet in Java to draw a 4 concentric circles.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    /*Java Applet to Print Concentric Circles using Applet*/
+
+                    import java.applet.*;
+                    import java.awt.*;
+                    public class pro7 extends Applet
+                    {
+                        //Initialize the applet
+                        public void init()
+                        {
+                        setBackground(Color.yellow);
+                        }
+                        //Draw cocentric circle
+                        public void paint(Graphics g)
+                        {
+                        g.setColor(Color.red);
+                        int rad=25;
+                        int dia=50;
+                        for(int i=0;i<4;i++)
+                        {
+                            g.drawOval(250-(i*rad),250-(i*rad),(i+1)*dia,(i+1)*dia);
+                        }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j7.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.Create an applet in Java to draw a line.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.applet.Applet;
+                    import java.awt.Graphics;
+                    public class pro8 extends Applet{
+ 
+                    public void paint(Graphics g){
+  
+                    //draw vertical line
+                        g.drawLine(10,50,20,100);
+ 
+                    //draw horizontal line
+                        g.drawLine(10,10,100,10);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Create an applet in Java to draw a oval.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.awt.*;
+                    import java.applet.Applet;
+                     
+                    public class pro9 extends Applet {
+                     
+                        public void paint(Graphics g)
+                        {
+                           // draw a ellipse
+                            g.drawOval(100, 100, 150, 100);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j9.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10. Create an applet in Java to draw a arc.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.applet.Applet;
+                    import java.awt.*;
+                    
+                    
+                    public class pro10 extends Applet
+                    {
+                        public void paint(Graphics g){
+                            setForeground(Color.red);
+                            g.drawArc(10,10,50,100,10,45);
+                            g.fillArc(100,10,1000,100,0,90);
+                    
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j10.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11. Create an applet in Java to change the background color.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.applet.Applet;
+                    import java.awt.*;
+
+                    public class pro11 extends Applet {
+   
+                     public pro11() {
+                        setBackground(Color.red);
+                        }
+
+                        public void paint(java.awt.Graphics g) {
+
+                        .drawString("Background Color Changed", 50, 50);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j11.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12. Create an applet in Java to draw rounded rectangle.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.awt.*;
+                    import java.applet.Applet;
+ 
+                    public class pro12 extends Applet {
+ 
+                    public void paint(Graphics g)
+                        {
+                        g.drawRoundRect(10,130,50,70,20,20);
+                        g.fillRoundRect(70,130,50,70,20,20);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j12.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13.Create an applet in Java to set font.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.awt.*;    
+                    import java.applet.*;    
+                        public class pro13 extends Applet    
+                     {    
+                       Font f1,f2,f3;    
+                        
+                       public void  init()    
+                        {    
+                           f1 = new Font("Arial",Font.BOLD,18);    
+                           f2 = new Font("Forte",Font.PLAIN,24);    
+                           f3 = new Font("Elephant",Font.ITALIC,28);    
+                        }    
+                              
+                       public void  paint(Graphics g)    
+                       {    
+                          g.drawString("Welcome",50,50);    
+                        
+                          g.setFont(f1);     
+                          g.drawString("to ",50,80);    
+                        
+                          g.setFont(f2);     
+                          g.drawString("My ",50,110);    
+                        
+                          g.setFont(f3);     
+                          g.drawString("Website",50,140);    
+                       }    
+                     }                      
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j13.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>14.Create an applet to display a digital clock.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.awt.*;
+                    import java.applet.Applet;
+                    import java.text.DateFormat;
+                    import java.text.SimpleDateFormat;
+                    import java.util.Date;
+                    public class pro14 extends Applet {
+                        DateFormat dateFormat;
+                        Date date;
+                        Thread t;
+                        public void init() {
+                            this.setSize(300,200);
+                        }
+                        public void paint(Graphics g)
+                        {
+                            try
+                            {
+                                Font f=new Font("Arial",Font.BOLD,50);
+                                g.setFont(f);
+                                g.setColor(Color.DARK_GRAY);
+                                dateFormat = new SimpleDateFormat("hh:mm:ss a");
+                                date = new Date();
+                                g.drawString(dateFormat.format(date),5,100);
+                                Font f1=new Font("Arial",Font.BOLD,10);
+                                g.setFont(f1);
+                                t.sleep(1000);
+                                repaint();
+                            }catch(Exception e)
+                            {
+                            
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j14.png" alt="">  
+            </div>
+        </details>
+       
+
+        <details>
+            <summary>
+              <h3>14.Create an applet to display a digital clock.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.applet.Applet;
+                    import java.awt.*;
+                    
+                       //<applet code= appro1 width= 600 height=500 ></applet>
+                       
+                    public class appro1 extends Applet 
+                    {
+                      public void paint(Graphics g) 
+                       {
+                          setBackground(Color.red);
+                          g.setColor(Color.yellow);
+                          g.fillOval(100, 100, 350, 350);
+                          g.setColor(Color.black);
+                          g.fillOval(195, 190, 40, 40);
+                          g.fillOval(325, 190, 40, 40);
+                          g.drawArc(200, 290, 150, 70, 180, 180);
+                       }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/applets/j15.png" alt="">  
+            </div>
+        </details>
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

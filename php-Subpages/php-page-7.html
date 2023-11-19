@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Page-1 Php-Constant</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" id="top-heading">PHP Constant</h1>
+
+    <hr class="line">
+    <p class="desc">In this tutorial, you learn about PHP constants and how to use the define() function and const keyword to define constants.</p>
+    <hr class="line">
+    <h2 class="sub-title">Introduction to PHP constants</h2>
+    <p class="desc">
+        A constant is simply a name that holds a single value. As its name implies, the value of a constant cannot be changed during the execution of the PHP script.
+    </p>
+    <p class="desc">
+        To define a constant, you use the  define() function. The  define() function takes the constant’s name as the first argument and the constant value as the second argument. For example:
+    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php 
+
+        define('WIDTH','1140px');
+        echo WIDTH;
+        ?>
+    </pre>
+
+    <img src="../images/php-3.png" alt="" class="content-img">
+
+    <p class="desc"><b>The const keyword</b></p>
+    <p class="desc">PHP provides you with another way to define a constant via the const keyword. Here’s the syntax:</p>
+
+    <p class="desc"><i>const CONSTANT_NAME = value;</i></p>
+    
+
+    <p class="desc"><b>FOR EXAMPLE : </b></p>
+
+    <pre class="code-box">
+            <span><</span>?php
+
+                const SALES_TAX = 0.085;
+
+                $gross_price = 100;
+
+                $net_price = $gross_price * (1 + SALES_TAX);
+
+                echo $net_price; // 108.5
+            ?>
+    </pre>
+  
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+
+    
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+            <a href="php-page-2.html" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> Home - RC Codes </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>EXCEPTION HANDLING</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.Write a Java program to create a class called Animal with a method called makeSound(). Create a subclass called Cat that overrides the makeSound() method to bark.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                class Exception
+                {
+                    public static void main(String[] args)
+                    {
+                        try {
+                            int[] arr = new int[5];
+                            
+                            arr[10] = 50; // This statement will throw an exception
+                        }
+                        catch (ArrayIndexOutOfBoundsException e) {
+                            System.out.println("Exception caught: " + e);
+                        }
+                    }
+                }                
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7077ExceptionHandling1.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2. Write a Java program to create a class called Vehicle with a method called drive(). Create a subclass called Car that overrides the drive() method to print "Repairing a car".</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class OddNum_Exp {
+                        public static void main(String x[]) {
+                          int a =4;
+                          checknum(a);
+                          a =5;
+                          checknum(a);
+                        }
+                      
+                        public static void checknum(int a) {
+                          try {
+                            checkEvenNum(a);
+                            System.out.println(a + " is even.");
+                          } catch (IllegalArgumentException e) {
+                           System.out.println("Exception :" + e.getMessage());
+                          }
+                        }
+                      
+                        public static void checkEvenNum(int b) {
+                          if (b % 2 != 0) {
+                            throw new IllegalArgumentException(b + " is odd.");
+                          }
+                        }                      
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7083Exceptionhandling2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3. Write a Java program to create a class called Shape with a method called getArea(). Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.io.File;
+                    import java.io.FileNotFoundException;
+                    import java.util.Scanner;
+                     
+                    class Read_File {
+                      public static void main(String x[] ) {
+                        try {
+                          r_File("test2.txt");
+                        } catch (FileNotFoundException e) {
+                          System.out.println("Exception: " + e.getMessage());
+                        }
+                      }
+                    
+                      public static void r_File(String fname) throws FileNotFoundException {
+                        File file = new File(fname);
+                        Scanner scanner = new Scanner(file);
+                    
+                    
+                        while (scanner.hasNextLine()) {
+                          String line = scanner.nextLine();
+                          System.out.println(line);
+                        }
+                    
+                        scanner.close();
+                      }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7083Exceptionhandling3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4. Write a Java program to create a class called Employee with methods called work() and getSalary(). Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee().</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.io.BufferedReader;
+                    import java.io.File;
+                    import java.io.FileNotFoundException;
+                    import java.io.FileReader;
+                    import java.io.IOException;
+                    
+                    class exception4 {
+                        class PositiveNumberException extends Exception {
+                            public PositiveNumberException(String message) {
+                                super(message);
+                            }
+                        }
+                        public static void main(String[] args) {
+                            File filename = new File("numbers.txt");
+                    
+                            try {
+                                new exception4().checkPositiveNumbers(filename);
+                                System.out.println("No positive numbers found.");
+                            } catch (PositiveNumberException e) {
+                                System.err.println("Exception: " + e.getMessage());
+                            } catch (IOException e) {
+                                System.err.println("Error reading the file: " + e.getMessage());
+                            }
+                        }
+                    
+                        void checkPositiveNumbers(File filename) throws IOException, PositiveNumberException {
+                            try {
+                                BufferedReader reader = new BufferedReader(new FileReader(filename));
+                                String line;
+                                while ((line = reader.readLine()) != null) {
+                                    int number = Integer.parseInt(line);
+                                    if (number > 0) {
+                                        throw new exception4.PositiveNumberException("Positive number found: " + number);
+                                    }
+                                }
+                                reader.close();
+                            } catch (FileNotFoundException e){
+                                throw new IOException("The specified file was not found.", e);
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7001Exception4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5. Write a Java program to create a class known as "BankAccount" with methods called deposit() and withdraw(). Create a subclass called SavingsAccount that overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    // Write a Java program that reads a file and throws an exception if the file is empty.
+                    import java.io.File;
+                    import java.io.FileReader;
+                    import java.io.IOException; 
+                    class EmptyFileException extends Exception {
+                        public EmptyFileException(String message) {
+                            super(message);
+                        }
+                    }
+                    class CheckEmptyFile {
+                        public static void main(String[] args) {
+                            try {
+                                checkFileNotEmpty("data.txt");
+                            } catch (EmptyFileException e) {
+                                System.out.println("Empty file detected: " + e.getMessage());
+                            } catch (IOException e) {
+                                System.out.println("File not found or cannot be read: " + e.getMessage());
+                            }
+                        }
+                        public static void checkFileNotEmpty(String fileName) throws IOException, EmptyFileException {
+                            File file = new File(fileName);
+                            if (!file.exists() || file.length() == 0) {
+                                throw new EmptyFileException("File is empty or does not exist.");
+                            }
+                            FileReader reader = new FileReader(file);
+                            reader.close();
+                        }
+                    }                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7055exceptionHandling5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6. Write a Java program to create a class called Animal with a method named move(). Create a subclass called Cheetah that overrides the move() method to run.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    class exception6{
+                        static class MyException extends Exception{
+                            MyException(String msg){
+                                super(msg);
+                            }
+                        }
+                        public static void main(String arg[]) throws java.io.IOException, exception6.MyException{
+                            java.io.BufferedReader input = new java.io.BufferedReader (new java.io.InputStreamReader(System.in));
+                            // declare hashmap
+                            java.util.HashMap<Integer, Boolean> map = new java.util.HashMap<Integer, Boolean>();
+                    
+                            try{
+                                System.out.print("Enter non repeating numbers : ");
+                                String[] list = input.readLine().split(" ");
+                                
+                                for(String st : list){
+                                    int num = Integer.parseInt(st);
+                                    if(map.containsKey(num)){
+                                        String err = num + " is repeated in the list";
+                                        throw new exception6.MyException(err);
+                                    } else {
+                                        map.put(num, true);
+                                    }
+                                }
+                            } catch(java.lang.NumberFormatException e){
+                                System.out.println("Invalid input. Please enter a valid number.");
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/1D-Array/7059onedarray6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7. Write a Java program to create a class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+
+                    class vowelchecker
+                    {
+                    public static void main(String args[])
+                    {
+                    try
+                    {
+                    Scanner sc = new Scanner(System.in);
+                    System.out.print("Enter a String : ");
+                    String str = sc.nextLine();
+                    checkForVowels(str);
+                    System.out.println("String Contains Vowels.");
+                    }
+                    catch(NoVowelsException e)
+                    {
+                    System.out.println("Exception : "+e.getMessage());
+                    }
+                    }
+                    static void checkForVowels(String input) throws NoVowelsException
+                    {
+                    if(!input.matches(".*[AEIOUaeiou].*"))
+                    {
+                    throw new NoVowelsException("The Input string does not contains any vowels.");
+                    }
+                    }
+                    }
+                    class NoVowelsException extends Exception
+                    {
+                    public NoVowelsException(String message)
+                    {
+                       super(message);
+                    }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7072ExceptionHandling7.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8. Write a Java program to create a class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.sql.*;
+                    class ExceptionHandle
+                    {
+                    public static void main(String st[]) 
+                    {
+                    try
+                    {
+                            Class.forName("com.mysql.jdbc.Driver");
+                            Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/bharat?useSSL=false","root","god123456");
+                                    System.out.println("Connect to database successfully");
+                            c.close();
+                            }catch(ClassNotFoundException e){System.out.println("Unable to find class");}
+                            catch(SQLException e){System.out.println("Fail to connect!");}
+                    }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7101ExceptionHandling8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9. Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.sql.Connection;
+                    import java.sql.DriverManager;
+                    import java.sql.SQLException;
+                    class DatabaseManager {
+                        public static void main(String[] args) throws ClassNotFoundException {
+                    //        Class.forName("com.mysql.jdbc.Driver");
+                            String dbUrl = "jdbc:mysql://localhost:3306/codevengers";
+                            String username = "root";
+                            String password = "";
+                            try {
+                                Connection connection = new DatabaseManager().getConnection(dbUrl, username, password);
+                                System.out.println("Connection successfull");
+                                connection.close();
+                            } catch (DatabaseConnectionException e) {
+                                System.out.println("Exception: " + e.getMessage());
+                            } catch (SQLException e) {
+                                System.out.println("SQL Exception: " + e.getMessage());
+                            }
+                        }
+                        Connection getConnection(String dbUrl, String username, String password) throws DatabaseConnectionException {
+                            try {
+                                return DriverManager.getConnection(dbUrl, username, password);
+                            } catch (SQLException e) {
+                                throw new DatabaseConnectionException("Failed to connect to the database: " + e.getMessage());
+                            }
+                        }
+                    }
+                    class DatabaseConnectionException extends Exception {
+                        public DatabaseConnectionException(String message) {
+                            super(message);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7001Exception9.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10. Write a Java program that creates a class hierarchy for employees of a company. The base class should be Employee, with subclasses Manager, Developer, and Programmer. Each subclass should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.sql.Connection;
+                    import java.sql.DriverManager;
+                    import java.sql.PreparedStatement;
+                    import java.sql.SQLException;
+                    class DatabaseOperationExample {
+                        private static final String JDBC_URL = "jdbc:mysql://localhost:3306/your_database_name";
+                        private static final String USERNAME = "your_username";
+                        private static final String PASSWORD = "your_password";
+                        public static void main(String[] args) {
+                            try {
+                                Class.forName("com.mysql.cj.jdbc.Driver");
+                                try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
+                                    if (!insertData(connection, "John Doe", 25, "john@example.com")) {
+                                        throw new SQLExceptionCustom("Insert operation failed");
+                                    }
+                                    if (!updateData(connection, 1, "John Doe Updated")) {
+                                        throw new SQLExceptionCustom("Update operation failed");
+                                    }  
+                                    if (!deleteData(connection, 1)) {
+                                        throw new SQLExceptionCustom("Delete operation failed");
+                                    }
+                                }
+                            } catch (ClassNotFoundException | SQLException | SQLExceptionCustom e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        private static boolean insertData(Connection connection, String name, int age, String email) throws SQLException {
+                            String insertQuery = "INSERT INTO your_table_name (name, age, email) VALUES (?, ?, ?)";
+                            try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+                                preparedStatement.setString(1, name);
+                                preparedStatement.setInt(2, age);
+                                preparedStatement.setString(3, email);
+                                int rowsAffected = preparedStatement.executeUpdate();
+                                return rowsAffected > 0;
+                            }
+                        }
+                        private static boolean updateData(Connection connection, int id, String newName) throws SQLException {
+                            String updateQuery = "UPDATE your_table_name SET name = ? WHERE id = ?";
+                            try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+                                preparedStatement.setString(1, newName);
+                                preparedStatement.setInt(2, id);
+                                int rowsAffected = preparedStatement.executeUpdate();
+                                return rowsAffected > 0;
+                            }
+                        }
+                        private static boolean deleteData(Connection connection, int id) throws SQLException {
+                            String deleteQuery = "DELETE FROM your_table_name WHERE id = ?";
+                            try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+                                preparedStatement.setInt(1, id);
+                                int rowsAffected = preparedStatement.executeUpdate();
+                                return rowsAffected > 0;
+                            }
+                        }
+                    }
+                    class SQLExceptionCustom extends SQLException {
+                        public SQLExceptionCustom(String message) {
+                            super(message);
+                        }
+                    }    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11. Create a program, showing an example of super keyword</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class Main {
+                        static void checkAge(int age) {
+                            if (age < 18) {
+                            throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+                            }
+                            else {
+                            System.out.println("Access granted - You are old enough!");
+                            }
+                        }                      
+                        public static void main(String[] args) {
+                          checkAge(15); // Set age to 15 (which is below 18...)
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7050exceptionhandling11.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12. Create a program, showing an example of super function.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class multiplecatch{
+                        public  static void main(String[] args) {         
+                                try{    
+                                    int a[]=new int[5];    
+                                    a[5]=30/0;    
+                                    }    
+                                    catch(ArithmeticException e)  
+                                        {  
+                                        System.out.println("Arithmetic Exception occurs");  
+                                        }    
+                                    catch(ArrayIndexOutOfBoundsException e)  
+                                    {  
+                                        System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                                    }    
+                                    catch(Exception e)  
+                                    {  
+                                    System.out.println("Parent Exception occurs");  
+                                    }             
+                                    System.out.println("rest of the code");
+                            }
+                        }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/7050exceptionhandling12.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13. Create a program, showing an example of method overriding.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    class NestedTryBlock{    
+                        public static void main(String args[]){   
+                        //outer try block   
+                            try{    
+                            //inner try block 1  
+                            try{    
+                                System.out.println("going to divide by 0");    
+                                int b =39/0;    
+                            }  
+                            //catch block of inner try block 1  
+                            catch(ArithmeticException e)  
+                            {  
+                                System.out.println(e);  
+                            }
+                            //inner try block 2  
+                            try{    
+                            int a[]=new int[5];    
+                           //assigning the value out of array bounds  
+                            a[5]=4;    
+                            }  
+                        //catch block of inner try block 2  
+                        catch(ArrayIndexOutOfBoundsException e)  
+                        {  
+                            System.out.println(e);  
+                        }    
+                            System.out.println("other statement");    
+                        }  
+                        //catch block of outer try block  
+                        catch(Exception e)  
+                        {  
+                            System.out.println("handled the exception (outer catch)");  
+                        }    
+                        System.out.println("normal flow..");    
+                        }    
+                    }  
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Exception handling/13.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>14. Create a program, showing an example of dynamic method dispatch.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>15. Write a Java program to create an abstract class Animal with an abstract method called sound(). Create subclasses Lion and Tiger that extend the Animal class and implement the sound() method to make a specific sound for each animal.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>16. Write a Java program to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). Create subclasses Circle and Triangle that extend the Shape class and implement the respective methods to calculate the area and perimeter of each shape.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>17. Write a Java program to create an abstract class BankAccount with abstract methods deposit() and withdraw(). Create subclasses: SavingsAccount and CurrentAccount that extend the BankAccount class and implement the respective methods to handle deposits and withdrawals for each account type.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>18. Write a Java program to create an abstract class Animal with abstract methods eat() and sleep(). Create subclasses Lion, Tiger, and Deer that extend the Animal class and implement the eat() and sleep() methods differently based on their specific behavior.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>19. Write a Java program to create an abstract class Employee with abstract methods calculateSalary() and displayInfo(). Create subclasses Manager and Programmer that extend the Employee class and implement the respective methods to calculate salary and display information for each role.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>20. Write a Java program to create an abstract class Shape3D with abstract methods calculateVolume() and calculateSurfaceArea(). Create subclasses Sphere and Cube that extend the Shape3D class and implement the respective methods to calculate the volume and surface area of each shape</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>21. Program to Remove Duplicate Element in an array</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>22. Program to Print Odd and Even Numbers from an array</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>23. How to Sort an Array in Java</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    &lt;details&gt;
+                    &lt;summary&gt;
+                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
+                    &lt;/summary&gt;
+                    &lt;div&gt;
+                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
+                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../images/1-tier.png" alt="">  
+            </div>
+        </details>
+
+       
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

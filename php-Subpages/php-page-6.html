@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Page-1 PHP-Arrays</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title">PHP Arrays</h1>
+    <hr class="line">
+    <p class="desc">In this tutorial you'll learn how to store multiple values in a single variable in PHP.</p>
+    <hr class="line">
+    <h2 class="sub-title">What is PHP Arrays?</h2>
+    <p class="desc">
+        Arrays are complex variables that allow us to store more than one value or a group of values under a single variable name. Let's suppose you want to store colors in your PHP script. Storing the colors one by one in a variable could look something like this:
+    </p>
+
+<!--------------------------------codee--------------------------------------->
+    <pre class="code-box" id="myPreTag">
+        <code>
+        <span><</span>?php
+            $color1 = "Red";
+            $color2 = "Green";
+            $color3 = "Blue";
+        ?>
+        </code>
+    </pre>
+
+    
+    <pre class="output-box">
+        Red
+        Green
+        Blue
+    </pre>
+
+
+    <h1 class="sub-title">Types of Arrays in PHP</h1>
+    <p class="desc">There are three types of arrays that you can create. These are:</p>
+
+    <p class="desc">
+        <ul class="type-1">
+            <li><b>Indexed array:</b>An array with a numeric key.</li>
+
+            <li><b>Associative array :</b> An array where each key has its own specific value.</li>
+            <li><b>Multidimensional array:</b>An array containing one or more arrays within itself.</li>
+        </ul>
+    </p>
+
+    <h2 class="sub-title">Indexed Arrays</h2>
+    <p class="desc">An indexed or numeric array stores each array element with a numeric index. The following examples shows two ways of creating an indexed array, the easiest way is:
+    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box" id="myPreTag">
+        <span><</span>?php
+        <span class="comment">// Define an indexed array</span>
+            $colors = array("Red", "Green", "Blue");
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Array ( [0] => Red [1] => Green [2] => Blue )
+    </pre>
+
+    <p class="desc">Similar Exmaple of above porgram </p>
+
+    <pre class="code-box">
+        <span<><</span>?php
+            $colors[0] = "Red"; 
+            $colors[1] = "Green"; 
+            $colors[2] = "Blue"; 
+        ?>
+    </pre>
+    <pre class="ouput-box">
+        Array ( [0] => Red [1] => Green [2] => Blue )
+
+    </pre>
+
+
+    <h2 class="sub-title">Associative Arrays</h2>
+    <p class="desc">In an associative array, the keys assigned to values can be arbitrary and user defined strings. In the following example the array uses keys instead of index numbers:
+    </p>
+
+    <pre class="code-box" id="myPreTag">
+        <code>
+            <span><</span>?php
+                <span class="comment">// Define an associative array</span>
+                $ages = array("Peter"=>22, "Clark"=>32, "John"=>28);
+            ?>
+        </code>
+    </pre>
+    
+
+    <p class="desc"><b>Output : </b></p>
+    <pre class="output-box">
+        <code>
+            Array ( [Peter] => 22 [Clark] => 32 [John] => 28 )
+        </code>
+    </pre>
+    
+    <img src="../images/php-4.png" alt="" class="content-img">
+
+    <h2 class="sub-title">Multi-dimensional Array</h2>
+
+    <p class="desc">A multi-dimensional array each element in the main array can also be an array. And each element in the sub-array can be an array, and so on. Values in the multi-dimensional array are accessed using multiple index.
+    </p>
+    <pre class="code-box copy-code-button" id="myPreTag">
+        <code>
+            <span><</span>?php
+                $cars = array
+                (
+                array("Elentra",22,18),
+                array("Audi",15,13),
+                );
+                echo $cars[0][0].": In stock: ".$cars[0][1].", sold: ".$cars[0][2].".\n";
+                echo $cars[1][0].": In stock: ".$cars[1][1].", sold: ".$cars[1][2].".\n";
+            ?>
+        </code>
+    </pre>
+
+
+    <pre class="output-box">
+        <code>
+            Elentra: In stock: 22, sold: 18.
+            Audi: In stock: 15, sold: 13.
+        </code>
+    </pre>
+    
+
+    <!-- <pre id="myPreTag">This is some text.<br>This is some text.<br>This is some text.</pre> -->
+  
+
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+
+
+
+    <!-----------------------BUTTONS--------------------------->
+    <!-----------------------BUTTONS--------------------------->
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+    </div>
+
+    <script src="../js/copy-code.js"></script>
+    <!-- <script src="../js/text-copy.js"></script> -->
+</body>
+</html>
+

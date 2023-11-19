@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Php Superglobals</title>
+</head>
+<body>
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+    <h1 class="title" id="top-heading">PHP Global Variables - Superglobals</h1>
+
+    <hr class="line">
+    <p class="desc">Some predefined variables in PHP are "superglobals".</p>
+    <hr class="line">
+    <h2 class="sub-title">Introduction to PHP constants</h2>
+    <p class="desc">
+        Some predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.
+    </p>
+    <p class="desc">
+        <b>The PHP superglobal variables are:</b>
+    </p>
+    <p class="desc">
+        <ul>
+            <li>$GLOBALS</li>
+            <li>$_SERVER</li>
+            <li>$_REQUEST</li>
+            <li>$_POST</li>
+            <li>$_GET</li>
+            <li>$_FILES</li>
+            <li>$_ENV</li>
+            <li>$_COOKIE</li>
+            <li>$_SESSION</li>
+        </ul>
+    </p>
+
+    <img src="../images/php-3.png" alt="" class="content-img">
+
+    <h2 class="sub-title">PHP $GLOBALS</h2>
+    <p class="desc">$GLOBALS is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also from within functions or methods).</p>
+    <p class="desc">
+        PHP stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable.
+    </p>    
+
+    <p class="desc"><b>FOR EXAMPLE : </b></p>
+
+    <pre class="code-box">
+            <span><</span>?php
+            $x = 75;
+            $y = 25;
+             
+            function addition() {
+              $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+            }
+             
+            addition();
+            echo $z;
+            ?>
+    </pre>
+    <p class="desc"><b>Output:</b></p>
+    <pre class="output-box">
+        <span>100</span>
+    </pre>
+  
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+    <h2 class="sub-title">PHP $_SERVER</h2>
+    <p class="desc">$_SERVER is a PHP super global variable which holds information about headers, paths, and script locations.
+
+    </p>
+    <pre class="code-box">
+        <span><</span>Php
+            echo $_SERVER['PHP_SELF'];
+            echo " <span><</span>br>";
+            echo $_SERVER['SERVER_NAME'];
+            echo " <span><</span>br>";
+            echo $_SERVER['HTTP_HOST'];
+            echo " <span><</span>br>";
+            echo $_SERVER['HTTP_REFERER'];
+            echo " <span><</span>br>";
+            echo $_SERVER['HTTP_USER_AGENT'];
+            echo "<span><</span>br>";
+            echo $_SERVER['SCRIPT_NAME'];
+        ?>
+    </pre>
+    <p class="desc"><b>Output:</b></p>
+    <pre class="output-box">
+        /demo/demo_global_server.php 35.194.26.41 35.194.26.41
+        https://rccodes.com/showphp.php?filename=demo_global_server
+        Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
+        /demo/demo_global_server.php
+    </pre>
+
+
+    <h2 class="sub-title">PHP Superglobal - $_POST</h2>
+    <p class="desc">PHP $_POST is a PHP super global variable which is used to collect form data after submitting an HTML form with method="post". <b>$_POST </b>is also widely used to pass variables.</p>
+
+    <pre class="code-box">
+        <span><</span>html>
+            <span><</span>body>
+            
+            <span><</span>form method="post" action="">
+              Name: <input type="text" name="fname">
+              <input type="submit">
+            <span><</span>/form>
+            
+            <span><</span>?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // collect value of input field
+                $name = $_POST['fname'];
+                if (empty($name)) {
+                  echo "Name is empty";
+                } else {
+                  echo $name;
+                }
+              }
+            ?>
+            
+            <span><</span>/body>
+            <span><</span>/html>
+    
+    </pre>
+
+
+    <h2 class="sub-title">PHP $_GET</h2>
+    <p class="desc">PHP $_GET is a PHP super global variable which is used to collect form data after submitting an HTML form with method="get".$_GET can also collect data sent in the URL.</p>
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+            <a href="php-page-2.html" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

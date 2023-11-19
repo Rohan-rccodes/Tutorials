@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>RC Codes Input-Output </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>JAVA INOUT-OUTPUT</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1. Enter the character from user using InputStreamReader.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                //Enter the character from user using InputStreamReader
+
+                import java.io.*;  
+                class InputStreamReaderP{  
+                public static void main(String args[])throws Exception{  
+                  
+                InputStreamReader r=new InputStreamReader(System.in);  
+                BufferedReader br=new BufferedReader(r);  
+                  
+                System.out.println("Enter your name");  
+                String name=br.readLine();  
+                System.out.println("Welcome "+name);  
+                 }  
+                }  
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Input-output/7011inputoutput1.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2.Enter the string from user using BufferedStreamReader</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.io.*;
+
+                    class Buffered_Stream
+                    {
+                      public static void main ( String s[] ) throws IOException
+                      {
+                        System.out.print ( "Enter the string: " );
+                    
+                        BufferedReader input = new BufferedReader ( new InputStreamReader ( System.in ) );
+                    
+                        String inputString = input.readLine();
+                    
+                        System.out.println ( "Entered string is: " + inputString );
+                      }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7083Inputoutput2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3.Enter the integer from user using Scanner class.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    //Enter the integer from the user using Scanner class
+                    import java.util.Scanner;
+                    class A{
+                        public static void main(String arg[])
+                        {
+                            Scanner s = new Scanner(System.in);
+                            System.out.println("Enter an integer :-");
+                            int a = s.nextInt();
+                            System.out.println(a);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7077InputOutput3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Enter the float from user using Scanner class.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+
+                    class FloatInputExample {
+                        public static void main(String[] args) {
+                            // Create a Scanner object to read user input
+                            Scanner scanner = new Scanner(System.in);
+                    
+                            System.out.print("Enter a float number: ");
+                    
+                            // Check if the next token entered by the user is a float
+                            if (scanner.hasNextFloat()) {
+                                float userInput = scanner.nextFloat();
+                                System.out.println("You entered: " + userInput);
+                            } else {
+                                System.out.println("Invalid input. Please enter a valid float number.");
+                            }
+                    
+                            // Close the Scanner to release resources
+                            scanner.close();
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7006inputoutput4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5. Enter the double from user using Scanner class.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    class prog5 {
+                       public static void main(String[] args) {
+                           // Create a Scanner object to read input from the console
+                           Scanner scanner = new Scanner(System.in);
+                   
+                           // Prompt the user to enter a double
+                           System.out.print("Enter a double: ");
+                   
+                           // Check if the next input is a double
+                           if (scanner.hasNextDouble()) {
+                               // Read the double from the user
+                               double userInput = scanner.nextDouble();
+                   
+                               // Display the entered double
+                               System.out.println("You entered: " + userInput);
+                   
+                               // Check if the entered double is positive, negative, or zero
+                               if (userInput > 0) {
+                                   System.out.println("The entered double is positive.");
+                               } else if (userInput < 0) {
+                                   System.out.println("The entered double is negative.");
+                               } else {
+                                   System.out.println("The entered double is zero.");
+                               }
+                           } else {
+                               // If the input is not a double, display an error message
+                               System.out.println("Invalid input. Please enter a valid double.");
+                           }
+                           // Close the scanner
+                           scanner.close();
+                       }
+                    }                                       
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7021inputoutput5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6.Enter the boolean from user using Scanner class</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.util.*;  
+                    class Boolean {    
+                        public static void main(String[] args) {         
+                               System.out.print("Are you above 18?- ");  
+                               Scanner sc = new Scanner(System.in);  
+                               boolean bn = sc.nextBoolean();  
+                               if (bn == true) {  
+                                   System.out.println("You are over 18");  
+                               } else if (bn == false) {  
+                                   System.out.println("You are under 18");  
+                               }  
+                               sc.close();                      
+                         }  
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7050Inputoutput6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Enter the short integer from user using Scanner class</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;  
+                    class a  
+                    {  
+                    public static void main(String[] x)   
+                    {  
+                           //object of the Scanner class  
+                           Scanner s=new Scanner(System.in);  
+                           System.out.print("Enter a short integer value: ");  
+                           //invoking nextShort() method that reads an integer input by keyboard  
+                           //storing the input number in a variable num  
+                           int num = s.nextShort();  
+                           System.out.println("The Short integer entered by the user is: "+num);  
+                    }  
+                    }  
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7039input_output7.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.Enter the long integer from user using Scanner class</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.util.Scanner;
+                    //Enter the long integer from user using Scanner class
+                    class LongUsingScanner 
+                    {
+                        public static void main(String[] args) 
+                        {
+                            Scanner sc = new Scanner(System.in);
+                            System.out.println("Enter a long integer : ");
+                            long l = sc.nextLong();
+                            System.out.println("long integer is : "+l);
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7011inputoutput8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Get all characters from the file and display on the screen.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.io.BufferedReader;
+                    import java.io.FileReader;
+                    import java.io.IOException;
+                    
+                     class prog9 {
+                        public static void main(String[] args) {
+                            // Replace "your_file_path.txt" with the path to your text file
+                            String filePath = "abc.txt";
+                    
+                            try{
+                    
+                                BufferedReader reader = new BufferedReader(new FileReader(filePath));
+                                int character;
+                                
+                                // Read and display each character until the end of the file
+                                while ((character = reader.read()) != -1) {
+                                    System.out.print((char) character);
+                                }
+                            } catch (IOException e) {
+                                System.out.println("Error reading the file: " + e.getMessage());
+                                e.printStackTrace();
+                            }
+                        }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7089InputOutput9.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10.Get all characters from the file, count number of lines, words, characters and display on the screen</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.io.BufferedReader;
+                    import java.io.FileReader;
+                    import java.io.IOException;
+                     class prog10 {
+                        public static void main(String[] args)  throws ClassNotFoundException{
+                            String filePath = "abc.txt"; // Replace with the actual path to your file
+                    
+                            try{ 
+                                BufferedReader reader = new BufferedReader(new FileReader(filePath));
+                                int character;
+                                int lineCount = 0;
+                                int wordCount = 0;
+                                int charCount = 0;
+                                boolean inWord = false;
+                                while ((character = reader.read()) != -1) {
+                                    charCount++;
+                                    // Count lines
+                                    if (character == '\n') {
+                                        lineCount++;
+                                    }
+                                    // Count words
+                                    if (Character.isWhitespace(character)) {
+                                        inWord = false;
+                                    } else if (!inWord) {
+                                        inWord = true;
+                                        wordCount++;
+                                    }
+                                }
+                                // Display statistics
+                                System.out.println("Number of lines: " + lineCount);
+                                System.out.println("Number of words: " + wordCount);
+                                System.out.println("Number of characters: " + charCount);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/Input-output/7089InputOutput10.png" alt="">  
+            </div>
+        </details>
+       
+    </div>
+
+</section>
+ 
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

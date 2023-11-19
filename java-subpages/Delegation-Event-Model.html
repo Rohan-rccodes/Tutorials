@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> Home - RC Codes </title>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
+
+    <!--------BOX-ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <!-- <link rel="stylesheet" href="/style/substyle-java.css"/> -->
+    <link rel="stylesheet" href="../style/substyle-java-programs.css">
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------navigation-------->
+    <nav id="navbar">
+        <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+                <li><a href="../index.html">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
+                <li><a href="#course">Programs</a></li>
+                <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
+            </ul>
+            <img id="menu-btn" src="../images/menu.png" alt="">
+        </div>
+    </nav>
+   
+
+    <!------HOME SECTION---------->
+
+    <!-- <section id="home">
+        <h2>
+          WELCOME TO <span class="prime"> JAVA </span> TUTORIALS
+        </h2>
+        <p>Hello, here you get all the resource you need. RCcodes is a reliable source when you need help to understand any subjects</p>
+        <div class="home-btn">
+            <a href="#course" class="blue">Learn More</a>
+            <a href="#course" class="orange">View Courses</a>
+        </div>
+    </section> -->
+
+
+<!--------------COURSES SECTION----------------->
+
+<section id="course">
+    <h1>DELEGATION EVENT MODEL</h1>
+    <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
+
+    <div class="course-container">
+
+        <details>
+            <summary>
+              <h3>1.Java Program to Display Some Text in the Frame using Labels</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                    class Login implements ActionListener
+                    {
+	                    static JTextField name;
+	                    static JPasswordField pswd; 
+	                    static JButton view;
+	                    static JTextField text;
+	                    public static void main(String args[])
+	                    {
+		                    JFrame frame=new JFrame("Login");
+		                    frame.setSize(400,400);
+		                    frame.setLayout(null);
+		                    frame.setBackground(Color.white);
+		                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		                    JLabel l_name=new JLabel("Name :");
+		                    JLabel l_pswd=new JLabel("Password :");
+		                    l_name.setBounds(50,50,50,50);
+		                    l_pswd.setBounds(20,100,80,50);
+		                    frame.add(l_name);
+		                    frame.add(l_pswd);
+		                    name=new JTextField();
+		                    pswd=new JPasswordField();
+		                    name.setBounds(100,50,250,50);
+		                    pswd.setBounds(100,100,250,50);
+		                    frame.add(name);
+		                    frame.add(pswd);
+		                    view=new JButton("View");
+		                    view.setBounds(150,200,100,50);
+		                    frame.add(view);
+		                    text=new JTextField();
+		                    text.setBounds(0,250,400,50);
+		                    frame.add(text);
+		                    Login obj=new Login();
+		                    view.addActionListener(obj);
+		                    frame.setVisible(true);
+	                    }
+	                    public void actionPerformed(ActionEvent e)
+	                    {
+		                    String pass=String.valueOf(pswd.getPassword());
+		                    text.setText("Username = "+name.getText());
+		                    text.setText(text.getText()+" Password = "+pass);
+	                    }
+                    } 
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>2.Java Program to Create Text Area and Password Field</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                    class Login implements ActionListener
+                    {
+	                    static JTextField name;
+	                    static JPasswordField pswd; 
+	                    static JButton view;
+	                    static JTextField text;
+	                    public static void main(String args[])
+	                    {
+		                    JFrame frame=new JFrame("Login");
+		                    frame.setSize(400,400);
+		                    frame.setLayout(null);
+		                    frame.setBackground(Color.white);
+		                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		                    JLabel l_name=new JLabel("Name :");
+		                    JLabel l_pswd=new JLabel("Password :");
+		                    l_name.setBounds(50,50,50,50);
+		                    l_pswd.setBounds(20,100,80,50);
+		                    frame.add(l_name);
+		                    frame.add(l_pswd);
+		                    name=new JTextField();
+		                    pswd=new JPasswordField();
+		                    name.setBounds(100,50,250,50);
+		                    pswd.setBounds(100,100,250,50);
+		                    frame.add(name);
+		                    frame.add(pswd);
+		                    view=new JButton("View");
+		                    view.setBounds(150,200,100,50);
+		                    frame.add(view);
+		                    text=new JTextField();
+		                    text.setBounds(0,250,400,50);
+		                    frame.add(text);
+		                    Login obj=new Login();
+		                    view.addActionListener(obj);
+		                    frame.setVisible(true);
+	                    }
+	                    public void actionPerformed(ActionEvent e)
+	                    {
+		                    String pass=String.valueOf(pswd.getPassword());
+		                    text.setText("Username = "+name.getText());
+		                    text.setText(text.getText()+" Password = "+pass);
+	                    }
+                    } 
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/D-event-model/dlm2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>3.Java Program to Create a Button and Display Image in the Frame when Clicked</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                
+                public class event {
+                    static JFrame frame;
+                
+                    public static void main(String[] args) {
+                        frame = new JFrame("Button Image");
+                        frame.setSize(500, 500);
+                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame.getContentPane().setBackground(Color.white);
+                        frame.setLayout(new FlowLayout());
+                
+                        JButton button = new JButton("Display");
+                        frame.add(button);
+                
+                        button.addActionListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                ImageIcon icon = new ImageIcon("logo.jpeg");
+                                JLabel label = new JLabel(icon);
+                                frame.add(label);
+                                frame.pack();
+                                frame.setSize(500, 500);
+                            }
+                        });
+                
+                        frame.setVisible(true);
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7031delegationeventmodel3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Java Program to Create 2 Radio Buttons and Display Selected Button Label</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                class Login implements ActionListener
+                {
+	                static JTextField name;
+	                static JPasswordField pswd; 
+	                static JButton view;
+	                static JTextField text;
+	                public static void main(String args[])
+	                {
+		                JFrame frame=new JFrame("Login");
+		                frame.setSize(400,400);
+		                frame.setLayout(null);
+		                frame.setBackground(Color.white);
+		                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		                JLabel l_name=new JLabel("Name :");
+		                JLabel l_pswd=new JLabel("Password :");
+		                l_name.setBounds(50,50,50,50);
+		                l_pswd.setBounds(20,100,80,50);
+		                frame.add(l_name);
+		                frame.add(l_pswd);
+		                name=new JTextField();
+		                pswd=new JPasswordField();
+		                name.setBounds(100,50,250,50);
+		                pswd.setBounds(100,100,250,50);
+		                frame.add(name);
+		                frame.add(pswd);
+		                view=new JButton("View");
+		                view.setBounds(150,200,100,50);
+		                frame.add(view);
+		                text=new JTextField();
+		                text.setBounds(0,250,400,50);
+		                frame.add(text);
+		                Login obj=new Login();
+		                view.addActionListener(obj);
+		                frame.setVisible(true);
+	                }
+	                public void actionPerformed(ActionEvent e)
+	                {
+		                String pass=String.valueOf(pswd.getPassword());
+		                text.setText("Username = "+name.getText());
+		                text.setText(text.getText()+" Password = "+pass);
+	                }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7098DelegationEventModel4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.Java Program to Handle KeyBoardEvent</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>   
+                // Java Program to Handle KeyBoardEvent
+                import java.awt.*;
+                import java.awt.event.*;
+
+                class Main implements KeyListener {
+                    static Frame frame;
+                    static TextField tf1;
+                    static TextField tf2;
+
+                    // Driver function
+                        public static void main(String args[]) {
+                        frame = new Frame("Keyboard Event");
+                        frame.setSize(500, 500);
+                        frame.setLayout(null);
+
+                        tf1 = new TextField();
+                        tf1.setBounds(150, 100, 500, 50);
+
+                        tf2 = new TextField();
+                        tf2.setBounds(140, 400, 500, 50);
+
+                        Main obj = new Main();
+
+                        tf2.addKeyListener(obj);
+                        frame.addWindowListener(new WindowAdapter() {
+                            public void windowClosing(WindowEvent w) {
+                                frame.dispose();
+                            }
+                        });
+                        frame.setVisible(true);
+                        frame.add(tf1);
+                        frame.add(tf2);
+                            }
+                        public void keyReleased(KeyEvent e) {
+                        tf1.setText("");
+                        tf1.setText("Key Released : " + e.getKeyCode());        
+                        System.out.println("Key Released");
+                        }
+
+                        // function to display the unicode of key pressed and the character if it is a letter or a digit
+                        public void keyPressed(KeyEvent e) {
+                        tf1.setText("");
+                        tf1.setText("Key Pressed : " + e.getKeyCode());
+                        System.out.println("Key Pressed");
+                            }
+                        // function to display the character of the key typed
+                        public void keyTyped(KeyEvent e) {
+                        tf1.setText("");
+                        tf1.setText("Key Typed : " + e.getKeyChar());
+                        System.out.println("Key Typed");
+                            }
+                        }
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7002delegationeventmodel5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6.Java Program to Handle MouseEvent</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import java.awt.*;
+                import java.awt.event.*;     
+                class MouseL extends Frame {
+                    Button b1 = new Button("Ok");
+                    Button b2 = new Button("Cancel");
+                
+                    MouseL() {
+                        this.setVisible(true);
+                        this.setSize(300, 450);
+                        setLayout(new FlowLayout());
+                        add(b1);
+                        add(b2);
+                        setBackground(Color.gray);
+                        b1.addMouseListener(new InnerMouseL());
+                        b2.addMouseListener(new InnerMouseL());
+                        addWindowListener(new win());
+                        // pack();
+                    }               
+                    public static void main(String[] args) {
+                        new MouseL();
+                    }
+                }              
+                class win extends WindowAdapter
+                {
+                    public void windowClosing(java.awt.event.WindowEvent w)
+                    {
+                        System.exit(10);
+                    }
+                }  
+                class InnerMouseL extends MouseAdapter {
+                    public void mouseClicked(MouseEvent e) {
+                        System.out.println(e.getClickCount());
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/dlm6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Java Program to Get and Set State and Get Label of a Check Box</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                    lass Check_Box implements ActionListener
+                    {
+	                static JTextField text;
+	                static Checkbox checkbox;
+	
+	                public static void main(String args[])
+	                {
+		            //Create a frame
+		            JFrame frame=new JFrame("Check Box");
+		            frame.setSize(500,500);
+		            frame.setBackground(Color.white);
+		            frame.setLayout(null);
+		            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		            text=new JTextField();
+		            text.setBounds(0,0,500,50);
+		            frame.add(text);
+		
+		            JButton get_st=new JButton("Get State");
+		            JButton set_st=new JButton("Set State");
+		            JButton get_lb=new JButton("Get Label");
+		            get_st.setBounds(50,80,100,50);
+		            set_st.setBounds(180,80,100,50);
+		            get_lb.setBounds(310,80,100,50);
+		            frame.add(get_st);
+		            frame.add(set_st);
+		            frame.add(get_lb);
+		
+		            Check_Box obj=new Check_Box();
+		
+		            get_st.addActionListener(obj);
+		            set_st.addActionListener(obj);
+		            get_lb.addActionListener(obj);
+		
+		            checkbox=new Checkbox("Sample Checkbox");
+		            checkbox.setBounds(150,200,200,80);
+		            frame.add(checkbox);
+		            //Display the frame
+		            frame.setVisible(true);
+	                    }
+	                public void actionPerformed(ActionEvent e)
+	                    {
+		            String option=e.getActionCommand();
+		            if(option.equals("Get State"))
+			            get_State();
+		            else if(option.equals("Set State"))
+			            set_State();
+		            else
+			            get_Label();
+	                }
+	
+	                    public void get_State()
+	                    {
+		                boolean state=checkbox.getState();
+		                if(state==true)
+			                text.setText("State of Checkbox : Checked");
+		                else
+			            text.setText("State of Checkbox : Un-Checked");
+	                }
+	
+	                    public void set_State()
+	                    {
+                            text.setText("State of Checkbox changed from ");
+		                    boolean state=checkbox.getState();
+		                if(state==true)
+		                        {
+			                    checkbox.setState(false);
+			                    text.setText(text.getText()+"Checked to Un-Checked");
+		                        }
+		                        else
+		                            {
+			                        checkbox.setState(true);
+			                            text.setText(text.getText()+"Un-Checked to Checked");
+                                    }
+	                            }
+	
+	                            public void get_Label()
+	                            {
+		                            text.setText("Label of the checkbox is : ");
+                                    text.setText(text.getText()+checkbox.getLabel());	
+	                            }
+                        }
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7098DelegationEventModel7.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.Java Program to Create Check Boxes and Radio Buttons</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                class Button_Checkbox implements ActionListener,ItemListener
+                    {
+                        static JFrame frame;
+                        static JLabel text1,text2;
+                        static JCheckBox[] checkbox;
+                        static JRadioButton[] button;
+    
+                        public static void main(String args[])
+                        {   
+	                    frame=new JFrame("Buttons & Checkboxes");
+	                    frame.setSize(600,600);
+	                    frame.setLayout(null);
+	                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	                frame.getContentPane().setBackground(Color.white);
+	
+	                text1=new JLabel("");
+	                text1.setBounds(0,450,600,50);
+	                frame.add(text1);
+	                text2=new JLabel("");
+	                text2.setBounds(0,500,600,50);
+	                frame.add(text2);
+	
+	                Button_Checkbox obj=new Button_Checkbox();
+	
+	                button=new JRadioButton[3];
+	                for(int i=0;i<3;i++)
+	                    {
+		                    [i]=new JRadioButton("Button "+(i+1));
+		                    button[i].setBounds(200,i*80,100,50);
+		                    frame.add(button[i]);
+		                    button[i].addActionListener(obj);
+	                        }
+	
+	                checkbox=new JCheckBox[3];
+	                for(int i=0;i<3;i++)
+	                {
+                    checkbox[i]=new JCheckBox("Checkbox"+(i+1));
+                    checkbox[i].setBounds(220,(240)+i*80,100,50);
+		            frame.add(checkbox[i]);
+		            checkbox[i].addItemListener(obj);
+                    }
+	                frame.setVisible(true);
+                        } 
+                    public void actionPerformed(ActionEvent e)
+                    {
+                    String s="";
+	                for(int i=0;i<3;i++)
+	                    {
+	                 if(button[i].isSelected())
+	                    s=s+" "+button[i].getText();
+	                    }
+	                text1.setText("Button(s) Selected : "+" "+s);
+                        }
+                public void itemStateChanged(ItemEvent e)
+                    {
+                        String s="";
+	                for(int i=0;i<3;i++)
+	                {	
+	                    if(checkbox[i].isSelected())
+	                        s=s+" "+checkbox[i].getText();				
+	                }
+	                text2.setText("Checkbox(s) Selected : "+s);	
+                    }
+                } 
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7098DelegationEventModel8.png alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Java Program to Create and Switch between Frames using Buttons</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10.Java Program to Create and Set Border to Push Buttons</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>11.Java Program to Create a List Box to Select Multiple Items and Display it in the Frame</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>12.Java Program to Display a Message in a New Frame</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.event.*;
+                import java.awt.*;
+                class Message implements ActionListener
+                {
+                    public static void main(String args[])
+                    {
+                    JFrame frame = new JFrame("Original Frame");
+                    frame.setSize(300,300);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                  
+                    Message obj = new Message();                   
+                    JButton button = new JButton("View Message");
+                    frame.add(button);
+                    button.addActionListener(obj);                    
+                    frame.setVisible(true);
+                    }                   
+                    public void actionPerformed(ActionEvent e)
+                    {                   
+                    JFrame sub_frame = new JFrame("Sub Frame");
+                    sub_frame.setSize(200,200);             
+                    JLabel label = new JLabel("!!! Hello !!!");
+                    sub_frame.add(label);
+                    sub_frame.setVisible(true);
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7098DelegationEventModel12.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>13.Java Program to Close the Frame using WindowAdapter Class</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                class Window_Adapter extends WindowAdapter
+                {
+                    static JFrame frame;
+                    public static void main(String args[])
+                    {
+                        frame=new JFrame("Window Adapter Class");
+                        frame.setBackground(Color.white);
+                        frame.setSize(500,500);
+                        Window_Adapter obj=new Window_Adapter();
+                        frame.addWindowListener(obj);
+                        frame.setVisible(true);
+                    }
+                    public void windowClosing(WindowEvent e)
+                    {   
+                        System.out.println("Status of frame : Closing");
+                        windowClosed(e);
+                    }
+                    public void windowClosed(WindowEvent e)
+                    {
+                        frame.dispose();
+                    }
+                    public void windowIconified(WindowEvent e)
+                    {
+                        System.out.println("Status of frame : Iconified");
+                    }
+                    public void windowDeiconified(WindowEvent e)
+                    {
+                        System.out.println("Status of frame : Deiconfied");
+                    }
+                    public void windowActivated(WindowEvent e)
+                    {
+                        System.out.println("Status of frame : Activated");
+                    }
+                    public void windowDeactivated(WindowEvent e)
+                    {
+                        System.out.println("Status of frame : Deactivated");
+                    }
+                    public void windowOpened(WindowEvent e)
+                    {
+                        System.out.println("Status of frame : Opened");
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7098DelegationEventModel13.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>14.Java Program to Check Which Fonts are Available in a Local System</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import java.awt.GraphicsEnvironment;
+                class Fonts_Available
+                {	
+                    public static void main(String[] args)
+                    {		
+                        GraphicsEnvironment local_env; 
+                                local_env= GraphicsEnvironment.getLocalGraphicsEnvironment();		
+                        String allfonts[] = local_env.getAvailableFontFamilyNames();		
+                        for(int i=0;i<allfonts.length;i++)
+                            System.out.println(allfonts[i]);
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src="../javapro/Delegation-event-model/7098DelegationEventModel14.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>15. Java Program to Display Text in Different Fonts</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>16. Java Program to Change Frame Background Color as Cyan</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>17. Java Program to Change the Applet Background Colour when Button Clicked</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>18. Java Program to Display Several Dots on the Screen Continuously</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+                import javax.swing.*;
+                import java.awt.*;
+                import java.lang.Math;
+                import java.awt.Graphics.*;
+                class dispdots {
+                  //Driver function
+                    public static void main(String args[]) {
+                    //Create a frame
+                    JFrame frame = new JFrame("Infinite Dots");
+                    frame.setSize(500, 500);
+                    frame.getContentPane().setBackground(Color.black);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setVisible(true);
+                    /*Draw the dots on frame continuously using method paint 
+                                until the user closes the frame*/
+                    while (frame.isVisible()) {
+                        paint(frame.getGraphics());
+                        try {
+                        //Delay by 1ms
+                        Thread.sleep(1);
+                        } catch (InterruptedException ie) {}
+                        }
+                    }
+                    //function to draw a dot on the frame
+                    public static void paint(Graphics g) {
+                    g.setColor(Color.green);
+                    int x = (int)(Math.random() * 1000) % 500;
+                    int y = (int)(Math.random() * 1000) % 500;
+                    g.drawLine(x, y, x, y);
+                    }
+                }
+            </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>19. Java Program to Validate the TextField for only entering numbers using KeyListener</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>20. Java Program to Validate the TextField for only entering email id using KeyAdapter</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+            <code>
+            
+                </code>
+            </pre>
+
+            <p><b>Output: </b></p>
+            <img src=".." alt="">  
+            </div>
+        </details> 
+    
+    </div>
+
+</section>
+
+<!-------------------footerrrr------------------------>
+<footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+        <li><a href="#">Manage Reputation</a></li>
+        <li><a href="#">Manage Website</a></li>
+        <li><a href="#">Power Tool</a></li>
+        <li><a href="#">Marketing Services</a></li>
+        </div>
+    <div class="footer-col">
+        <h3>Courses</h3>
+        <li><a href="#course">Html5</a></li>
+        <li><a href="#course">CSS3</a></li>
+        <li><a href="#course">JavaScript</a></li>
+        <li><a href="#course">DBMS</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li><a href="#">Manage Reputation</a></li>
+            <li><a href="#">Power Tool</a></li>
+            <li><a href="#">Manage Website</a></li>
+            <li><a href="#">Marketing Services</a></li>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Get all the latest updates to your email, join now</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Your Email Address">
+                    <a href="#" class="yellow">SUBSCRIBE</a>
+                </div>
+                </div>
+
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer>
+<script src="../js/hamburger.js"></script>
+<script src="js/script.js"></script>
+<script src="js/active-tab.js"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>
