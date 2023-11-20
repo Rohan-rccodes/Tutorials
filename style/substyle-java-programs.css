@@ -219,6 +219,11 @@ details  h3
   list-style: revert;
 
 }
+#p6
+{
+  width: 60px;
+  height: 150px;
+}
 .code-box 
 { 
   padding: 1rem 4rem;

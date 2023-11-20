@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title> Home - RC Codes </title>
+    <title>RC-Codes JDBC </title>
 
      <!--------FAV-ICONS---------->
     <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
@@ -33,7 +33,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <!-- <li><a href="#features">Features</a></li> -->
                 <li  class="tutdrop-btn"><a href="../Tutorials/java-tutorials.html">Tutorials</a></li>
-                <li><a href="#course">Programs</a></li>
+                <li><a href="../Tutorials/Java-Programs.html">Programs</a></li>
                 <li><a href="https://github.com/rohan-rccodes">About-Me</a></li>
             </ul>
             <img id="menu-btn" src="../images/menu.png" alt="">
@@ -58,14 +58,14 @@
 <!--------------COURSES SECTION----------------->
 
 <section id="course">
-    <h1>1D ARRAYS</h1>
+    <h1>DATABASE CONNECTIVITY</h1>
     <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
 
     <div class="course-container">
 
         <details>
             <summary>
-              <h3>1. Program to copy all elements of one array into another array.</h3>
+              <h3>1. Create the connection with MySQL Database and manage the driver.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -73,41 +73,42 @@
                 <p><b>Program:</b></p>
             <pre>
             <code>
-            class OnearrTOAnotherArray 
-                {
-	            public static void main(String[] args) 
-	            {
-		            int arr1[] = new int[] {1,2,3 ,4 ,5};
-		            int arr2[] = new int[arr1.length];
-		            System.out.println("Elements of First array: ");
-	                for (int i = 0; i < arr1.length; i++) 
-	            {
-	                System.out.print(arr1[i] + " ");
-	            }
-	                //copying the first array to the second array
-	                for (int i = 0; i < arr1.length; i++)
-	            {
-	                arr2[i] = arr1[i];
-	            }
-	                System.out.println();
-	                System.out.println("Elements of Second array: ");
-	                for (int i = 0; i < arr2.length; i++) 
-	            {
-	                System.out.print(arr2[i] + " ");
-	            }
-	        }
-        }
-                </code>
+                import java.sql.Connection;
+                import java.sql.DriverManager;
+                import java.sql.SQLException;
+                
+                class MySQLConnectionExample {
+                    public static void main(String[] args) {
+                        String url = "jdbc:mysql://localhost:3306/test";
+                        String user = "root";
+                        String password = "";
+                
+                        try {
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+                            Connection connection = DriverManager.getConnection(url, user, password);
+                
+                            if (connection != null) {
+                                System.out.println("Connected to the MySQL database");
+                                connection.close();
+                            }
+                        } catch (ClassNotFoundException e) {
+                            System.err.println("MySQL JDBC driver not found");
+                        } catch (SQLException e) {
+                            System.err.println("Connection to the database failed: " + e.getMessage());
+                        }
+                    }
+                }
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7011onedarray1.png" alt="">  
+            <img src="../javapro/jdbc/1.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>2.Program to find the frequency of each element in the array</h3>
+              <h3>2.Create the table in the database from Java API.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -115,151 +116,50 @@
                 <p><b>Program:</b></p>
             <pre>
                 <code>
-                    import java.util.HashMap;
-                    import java.util.Map;
-
-                    class FrequencyCounter
-                    {
+                    class DataDefination {
                         public static void main(String[] args) {
-       
-                        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 5, 4, 6, 7, 6, 8, 9, 9};
-        
-                        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        
-                        for (int element : array) {
-           
-                        if (frequencyMap.containsKey(element)) {
-                        frequencyMap.put(element, frequencyMap.get(element) + 1);
-                        } else {
-               
-                        frequencyMap.put(element, 1);
-                        }
-                    }
-                        System.out.println("Element frequencies:");
-                        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
-                        System.out.println(entry.getKey() + ": " + entry.getValue());
-                        }
-                    }
-                }  
-                </code>
-            </pre>
+                            try {                    
+                                Class.forName("com.mysql.cj.jdbc.Driver");
 
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/70711Darray2.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-                <h3>3. Program to left rotate the elements of an array.</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-                <p><b>Program:</b></p>
-            <pre>
-                <code>
-                    /*Program to left rotate the elements of an array*/
-
-                    class RotateLeft {  
-                        public static void main(String[] args) {  
-                          
-                            int [] arr = new int [] {1, 2, 3, 4, 5}; 
-                              //n determine the number of times an array should be rotated 
-                            int n = 3;  
-                            //Displays original array  
-                            System.out.println("Original array: ");  
-                            for (int i = 0; i < arr.length; i++) {  
-                                System.out.print(arr[i] + " ");  
-                            }  
-                              
-                            for(int i = 0; i < n; i++){  
-                                int j, first;  
-                                //Stores the first element of the array  
-                                first = arr[0];  
-                                for(j = 0; j < arr.length-1; j++){  
-                                    //Shift element of array by one  
-                                    arr[j] = arr[j+1];  
-                                }  
-                                //First element of array will be added to the end  
-                                arr[j] = first;  
-                            }  
-                            System.out.println();  
-                            //Displays resulting array after rotation  
-                            System.out.println("Array after left rotation: ");  
-                            for(int i = 0; i< arr.length; i++){  
-                                System.out.print(arr[i] + " ");  
-                            }  
-                        }  
-                    }  
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7007_1dArray3.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>4. Program to print the duplicate elements of an array.</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>5. Program to print the elements of an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-                <p><b>Program:</b></p>
-            <pre>
-                <code>
-                    class PrintArrayElements {
-                        public static void main(String[] args) {
-                            // Create an array of integers
-                            int[] numbers = {1, 2, 3, 4, 5};
+                                java.sql.Connection connect = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/test",
+                                        "root", "");
                     
-                            // Print the elements of the array
-                            System.out.println("Elements of the array:");
-                            for (int i = 0; i < numbers.length; i++) {
-                                System.out.println(numbers[i]);
+                                if (connect.isClosed()) {
+                                    System.out.println(" Your Connection is Closed!");
+                                    System.exit(0);
+                                }                              
+                                System.out.println(" Your Connection is Establised ");
+                                java.sql.Statement state = connect.createStatement();
+                                String create_table_query = "CREATE Table mytable3 (id int)";
+                    
+                                Boolean result = state.execute(create_table_query);
+                    
+                                if (result) {
+                                    System.out.println("Table created!");
+                                } 
+                    
+                                connect.close();
+                    
+                                if (connect.isClosed())
+                                    System.out.println(" Successfully Connection is Closed!");
+                            } catch (ClassNotFoundException error) {
+                                System.out.print(error.getMessage());
+                            } catch (java.sql.SQLException error) {
+                                System.out.print(error.getMessage());
                             }
                         }
                     }
-                    
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7073_1Darray5.png" alt="">  
+            <img src="../javapro/jdbc/jdbc2.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>6. Program to print the elements of an array in reverse order</h3>
+                <h3>3.Insert the row in the table in the database from Java API.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -267,12 +167,127 @@
                 <p><b>Program:</b></p>
             <pre>
                 <code>
-                    class ReverseArray {
+                import java.sql.*;
+                    class employee{
+                    public static void main(String s[]){
+                    
+                    try{
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","");
+                    
+                    Statement s1=con.createStatement();
+                    int x= s1.executeUpdate("insert into users values(8,'test','something@gmail.com')");
+                    if(x==1){
+                    System.out.println("Row inserted successfully");}
+                    }catch(ClassNotFoundException e){System.out.println(e);}
+                    catch(SQLException e){System.out.println(e);}
+                    }
+                }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/jdbc/3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4.Update the row in the table in the database from Java API.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    import java.sql.Connection;
+                    import java.sql.DriverManager;
+                    import java.sql.SQLException;
+                    import java.sql.Statement;
+                    
+                    class DatabaseUpdateWithStatement {
                         public static void main(String[] args) {
-                            int[] array = {1, 2, 3, 4, 5};
+                            String url = "jdbc:mysql://localhost:3306/mydb";
+                            String username = "root";
+                            String password = "";
+                    
+                            // SQL update statement
+                            String updateSql = "UPDATE users SET id = 2 WHERE id = 5";
+                    
+                            try {
+                                Connection connection = DriverManager.getConnection(url, username, password);
+                                Statement statement = connection.createStatement();
+                                int rowsAffected = statement.executeUpdate(updateSql);
+                    
+                                if (rowsAffected > 0) {
+                                    System.out.println("Row updated successfully.");
+                                } else {
+                                    System.out.println("No rows updated.");
+                                }
+                            } catch (SQLException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/jdbc/jdbc4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.Delete the row in the table in the database from Java API.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.sql.Connection;
+                    import java.sql.DriverManager;
+                    import java.sql.Statement;
+                    import java.sql.SQLException;
+                    import java.sql.ResultSet;
+                    
+                    class Main {
+                        private static Connection con;
+                        private static int rows_affected;
+                        public static void main(String[] args) {
                             
-                            for (int i = array.length - 1; i >= 0; i--) {
-                                System.out.println(array[i]);
+                            try{
+                                Class.forName("com.mysql.cj.jdbc.Driver");
+                                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
+                                
+                                Statement st = con.createStatement(ResultSet.TYPE_FORWARD_ONLY,ResultSet.CONCUR_UPDATABLE);
+                                String sql = "DELETE FROM students";
+                                
+                                rows_affected = st.executeUpdate(sql);
+                                System.out.println("Numbers of rows deleted : "+rows_affected);
+                                
+                                //telling user that he is deleting from an empty table.
+                                ResultSet rs =  st.executeQuery("SELECT * FROM students");
+                                if(!rs.next())
+                                System.out.println("--------   Hey User, Your table is empty.  --------");
+                            }
+                            catch(ClassNotFoundException c)
+                            {
+                                c.printStackTrace();
+                            }
+                            catch(SQLException s)
+                            {
+                                s.printStackTrace();
+                            }
+                            if(con!=null) {
+                                try {
+                                    con.close();
+                                }
+                                catch(SQLException sql_e) {
+                                    sql_e.printStackTrace();
+                                }
                             }
                         }
                     }
@@ -280,449 +295,282 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7059onedarray6.png" alt="">  
+            <img src="../javapro/jdbc/jdbc5.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>7. Program to print the elements of an array present on even position</h3>
+              <h3>6.Select multiple rows from the database table in Java API and show the result on the screen.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    import java.sql.*;
+                    import java.util.Scanner;
+                    
+                    class DatabaseManager {
+                        public static void main(String[] args) throws ClassNotFoundException {
+                           Class.forName("com.mysql.cj.jdbc.Driver");
+                            try {
+                                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/chatTest", "root", "");
+                                System.out.println("Connection successfully");
+                                Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                                ResultSet result = st.executeQuery("select * from chats");
+                    
+                                try{
+                                    while(result.next()){
+                                        System.out.println("Id = "+result.getInt("id")+ ", username = " + result.getString("username") + ", message = " + result.getString("message"));
+                                    }
+                                } catch(NumberFormatException e){
+                                    System.out.println("Exception: " + e.getMessage());
+                                }
+                                connection.close();
+                            } catch (SQLException e) {
+                                System.out.println("SQL Exception: " + e.getMessage());
+                            } catch (Exception e){
+                                System.out.println("Exception: " + e.getMessage());
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/jdbc/6.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Create a Scrollable Readonly Resultset and ask the row number from the user and display that row on the screen.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
             <div class="code-box">
             <pre>
                 <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
+                    import java.sql.*;
+                    import java.util.Scanner;
+                    
+                    class DatabaseManager {
+                        public static void main(String[] args) throws ClassNotFoundException {
+                           Class.forName("com.mysql.cj.jdbc.Driver");
+                            try {
+                                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/chatTest", "root", "");
+                                System.out.println("Connection successfully");
+                                Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                                ResultSet result = st.executeQuery("select * from chats");
+                    
+                                try{
+                                    Scanner scanner = new Scanner(System.in);
+                                    System.out.print("Enter row number : ");
+                                    int row = scanner.nextInt();
+                                    result.absolute(row);
+                                    System.out.println("Id = "+result.getInt("id")+ ", username = " + result.getString("username") + ", message = " + result.getString("message"));
+                                    scanner.close();
+                                } catch(NumberFormatException e){
+                                    System.out.println("Exception: " + e.getMessage());
+                                }
+                                connection.close();
+                            } catch (SQLException e) {
+                                System.out.println("SQL Exception: " + e.getMessage());
+                            } catch (Exception e){
+                                System.out.println("Exception: " + e.getMessage());
+                            }
+                        }
+                    }
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/jdbc/Jdbc7.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>8. Program to print the elements of an array present on odd position</h3>
+              <h3>8.Create a Scrollable Updateable Resultset and insert a new row, update an existing row and delete the row from Resultset and also the changes should be made to the database also. The values should be inserted, updated and deleted by the user only.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
             <div class="code-box">
             <pre>
                 <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
+                    import java.sql.*;
+                    import java.util.Scanner;
+                    
+                    class ScrollableResultSetExample {
+                        public static void main(String[] args) {
+                            String url = "jdbc:mysql://localhost:3306/chatTest";
+                            String username = "root";
+                            String password = "";
+                    
+                            try {
+                                Connection connection = DriverManager.getConnection(url, username, password);
+                                Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+                    
+                                // Create a ResultSet that is scrollable and updatable
+                                ResultSet resultSet = statement.executeQuery("SELECT * FROM chats");
+                    
+                                System.out.println("All rows before operations :");
+                                while (resultSet.next()) {
+                                    System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ", message = " + resultSet.getString("message"));
+                                }
+                    
+                                Scanner scanner = new Scanner(System.in);
+                    
+                                // Insert a new row
+                                System.out.println("Enter values for new row:");
+                                System.out.print("Id: ");
+                                int id = scanner.nextInt();
+                                scanner.nextLine();
+                                System.out.print("Username: ");
+                                String usernameValue = scanner.nextLine();
+                                System.out.print("Message: ");
+                                String message = scanner.nextLine();
+                    
+                                resultSet.moveToInsertRow();
+                                resultSet.updateInt("id", id);
+                                resultSet.updateString("username", usernameValue);
+                                resultSet.updateString("message", message);
+                                resultSet.insertRow();
+                    
+                                // Update an existing row
+                                System.out.println("Enter values for row to update:");
+                                System.out.print("Id: ");
+                                int updateId = scanner.nextInt();
+                                scanner.nextLine();
+                                System.out.print("New message: ");
+                                String newMessage = scanner.nextLine();
+                    
+                                resultSet.beforeFirst();
+                                while (resultSet.next()) {
+                                    if (resultSet.getInt("id") == updateId) {
+                                        resultSet.updateString("message", newMessage);
+                                        resultSet.updateRow();
+                                        break;
+                                    }
+                                }
+                    
+                                // Delete a row
+                                System.out.println("Enter id of row to delete:");
+                                int deleteId = scanner.nextInt();
+                                scanner.nextLine();
+                    
+                                resultSet.beforeFirst();
+                                while (resultSet.next()) {
+                                    if (resultSet.getInt("id") == deleteId) {
+                                        resultSet.deleteRow();
+                                        break;
+                                    }
+                                }
+                    
+                                scanner.close();
+                    
+                                System.out.println("All rows after operations :");
+                                resultSet.beforeFirst();
+                                while (resultSet.next()) {
+                                    System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ", message = " + resultSet.getString("message"));
+                                }
+                    
+                            } catch (SQLException e) {
+                                System.out.println("SQLException: " + e.getMessage());
+                            } catch (Exception e){
+                                System.out.println("Exception: " + e.getMessage());
+                            }
+                        }
+                    }
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/jdbc/Jdbc8.png alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>9. Program to print the largest element in an array</h3>
+              <h3>9.Create a Java Program to show, insert, update, delete of the table in Java API through PreparedStatement</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
             <div class="code-box">
             <pre>
                 <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
+                    // Program to insert, delete, update in table using PreparedStatement.
+                    import java.sql.*;
+                    import java.util.Scanner;
+                    
+                    class Database{
+                        Connection c;
+                        PreparedStatement s;
+                        public Database(String url,String uname,String pass) throws SQLException,ClassNotFoundException{
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                             c=DriverManager.getConnection(url,uname,pass);
+                        }
+                         void insert() throws SQLException {
+                        s=c.prepareStatement("insert into users values(?,?,?)");
+                        s.setInt(1,13);
+                        s.setString(2,"Ankush");
+                        s.setString(3,"Ankush@gmail.com");
+                    System.out.println(s.executeUpdate() +"Row affected");
+                       }
+                         void delete() throws SQLException {
+                            s=c.prepareStatement("delete from users where id=?");
+                            s.setInt(1,8);
+                    System.out.println(s.executeUpdate() +"Row affected");
+                            }
+                    
+                         void update() throws SQLException {
+                           s=c.prepareStatement("update users set username=? where id=?");
+                           s.setString(1,"Srk");
+                           s.setInt(2,1);
+                           System.out.println(s.executeUpdate() +"Row affected");
+                            }
+                    }
+                    class Db{
+                        public static void main(String str [])throws SQLException,ClassNotFoundException,java.io.IOException{
+                            String url = "jdbc:mysql://localhost:3306/mydb";
+                            String username = "root";
+                            String password = "";
+                            Database d=new Database(url,username,password);
+                            int c = 5;
+                            Scanner sc=new Scanner(System.in);
+                            while(c!=4){
+                                System.out.println(" Press 1 for insert. \n Press 2 for delete \n Press 3 for update \n Press 4 for Exit");
+                                c=sc.nextInt();
+                                switch(c){
+                                  case 1:
+                                  d.insert();
+                                  break;
+                                  
+                                  case 2:
+                                  d.delete();
+                                  break;
+                                  
+                                  case 3:
+                                  d.update();
+                                  break;
+                                  case 4:
+                                  System.out.println("Exit Successfully");
+                                  break;
+                                  default :
+                                  System.out.println("Choose between 1-4");
+                                  break;
+                                }
+                            }
+                        }
+                    }
+                    
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>10. Program to print the smallest element in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>11. Program to print the number of elements present in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>12. Program to print the sum of all the items of the array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>13. Program to right rotate the elements of an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>14. Program to sort the elements of an array in ascending order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>15. Program to sort the elements of an array in descending order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>16. Program to Find 3rd Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>17. Program to Find 2nd Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>18. Program to Find Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>19. to Program Find 2nd Smallest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>20. Program to Find Smallest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>21. Program to Remove Duplicate Element in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>22. Program to Print Odd and Even Numbers from an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>23. How to Sort an Array in Java</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/jdbc/jdbc9.png" alt="">  
             </div>
         </details>
 

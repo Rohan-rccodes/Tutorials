@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title> Home - RC Codes </title>
+    <title>RC-Codes Interfaces</title>
 
      <!--------FAV-ICONS---------->
     <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
@@ -58,14 +58,14 @@
 <!--------------COURSES SECTION----------------->
 
 <section id="course">
-    <h1>1D ARRAYS</h1>
+    <h1>INTERFACES</h1>
     <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
 
     <div class="course-container">
 
         <details>
             <summary>
-              <h3>1. Program to copy all elements of one array into another array.</h3>
+              <h3>1.Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. Implement the getArea() method for each of the three classes.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -73,41 +73,79 @@
                 <p><b>Program:</b></p>
             <pre>
             <code>
-            class OnearrTOAnotherArray 
-                {
-	            public static void main(String[] args) 
-	            {
-		            int arr1[] = new int[] {1,2,3 ,4 ,5};
-		            int arr2[] = new int[arr1.length];
-		            System.out.println("Elements of First array: ");
-	                for (int i = 0; i < arr1.length; i++) 
-	            {
-	                System.out.print(arr1[i] + " ");
-	            }
-	                //copying the first array to the second array
-	                for (int i = 0; i < arr1.length; i++)
-	            {
-	                arr2[i] = arr1[i];
-	            }
-	                System.out.println();
-	                System.out.println("Elements of Second array: ");
-	                for (int i = 0; i < arr2.length; i++) 
-	            {
-	                System.out.print(arr2[i] + " ");
-	            }
-	        }
-        }
-                </code>
+                // Shape interface
+                interface Shape {
+                    double getArea();
+                }
+                // Rectangle class implementing Shape
+                class Rectangle implements Shape {
+                    private double length;
+                    private double width;
+                
+                    public Rectangle(double length, double width) {
+                        this.length = length;
+                        this.width = width;
+                    }
+                
+                    @Override
+                    public double getArea() {
+                        return length * width;
+                    }
+                }
+                // Circle class implementing Shape
+                class Circle implements Shape {
+                    private double radius;
+                
+                    public Circle(double radius) {
+                        this.radius = radius;
+                    }
+                    @Override
+                    public double getArea() {
+                        return Math.PI * radius * radius;
+                    }
+                }
+                // Triangle class implementing Shape
+                class Triangle implements Shape {
+                    private double base;
+                    private double height;
+                
+                    public Triangle(double base, double height) {
+                        this.base = base;
+                        this.height = height;
+                    }
+                
+                    @Override
+                    public double getArea() {
+                        return 0.5 * base * height;
+                    }
+                }
+                // Main class to test the Shape interface and its implementations
+                 class ShapeTest {
+                    public static void main(String[] args) {
+                        // Test Rectangle
+                        Rectangle rectangle = new Rectangle(5, 8);
+                        System.out.println("Area of Rectangle: " + rectangle.getArea());
+                
+                        // Test Circle
+                        Circle circle = new Circle(4);
+                        System.out.println("Area of Circle: " + circle.getArea());
+                
+                        // Test Triangle
+                        Triangle triangle = new Triangle(6, 10);
+                        System.out.println("Area of Triangle: " + triangle.getArea());
+                    }
+                }
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7011onedarray1.png" alt="">  
+            <img src="../javapro/interfaces/j1.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>2.Program to find the frequency of each element in the array</h3>
+              <h3>2.Write a Java program to create a Animal interface with a method called bark() that takes no arguments and returns void. Create a Dog class that implements Animal and overrides speak() to print "Dog is barking".</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -115,616 +153,944 @@
                 <p><b>Program:</b></p>
             <pre>
                 <code>
-                    import java.util.HashMap;
-                    import java.util.Map;
+                    interface Animal {
+                        void bark();
+                    }
+                    class Dog implements Animal {
+                        
+                        public void bark() {
+                            System.out.println("DOG IS BARKING");
+                        }
+                    }
+                    class demo {
+                        public static void main(String[] args) { 
+                            
+                            Dog dog = new Dog();
+                            dog.bark();
+                        }
+                    }
+                </code>
+            </pre>
 
-                    class FrequencyCounter
-                    {
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j2.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>3.Write a Java program to create an interface Flyable with a method called fly_obj(). Create three classes Spacecraft, Airplane, and Helicopter that implement the Flyable interface. Implement the fly_obj() method for each of the three classes.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    // Flyable interface
+                    interface Flyable {
+                        void fly_obj();
+                    }
+                    // Spacecraft class implementing Flyable interface
+                    class Spacecraft implements Flyable {
+                        @Override
+                        public void fly_obj() {
+                            System.out.println("Spacecraft is flying in space.");
+                        }
+                    }
+                    // Airplane class implementing Flyable interface
+                    class Airplane implements Flyable {
+                        @Override
+                        public void fly_obj() {
+                            System.out.println("Airplane is flying in the sky.");
+                        }
+                    }
+                    // Helicopter class implementing Flyable interface
+                    class Helicopter implements Flyable {
+                        @Override
+                        public void fly_obj() {
+                            System.out.println("Helicopter is flying in the air.");
+                        }
+                    }
+                    class fly{
+                        public static void main(String[] args) {
+                            // Create objects of each class and call fly_obj() method
+                            Spacecraft sc = new Spacecraft();
+                            Airplane ap = new Airplane();
+                            Helicopter hc = new Helicopter();
+                        // Call fly_obj() method for each object
+                            sc.fly_obj();
+                            ap.fly_obj();
+                            hc.fly_obj();
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j3.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>4. Write a Java programming to create a banking system with three classes - Bank, Account, SavingsAccount, and CurrentAccount. The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and CurrentAccount should implement the Account interface and have their own unique methods.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    // A class to represent a bank
+                    class Bank {
+                      // A list of accounts in the bank
+                      private java.util.List<Account> accounts;
+                    
+                      // A constructor to initialize the list
+                      public Bank() {
+                        accounts = new java.util.ArrayList<Account>();
+                      }
+                    
+                      // A method to add an account to the bank
+                      public void addAccount(Account account) {
+                        accounts.add(account);
+                      }
+                    
+                      // A method to display the details of all accounts
+                      public void displayAccounts() {
+                        for (Account account : accounts) {
+                          System.out.println(account);
+                        }
+                      }
+                    }
+                    
+                    // An interface to represent an account
+                    interface Account {
+                      // A method to deposit money into the account
+                      public void deposit(double amount);
+                    
+                      // A method to withdraw money from the account
+                      public void withdraw(double amount);
+                    
+                      // A method to calculate the interest on the account
+                      public double calculateInterest();
+                    
+                      // A method to view the balance of the account
+                      public double getBalance();
+                    
+                      // A method to display the details of the account
+                      public String toString();
+                    }
+                    
+                    // A class to represent a savings account
+                    class SavingsAccount implements Account {
+                      // A constant to store the interest rate
+                      private static final double INTEREST_RATE = 0.05;
+                    
+                      // A variable to store the account number
+                      private int accountNumber;
+                    
+                      // A variable to store the balance of the account
+                      private double balance;
+                    
+                      // A constructor to initialize the account number and balance
+                      public SavingsAccount(int accountNumber, double balance) {
+                        this.accountNumber = accountNumber;
+                        this.balance = balance;
+                      }
+                    
+                      // A method to deposit money into the account
+                      public void deposit(double amount) {
+                        balance += amount;
+                      }
+                    
+                      // A method to withdraw money from the account
+                      public void withdraw(double amount) {
+                        if (balance >= amount) {
+                          balance -= amount;
+                        } else {
+                          System.out.println("Insufficient funds");
+                        }
+                      }
+                    
+                      // A method to calculate the interest on the account
+                      public double calculateInterest() {
+                        return balance * INTEREST_RATE;
+                      }
+                    
+                      // A method to view the balance of the account
+                      public double getBalance() {
+                        return balance;
+                      }
+                    
+                      // A method to display the details of the account
+                      public String toString() {
+                        return "SavingsAccount[accountNumber=" + accountNumber + ", balance=" + balance + "]";
+                      }
+                    }
+                    
+                    // A class to represent a current account
+                    class CurrentAccount implements Account {
+                      // A constant to store the overdraft limit
+                      private static final double OVERDRAFT_LIMIT = 1000;
+                    
+                      // A variable to store the account number
+                      private int accountNumber;
+                    
+                      // A variable to store the balance of the account
+                      private double balance;
+                    
+                      // A constructor to initialize the account number and balance
+                      public CurrentAccount(int accountNumber, double balance) {
+                        this.accountNumber = accountNumber;
+                        this.balance = balance;
+                      }
+                    
+                      // A method to deposit money into the account
+                      public void deposit(double amount) {
+                        balance += amount;
+                      }
+                    
+                      // A method to withdraw money from the account
+                      public void withdraw(double amount) {
+                        if (balance + OVERDRAFT_LIMIT >= amount) {
+                          balance -= amount;
+                        } else {
+                          System.out.println("Overdraft limit exceeded");
+                        }
+                      }
+                    
+                      // A method to calculate the interest on the account
+                      public double calculateInterest() {
+                        return 0; // No interest for current account
+                      }
+                    
+                      // A method to view the balance of the account
+                      public double getBalance() {
+                        return balance;
+                      }
+                    
+                      // A method to display the details of the account
+                      public String toString() {
+                        return "CurrentAccount[accountNumber=" + accountNumber + ", balance=" + balance + "]";
+                      }
+                    }
+                    
+                    // A class to test the program
+                    class Test {
+                      public static void main(String[] args) {
+                        // Create a bank object
+                        Bank bank = new Bank();
+                    
+                        // Create some account objects
+                        Account a1 = new SavingsAccount(101, 5000);
+                        Account a2 = new CurrentAccount(102, 3000);
+                        Account a3 = new SavingsAccount(103, 7000);
+                        Account a4 = new CurrentAccount(104, 4000);
+                    
+                        // Add the accounts to the bank
+                        bank.addAccount(a1);
+                        bank.addAccount(a2);
+                        bank.addAccount(a3);
+                        bank.addAccount(a4);
+                    
+                        // Display the details of all accounts
+                        bank.displayAccounts();
+                    
+                        // Deposit some money into a1
+                        a1.deposit(1000);
+                    
+                        // Withdraw some money from a2
+                        a2.withdraw(2000);
+                    
+                        // Calculate the interest for a3
+                        System.out.println("Interest for a3: " + a3.calculateInterest());
+                    
+                        // Display the balance of a4
+                        System.out.println("Balance of a4: " + a4.getBalance());
+                    
+                        // Display the details of all accounts again
+                        bank.displayAccounts();
+                      }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j4.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>5.Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the Resizable interface and implements the resize methods.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    interface Resizable {
+                        void resizeWidth(int width);
+                        void resizeHeight(int height);
+                      }
+                      
+                      class Rectangle implements Resizable {
+                          private int width;
+                          private int height;
+                          public Rectangle(int width, int height) {
+                              this.width = width;
+                              this.height = height;
+                          }
+                          public void resizeWidth(int width) {
+                              this.width = width;
+                          }
+                          public void resizeHeight(int height) {
+                              this.height = height;
+                          }
+                          public void printSize() {
+                              System.out.println("Width: " + width + ", Height: " + height);
+                          }
+                      }
+                      class Final_size {
+                          public static void main(String s[] ) {
+                              Rectangle r = new Rectangle(50, 30);
+                              r.printSize();
+                              r.resizeWidth(80);
+                              r.resizeHeight(40);
+                              r.printSize();
+                          }
+                      }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j5.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>6.rite a Java program to create an interface Drawable with a method draw() that takes no arguments and returns void. Create three classes Circle, Rectangle, and Triangle that implement the Drawable interface and override the draw() method to draw their respective shapes.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+                <p><b>Program:</b></p>
+            <pre>
+                <code>
+                    // Drawable.java
+                    // Declare the Drawable interface
+                    interface Drawable {
+                        // Declare the abstract method "draw" that classes implementing this interface must provide
+                        void draw();
+                    } 
+                    // Circle.java
+                    
+                    // Import necessary libraries for graphics and user interface
+                    import java.awt.*;
+                    import javax.swing.*;
+                    
+                    // Declare the Circle class, which implements the Drawable interface
+                    class Circle implements Drawable {
+                        // Implement the "draw" method required by the Drawable interface
+                        public void draw() {
+                            // Create a new JFrame for displaying the circle
+                            JFrame frame = new JFrame();
+                            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                            frame.setSize(400, 400);
+                            frame.setVisible(true);
+                    
+                            // Create a JPanel for custom drawing
+                            JPanel panel = new JPanel() {
+                                @Override
+                                protected void paintComponent(Graphics g) {
+                                    super.paintComponent(g);
+                                    // Set the drawing color to red and fill an oval
+                                    g.setColor(Color.RED);
+                                    g.fillOval(100, 100, 200, 200);
+                                }
+                            };
+                    
+                            // Add the panel to the frame
+                            frame.add(panel);
+                        }
+                    }
+                    // Rectangle.java
+                    
+                    // Import necessary libraries for graphics and user interface
+                    import java.awt.*;
+                    import javax.swing.*;
+                    
+                    // Declare the Rectangle class, which implements the Drawable interface
+                    class Rectangle implements Drawable {
+                        // Implement the "draw" method required by the Drawable interface
+                        public void draw() {
+                            // Create a new JFrame for displaying the rectangle
+                            JFrame frame = new JFrame();
+                            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                            frame.setSize(400, 400);
+                            frame.setVisible(true);
+                    
+                            // Create a JPanel for custom drawing
+                            JPanel panel = new JPanel() {
+                                @Override
+                                protected void paintComponent(Graphics g) {
+                                    super.paintComponent(g);
+                                    // Set the drawing color to blue and fill a rectangle
+                                    g.setColor(Color.BLUE);
+                                    g.fillRect(100, 100, 200, 200);
+                                }
+                            };
+                            // Add the panel to the frame
+                            frame.add(panel);
+                        }
+                    } 
+                    // Triangle.java
+                    // Import necessary libraries for graphics and user interface
+                    import java.awt.*;
+                    import javax.swing.*;
+                    // Declare the Triangle class, which implements the Drawable interface
+                    class Triangle implements Drawable {
+                        // Implement the "draw" method required by the Drawable interface
+                        public void draw() {
+                            // Create a new JFrame for displaying the triangle
+                            JFrame frame = new JFrame();
+                            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                            frame.setSize(400, 400);
+                            frame.setVisible(true);
+                        // Create a JPanel for custom drawing
+                            JPanel panel = new JPanel() {
+                                @Override
+                                protected void paintComponent(Graphics g) {
+                                    super.paintComponent(g);
+                                    // Set the drawing color to green and fill a polygon
+                                    g.setColor(Color.GREEN);
+                                    int[] xPoints = {
+                                        200,
+                                        100,
+                                        300
+                                    };
+                                    int[] yPoints = {
+                                        100,
+                                        300,
+                                        300
+                                    };
+                                    g.fillPolygon(xPoints, yPoints, 3);
+                                }
+                            };
+                        // Add the panel to the frame
+                            frame.add(panel);
+                        }
+                    }
+                    // Main.java
+                    // Import necessary libraries for graphics and user interface
+                    import java.awt.*;
+                    import javax.swing.*;
+                // Declare the Main class
+                    class Interfaces_6 {
+                        public static void main(String[] args) {
+                            // Create instances of Drawable objects, which are Circle, Rectangle, and Triangle
+                            Drawable circle = new Circle();
+                            Drawable rectangle = new Rectangle();
+                            Drawable triangle = new Triangle();
+                        // Call the "draw" method to display each shape
+                            circle.draw();
+                            rectangle.draw();
+                            triangle.draw();
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j6.png" id="p6" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>7.Write a Java program to create an interface Sortable with a method sort() that sorts an array of integers in ascending order. Create two classes BubbleSort and SelectionSort that implement the Sortable interface and provide their own implementations of the sort() method.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    interface Sortable {
+                        void sort(int[] arr);
+                    }
+                    class BubbleSort implements Sortable {
+                        @Override
+                        public void sort(int[] arr) {
+                            int n = arr.length;
+                            boolean swapped;
+                            for (int i = 0; i < n - 1; i++) {
+                                swapped = false;
+                                for (int j = 0; j < n - i - 1; j++) {
+                                    if (arr[j] > arr[j + 1]) {
+                                        // Swap arr[j] and arr[j+1]
+                                        int temp = arr[j];
+                                        arr[j] = arr[j + 1];
+                                        arr[j + 1] = temp;
+                                        swapped = true;
+                                    }
+                                }
+                                // If no two elements were swapped in inner loop, the array is already sorted
+                                if (!swapped) {
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    class SelectionSort implements Sortable {
+                        @Override
+                        public void sort(int[] arr) {
+                            int n = arr.length;
+                            for (int i = 0; i < n - 1; i++) {
+                                int minIndex = i;
+                                for (int j = i + 1; j < n; j++) {
+                                    if (arr[j] < arr[minIndex]) {
+                                        minIndex = j;
+                                    }
+                                }
+                                // Swap the found minimum element with the first element
+                                int temp = arr[i];
+                                arr[i] = arr[minIndex];
+                                arr[minIndex] = temp;
+                            }
+                        }
+                    }
+                    public class SortExample {
+                        public static void main(String[] args) {
+                            int[] arr = {64, 34, 25, 12, 22, 11, 90};
+                    
+                            Sortable bubbleSort = new BubbleSort();
+                            bubbleSort.sort(arr);
+                            System.out.println("Sorted using Bubble Sort: " + java.util.Arrays.toString(arr));
+                    
+                            int[] arr2 = {64, 34, 25, 12, 22, 11, 90};
+                    
+                            Sortable selectionSort = new SelectionSort();
+                            selectionSort.sort(arr2);
+                            System.out.println("Sorted using Selection Sort: " + java.util.Arrays.toString(arr2));
+                        }
+                    }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j7.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>8.Write a Java program to create an interface Playable with a method play() that takes no arguments and returns void. Create three classes Football, Volleyball, and Basketball that implement the Playable interface and override the play() method to play the respective sports.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    interface play{
+                        void play();
+                        }
+                        class football implements play{
+                        
+                        public static void main(String s[]){
+                        football obj= new football();
+                        obj.play();
+                        }
+                        public void play(){
+                        System.out.println("Playing Football");}
+                        }
+                        class voleyball implements play{
+                        public static void main(String s[]){
+                        voleyball obj1= new voleyball();
+                        obj1.play();
+                        }
+                        public void play(){
+                        System.out.println("Playing voleyball");}
+                        }
+                        class basketball implements play{
+                        public static void main(String s[]){
+                        basketball obj2= new basketball();
+                        obj2.play();
+                        }
+                        public void play(){
+                        System.out.println("Playing basketball");}
+                        }
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j8.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>9.Write a Java program to create an interface Searchable with a method search(String keyword) that searches for a given keyword in a text document. Create two classes Document and WebPage that implement the Searchable interface and provide their own implementations of the search() method.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                    interface Searchable {
+                        void search(String keyword);
+                    }
+                    
+                    // Class Document implementing Searchable
+                    class Document implements Searchable {
+                        private String content;
+                    
+                        // Constructor for Document
+                        public Document(String content) {
+                            this.content = content;
+                        }
+                    
+                        // Implementation of the search method for Document
+                        @Override
+                        public void search(String keyword) {
+                            if (content.contains(keyword)) {
+                                System.out.println("Keyword '" + keyword + "' found in the document.");
+                            } else {
+                                System.out.println("Keyword '" + keyword + "' not found in the document.");
+                            }
+                        }
+                    }
+                    
+                    // Class WebPage implementing Searchable
+                    class WebPage implements Searchable {
+                        private String url;
+                        private String htmlContent;
+                    
+                        // Constructor for WebPage
+                        public WebPage(String url, String htmlContent) {
+                            this.url = url;
+                            this.htmlContent = htmlContent;
+                        }
+                    
+                        // Implementation of the search method for WebPage
+                        @Override
+                        public void search(String keyword) {
+                            if (htmlContent.contains(keyword)) {
+                                System.out.println("Keyword '" + keyword + "' found on the web page at " + url + ".");
+                            } else {
+                                System.out.println("Keyword '" + keyword + "' not found on the web page at " + url + ".");
+                            }
+                        }
+                    }
+                    
+                    // Main class for testing
+                    public class Interface9 {
+                        public static void main(String[] args) {
+                            // Create instances of Document and WebPage
+                            Document document = new Document("This is a sample document. Java is a programming language.");
+                            WebPage webPage = new WebPage("http://example.com", "<html><body>Java programming on the web page</body></html>");
+                    
+                            // Test the search method for Document
+                            System.out.println("Searching in the document:");
+                            document.search("Java");
+                            document.search("Python");
+                            System.out.println();
+                    
+                            // Test the search method for WebPage
+                            System.out.println("Searching on the web page:");
+                            webPage.search("Java");
+                            webPage.search("JavaScript");
+                        }
+                    }
+                    
+                </code>
+            </pre>
+
+            <p style="text-align: left;"><b>Output: </b></p>
+            <img src="../javapro/interfaces/j9.png" alt="">  
+            </div>
+        </details>
+
+        <details>
+            <summary>
+              <h3>10.Write a Java program to create an interface Encryptable with methods encrypt (String data) and decrypt (String encryptedData) that define encryption and decryption operations. Create two classes AES and RSA that implement the Encryptable interface and provide their own encryption and decryption algorithms.</h3>
+              <i class="fa-solid fa-chevron-down down-icon"></i>
+              
+            </summary>
+            <div class="code-box">
+            <pre>
+                <code>
+                          
+                    import javax.crypto.Cipher;
+                    import javax.crypto.KeyGenerator;
+                    import javax.crypto.SecretKey;
+                    import java.security.KeyPair;
+                    import java.security.KeyPairGenerator;
+                    import java.security.PrivateKey;
+                    import java.security.PublicKey;
+                    import java.util.Base64;
+
+                    interface Encryptable {
+                        String encrypt(String data);
+                        String decrypt(String encryptedData);
+                            }
+                            class AES implements Encryptable {
+                            private static final String AES_ALGORITHM = "AES";
+
+                            private SecretKey secretKey;
+
+                            public AES() {
+                            try {
+                                KeyGenerator keyGen = KeyGenerator.getInstance(AES_ALGORITHM);
+                                keyGen.init(128);
+                            secretKey = keyGen.generateKey();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        public String encrypt(String data) {
+                        try {
+                            Cipher cipher = Cipher.getInstance(AES_ALGORITHM);
+                            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+
+                            byte[] encryptedBytes = cipher.doFinal(data.getBytes());
+                            return Base64.getEncoder().encodeToString(encryptedBytes);
+                            } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                            return null;
+                        }
+
+                        public String decrypt(String encryptedData) {
+                        try {
+                        byte[] encryptedBytes = Base64.getDecoder().decode(encryptedData);
+
+                        Cipher cipher = Cipher.getInstance(AES_ALGORITHM);
+                        cipher.init(Cipher.DECRYPT_MODE, secretKey);
+
+                            byte[] decryptedBytes = cipher.doFinal(encryptedBytes);
+                                return new String(decryptedBytes);
+                        } catch (Exception e) {
+                                e.printStackTrace();
+                        }   
+                            return null;
+                        }
+                } 
+
+                    class RSA implements Encryptable {
+    
+                private static final String RSA_ALGORITHM = "RSA";
+                    private KeyPair keyPair;
+                        public RSA() {
+                    try {
+                                KeyPairGenerator keyGen = KeyPairGenerator.getInstance(RSA_ALGORITHM);
+                            keyGen.initialize(2048);
+                        keyPair = keyGen.generateKeyPair();
+                        } catch (Exception e) {
+                        e.printStackTrace();
+                            }
+                        }
+
+                        public String encrypt(String data) {
+                         try {
+          
+                        PublicKey publicKey = keyPair.getPublic();
+                        Cipher cipher = Cipher.getInstance(RSA_ALGORITHM);
+                        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+
+                        byte[] encryptedBytes = cipher.doFinal(data.getBytes());
+                        return Base64.getEncoder().encodeToString(encryptedBytes);
+                            } catch (Exception e) {
+                            e.printStackTrace();
+                            }
+                            return null;
+                        }
+                        public String decrypt(String encryptedData) {
+                        try  {
+                        PrivateKey privateKey = keyPair.getPrivate();
+                        byte[] encryptedBytes = Base64.getDecoder().decode(encryptedData);
+
+                        Cipher cipher = Cipher.getInstance(RSA_ALGORITHM);
+                        cipher.init(Cipher.DECRYPT_MODE, privateKey);
+
+                            byte[] decryptedBytes = cipher.doFinal(encryptedBytes);
+                            return new String(decryptedBytes);
+                            } catch (Exception e) {
+                        e.printStackTrace();
+                            }
+                            return null;
+                            }
+                        } 
+                        public class Main {
                         public static void main(String[] args) {
        
-                        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 5, 4, 6, 7, 6, 8, 9, 9};
-        
-                        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        
-                        for (int element : array) {
-           
-                        if (frequencyMap.containsKey(element)) {
-                        frequencyMap.put(element, frequencyMap.get(element) + 1);
-                        } else {
-               
-                        frequencyMap.put(element, 1);
-                        }
+                        Encryptable aes = new AES();
+                        String encryptedDataAES = aes.encrypt("Java Interface.");
+                        System.out.println("AES Encrypted: " + encryptedDataAES);
+                        String decryptedDataAES = aes.decrypt(encryptedDataAES);
+                        System.out.println("AES Decrypted: " + decryptedDataAES);
+                        Encryptable rsa = new RSA();
+                        String encryptedDataRSA = rsa.encrypt("Java Interface.");
+                        System.out.println("RSA Encrypted: " + encryptedDataRSA);
+                        String decryptedDataRSA = rsa.decrypt(encryptedDataRSA);
+                        System.out.println("RSA Decrypted: " + decryptedDataRSA);
                     }
-                        System.out.println("Element frequencies:");
-                        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
-                        System.out.println(entry.getKey() + ": " + entry.getValue());
-                        }
-                    }
-                }  
+                } 
+
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/70711Darray2.png" alt="">  
+            <img src="../javapro/interfaces/j10.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-                <h3>3. Program to left rotate the elements of an array.</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
+                <h3>11.Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own implementations of the sort() method.</h3>
+                <i class="fa-solid fa-chevron-down down-icon"></i>
+
             </summary>
             <div class="code-box">
-                <p><b>Program:</b></p>
-            <pre>
-                <code>
-                    /*Program to left rotate the elements of an array*/
-
-                    class RotateLeft {  
-                        public static void main(String[] args) {  
-                          
-                            int [] arr = new int [] {1, 2, 3, 4, 5}; 
-                              //n determine the number of times an array should be rotated 
-                            int n = 3;  
-                            //Displays original array  
-                            System.out.println("Original array: ");  
-                            for (int i = 0; i < arr.length; i++) {  
-                                System.out.print(arr[i] + " ");  
-                            }  
-                              
-                            for(int i = 0; i < n; i++){  
-                                int j, first;  
-                                //Stores the first element of the array  
-                                first = arr[0];  
-                                for(j = 0; j < arr.length-1; j++){  
-                                    //Shift element of array by one  
-                                    arr[j] = arr[j+1];  
-                                }  
-                                //First element of array will be added to the end  
-                                arr[j] = first;  
-                            }  
-                            System.out.println();  
-                            //Displays resulting array after rotation  
-                            System.out.println("Array after left rotation: ");  
-                            for(int i = 0; i< arr.length; i++){  
-                                System.out.print(arr[i] + " ");  
-                            }  
+                <pre>
+                    <code>
+                        interface Sortable
+                        {
+                            void sort(int[] array);
+                        }
+                        class QuickSort implements Sortable
+                        {
+                            // @Override
+                            public void sort(int[] array)
+                            {
+                                quickSort(array, 0, array.length - 1);
+                            }
+                            private void quickSort(int[] array, int low, int high)
+                            {
+                                if (low < high)
+                                {
+                                    int pivotIndex = partition(array, low, high);
+                                    quickSort(array, low, pivotIndex - 1);
+                                    quickSort(array, pivotIndex + 1, high);
+                                }
+                            }
+                            private int partition(int[] array, int low, int high)
+                            {
+                                int pivot = array[high];
+                                int i = low - 1;
+                                for (int j = low; j < high; j++)
+                                    if (array[j] >= pivot) {
+                                        i++;
+                                        int temp = array[i];
+                                        array[i] = array[j];
+                                        array[j] = temp;
+                                    }
+                        
+                                int temp = array[i + 1];
+                                array[i + 1] = array[high];
+                                array[high] = temp;
+                                return i + 1;
+                            }
+                        }
+                        class MergeSort implements Sortable
+                        {
+                            // @Override
+                            public void sort(int[] array)
+                            {
+                                mergeSort(array, 0, array.length - 1);
+                            }
+                            private void mergeSort(int[] array, int left, int right)
+                            {
+                                if (left < right)
+                                {
+                                    int mid = left + (right - left) / 2;
+                                    mergeSort(array, left, mid);
+                                    mergeSort(array, mid + 1, right);
+                                    merge(array, left, mid, right);
+                                }
+                            }
+                            private void merge(int[] array, int left, int mid, int right)
+                            {
+                                int n1 = mid - left + 1;
+                                int n2 = right - mid;
+                        
+                                int[] leftArray = new int[n1];
+                                int[] rightArray = new int[n2];
+                        
+                                for (int i = 0; i < n1; i++)
+                                {
+                                    leftArray[i] = array[left + i];
+                                }
+                                for (int j = 0; j < n2; j++)
+                                {
+                                    rightArray[j] = array[mid + 1 + j];
+                                }
+                                int i = 0, j = 0, k = left;
+                                
+                                while (i < n1 && j < n2)
+                                {
+                                    if (leftArray[i] >= rightArray[j]) {
+                                        array[k] = leftArray[i];
+                                        i++;
+                                    } else {
+                                        array[k] = rightArray[j];
+                                        j++;
+                                    }
+                                    k++;
+                                }
+                                while (i < n1)
+                                {
+                                    array[k] = leftArray[i];
+                                    i++;
+                                    k++;
+                                }
+                                while (j < n2)
+                                {
+                                    array[k] = rightArray[j];
+                                    j++;
+                                    k++;
+                                }
+                            }
                         }  
-                    }  
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7007_1dArray3.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>4. Program to print the duplicate elements of an array.</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>5. Program to print the elements of an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-                <p><b>Program:</b></p>
-            <pre>
-                <code>
-                    class PrintArrayElements {
-                        public static void main(String[] args) {
-                            // Create an array of integers
-                            int[] numbers = {1, 2, 3, 4, 5};
-                    
-                            // Print the elements of the array
-                            System.out.println("Elements of the array:");
-                            for (int i = 0; i < numbers.length; i++) {
-                                System.out.println(numbers[i]);
+                        class Test
+                        {
+                            public static void main(String[] args)
+                            {
+                                int[] arr = {5, 1, 9, 3, 7, 6};
+                                
+                                Sortable quickSort = new QuickSort();
+                                quickSort.sort(arr);
+                                System.out.print("QuickSort: ");
+                                printArray(arr);
+                        
+                                int[] arr2 = {5, 1, 9, 3, 7, 6};
+                        
+                                Sortable mergeSort = new MergeSort();
+                                mergeSort.sort(arr2);
+                                System.out.print("MergeSort: ");
+                                printArray(arr2);
+                            }
+                            private static void printArray(int[] array)
+                            {
+                                for (int num : array) {
+                                    System.out.print(num + " ");
+                                }
+                                System.out.println();
                             }
                         }
-                    }
-                    
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7073_1Darray5.png" alt="">  
+                    </code>
+                </pre>
+                <p style="text-align: left;"><b>Output: </b></p>
+                <img src="../javapro/interfaces/j11.png" alt="">  
             </div>
         </details>
 
-        <details>
-            <summary>
-              <h3>6. Program to print the elements of an array in reverse order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-                <p><b>Program:</b></p>
-            <pre>
-                <code>
-                    class ReverseArray {
-                        public static void main(String[] args) {
-                            int[] array = {1, 2, 3, 4, 5};
-                            
-                            for (int i = array.length - 1; i >= 0; i--) {
-                                System.out.println(array[i]);
-                            }
-                        }
-                    }
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7059onedarray6.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>7. Program to print the elements of an array present on even position</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>8. Program to print the elements of an array present on odd position</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>9. Program to print the largest element in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>10. Program to print the smallest element in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>11. Program to print the number of elements present in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>12. Program to print the sum of all the items of the array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>13. Program to right rotate the elements of an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>14. Program to sort the elements of an array in ascending order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>15. Program to sort the elements of an array in descending order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>16. Program to Find 3rd Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>17. Program to Find 2nd Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>18. Program to Find Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>19. to Program Find 2nd Smallest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>20. Program to Find Smallest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>21. Program to Remove Duplicate Element in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>22. Program to Print Odd and Even Numbers from an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>23. How to Sort an Array in Java</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
+ 
+   
 
        
     </div>

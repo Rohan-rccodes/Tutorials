@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title> Home - RC Codes </title>
+    <title>RC-Codes 1D-Array</title>
 
      <!--------FAV-ICONS---------->
     <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
@@ -124,7 +124,7 @@
        
                         int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 5, 4, 6, 7, 6, 8, 9, 9};
         
-                        Map<Integer, Integer> frequencyMap = new HashMap<>();
+                        Map < Integer, Integer> frequencyMap = new HashMap<>();
         
                         for (int element : array) {
            
@@ -136,7 +136,7 @@
                         }
                     }
                         System.out.println("Element frequencies:");
-                        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+                        for (Map.Entry< Integer, Integer> entry : frequencyMap.entrySet()) {
                         System.out.println(entry.getKey() + ": " + entry.getValue());
                         }
                     }
@@ -337,9 +337,9 @@
                         public static void main(String args[])
                         {
                             int arr[]={1,2,3,4,5};
-                            for(int i=0;i<5;i++)
+                            for(int i=0;i< 5;i++)
                             {
-                                if(arr[i]%2!=0)
+                                ifb(barr[i]%2!=0)
                                 {
                                 System.out.println(arr[i]);
                                 }
@@ -481,10 +481,8 @@
                 <code>
                     class ArraySum {  
                         public static void main(String[] args) {  
-                          
                             int [] arr = new int [] {1, 2, 3, 4, 5};  
                             int sum = 0;  
-                           
                             for (int i = 0; i < arr.length; i++) {  
                                sum = sum + arr[i];  
                             }  
@@ -747,8 +745,8 @@
                            int array[] = {10, 20, 25, 63, 96, 57};
                            size = array.length;
                      
-                           for(int i = 0; i<size; i++ ){
-                              for(int j = i+1; j<size; j++){
+                           for(int i = 0; i < size; i++ ){
+                              for(int j = i+1; j < size; j++){
                                  if(array[i]>array[j]){
                                     temp = array[i];
                                     array[i] = array[j];

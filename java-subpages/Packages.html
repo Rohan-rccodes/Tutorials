@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title> Home - RC Codes </title>
+    <title>RC-Codes Packages </title>
 
      <!--------FAV-ICONS---------->
     <link rel="shortcut icon" href="../images/java2.png" type="image/x-icon"/>
@@ -58,14 +58,14 @@
 <!--------------COURSES SECTION----------------->
 
 <section id="course">
-    <h1>1D ARRAYS</h1>
+    <h1>JAVA PACKAGES</h1>
     <p style="color: orangered; text-align: center; font-size: 1.5rem">Choose Topic to See Programs</p>
 
     <div class="course-container">
 
         <details>
             <summary>
-              <h3>1. Program to copy all elements of one array into another array.</h3>
+              <h3>1.Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -73,41 +73,25 @@
                 <p><b>Program:</b></p>
             <pre>
             <code>
-            class OnearrTOAnotherArray 
-                {
-	            public static void main(String[] args) 
-	            {
-		            int arr1[] = new int[] {1,2,3 ,4 ,5};
-		            int arr2[] = new int[arr1.length];
-		            System.out.println("Elements of First array: ");
-	                for (int i = 0; i < arr1.length; i++) 
-	            {
-	                System.out.print(arr1[i] + " ");
-	            }
-	                //copying the first array to the second array
-	                for (int i = 0; i < arr1.length; i++)
-	            {
-	                arr2[i] = arr1[i];
-	            }
-	                System.out.println();
-	                System.out.println("Elements of Second array: ");
-	                for (int i = 0; i < arr2.length; i++) 
-	            {
-	                System.out.print(arr2[i] + " ");
-	            }
-	        }
-        }
+                import java.util.Date;
+                class A{
+                    public static void main(String a[])
+                    {
+                        Date obj = new  Date();
+                        System.out.println(obj); 
+                    }
+                }
                 </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7011onedarray1.png" alt="">  
+            <img src="../javapro/Packages/package1.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>2.Program to find the frequency of each element in the array</h3>
+              <h3>2.Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -115,43 +99,23 @@
                 <p><b>Program:</b></p>
             <pre>
                 <code>
-                    import java.util.HashMap;
-                    import java.util.Map;
-
-                    class FrequencyCounter
-                    {
+                    public class packages2_7024 {
                         public static void main(String[] args) {
-       
-                        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 5, 4, 6, 7, 6, 8, 9, 9};
-        
-                        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        
-                        for (int element : array) {
-           
-                        if (frequencyMap.containsKey(element)) {
-                        frequencyMap.put(element, frequencyMap.get(element) + 1);
-                        } else {
-               
-                        frequencyMap.put(element, 1);
+                            java.util.Date currentDate = new java.util.Date();
+                            System.out.println("Current Date: " + currentDate);
                         }
                     }
-                        System.out.println("Element frequencies:");
-                        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
-                        System.out.println(entry.getKey() + ": " + entry.getValue());
-                        }
-                    }
-                }  
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/70711Darray2.png" alt="">  
+            <img src="../javapro/Packages/packages2_7024.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-                <h3>3. Program to left rotate the elements of an array.</h3>
+                <h3>3. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -159,76 +123,58 @@
                 <p><b>Program:</b></p>
             <pre>
                 <code>
-                    /*Program to left rotate the elements of an array*/
+                    import java.util.Date;
 
-                    class RotateLeft {  
-                        public static void main(String[] args) {  
-                          
-                            int [] arr = new int [] {1, 2, 3, 4, 5}; 
-                              //n determine the number of times an array should be rotated 
-                            int n = 3;  
-                            //Displays original array  
-                            System.out.println("Original array: ");  
-                            for (int i = 0; i < arr.length; i++) {  
-                                System.out.print(arr[i] + " ");  
-                            }  
-                              
-                            for(int i = 0; i < n; i++){  
-                                int j, first;  
-                                //Stores the first element of the array  
-                                first = arr[0];  
-                                for(j = 0; j < arr.length-1; j++){  
-                                    //Shift element of array by one  
-                                    arr[j] = arr[j+1];  
-                                }  
-                                //First element of array will be added to the end  
-                                arr[j] = first;  
-                            }  
-                            System.out.println();  
-                            //Displays resulting array after rotation  
-                            System.out.println("Array after left rotation: ");  
-                            for(int i = 0; i< arr.length; i++){  
-                                System.out.print(arr[i] + " ");  
-                            }  
-                        }  
-                    }  
+                    public class CustomDate {
+                        private Date date;
+                    
+                        public CustomDate() {
+                            date = new Date();
+                        }
+                        public Date getCurrentDate() {
+                            return date;
+                        }
+                        public static void main(String[] args) {
+                            CustomDate customDate = new CustomDate();
+                            Date currentDate = customDate.getCurrentDate();
+                    
+                            System.out.println("Current Date: " + currentDate);
+                        }
+                    }                    
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../javapro/1D-Array/7007_1dArray3.png" alt="">  
+            <img src="../javapro/Packages/7006package3.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>4. Program to print the duplicate elements of an array.</h3>
+              <h3>4. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
             <div class="code-box">
             <pre>
                 <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
+                    class Date {
+                        public static void main(String args[]){
+                        java.util.Date date=new java.util.Date();  
+                        System.out.println(date); 
+                        }
+                    }                
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/Packages/7086Packages4.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>5. Program to print the elements of an array</h3>
+              <h3>5.Create a Java program to create a package with multiple default classes.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -259,7 +205,7 @@
 
         <details>
             <summary>
-              <h3>6. Program to print the elements of an array in reverse order</h3>
+              <h3>6. Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -286,7 +232,7 @@
 
         <details>
             <summary>
-              <h3>7. Program to print the elements of an array present on even position</h3>
+              <h3>7.Write a Java program to perform employee payroll processing using packages. In the java file, Emp.java creates a package employee and creates a class Emp. Declare the variables name,empid, category, bpay, hra, da, npay, pf, grosspay, incometax, and allowance. Calculate the values in methods. Create another java file Emppay.java. Create an object e to call the methods to perform and print values.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -306,39 +252,59 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../images/1-ti.png" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>8. Program to print the elements of an array present on odd position</h3>
+              <h3>8. Create a Java program to create a package with public class and protected members to be accessed in another class.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
             <div class="code-box">
             <pre>
                 <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
+                    MyPackage/MyClass.java
+                    package MyPackage;
+                    
+                    public class MyClass {
+                        protected int protectedField;
+                    
+                        protected void protectedMethod() {
+                            System.out.println("Protected method in MyClass");
+                        }
+                    }
+                     MyPackage/MyExtendedClass.java
+                    package MyPackage;
+                    
+                    public class MyExtendedClass extends MyClass {
+                        public void accessProtectedMembers() {
+                            protectedField = 42;  // Access the protected field
+                            protectedMethod();   // Access the protected method
+                            System.out.println("Value of protectedField: " + protectedField);
+                        }
+                    }
+                     MainApp.java
+                    package MyPackage;
+                    
+                    class Packages_8 {
+                        public static void main(String[] args) {
+                            MyExtendedClass extendedObj = new MyExtendedClass();
+                            extendedObj.accessProtectedMembers();
+                        }
+                    }
                 </code>
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../images/1-t" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>9. Program to print the largest element in an array</h3>
+              <h3>9.Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -358,13 +324,13 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../images/1" alt="">  
             </div>
         </details>
 
         <details>
             <summary>
-              <h3>10. Program to print the smallest element in an array</h3>
+              <h3>10.Create a Java program to create a package with public class and public members to be accessed in another class.</h3>
               <i class="fa-solid fa-chevron-down down-icon"></i>
               
             </summary>
@@ -384,348 +350,9 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../images/1-tpng" alt="">  
             </div>
         </details>
-
-        <details>
-            <summary>
-              <h3>11. Program to print the number of elements present in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>12. Program to print the sum of all the items of the array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>13. Program to right rotate the elements of an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>14. Program to sort the elements of an array in ascending order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>15. Program to sort the elements of an array in descending order</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>16. Program to Find 3rd Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>17. Program to Find 2nd Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>18. Program to Find Largest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>19. to Program Find 2nd Smallest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>20. Program to Find Smallest Number in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>21. Program to Remove Duplicate Element in an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>22. Program to Print Odd and Even Numbers from an array</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
-        <details>
-            <summary>
-              <h3>23. How to Sort an Array in Java</h3>
-              <i class="fa-solid fa-chevron-down down-icon"></i>
-              
-            </summary>
-            <div class="code-box">
-            <pre>
-                <code>
-                    &lt;details&gt;
-                    &lt;summary&gt;
-                    &lt;h3&gt;Here is your summary content&lt;/h3&gt;
-                    &lt;/summary&gt;
-                    &lt;div&gt;
-                    &lt;p&gt;We've put all our other content in a containing div.&lt;/p&gt;
-                    &lt;p&gt;This way, we can put a border around (or otherwise style) this container.&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;/details&gt;
-                </code>
-            </pre>
-
-            <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
-            </div>
-        </details>
-
        
     </div>
 

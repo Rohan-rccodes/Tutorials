@@ -113,7 +113,7 @@
        
                         int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 5, 4, 6, 7, 6, 8, 9, 9};
         
-                        Map<Integer, Integer> frequencyMap = new HashMap<>();
+                        Map< Integer, Integer> frequencyMap = new HashMap<>();
         
                         for (int element : array) {
            
@@ -125,7 +125,7 @@
                         }
                     }
                         System.out.println("Element frequencies:");
-                        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+                        for (Map.Entry< Integer, Integer> entry : frequencyMap.entrySet()) {
                         System.out.println(entry.getKey() + ": " + entry.getValue());
                         }
                     }
@@ -384,20 +384,19 @@
                 <code>
                     import java.util.*;
                     class STC{
-                    public static void main(String args[]){
-   
-                    String str="Aryan";
-  
-                    char [] chr= new char[str.length()];
-     
-                    for(int i=0;i<str.length();i++){
-   
-                    chr[i]=str.charAt(i);
+                    public static void main(String args[])
+                    {
+                        String str="Aryan";
+                        char [] chr= new char[str.length()];
+                        for(int i=0;i < str.length();i++)
+                        {
+                            chr[i]=str.charAt(i);
                         }
-                        for (char c : chr){
+                        for (char c : chr)
+                        {
                         System.out.println(c);
-                            }
-                        }
+                        }     
+                    }
                     }
                 </code>
             </pre>
@@ -539,7 +538,7 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../" alt="">  
             </div>
         </details>
 
@@ -565,7 +564,7 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/data-conversion/dc19.png" alt="">  
             </div>
         </details>
 
@@ -823,7 +822,7 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/data-conversion/dc23.png" alt="">  
             </div>
         </details>
 
@@ -967,7 +966,7 @@
             </pre>
 
             <p style="text-align: left;"><b>Output: </b></p>
-            <img src="../images/1-tier.png" alt="">  
+            <img src="../javapro/data-conversion/dc10.png" alt="">  
             </div>
         </details>
 

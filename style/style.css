@@ -175,7 +175,7 @@ nav .navigation ul li a:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #features .feature-box:hover {
-  transition: all 0.3s ease;
+  transition: .3s ease;
   transform: scale(1.03);
   box-shadow: rgb(182, 182, 197) 0px 2px 2px 2px;
 }

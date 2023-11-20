@@ -72,57 +72,27 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-                import javax.swing.*;
-                import java.awt.*;
-                import java.awt.event.*;
-                    class Login implements ActionListener
-                    {
-	                    static JTextField name;
-	                    static JPasswordField pswd; 
-	                    static JButton view;
-	                    static JTextField text;
-	                    public static void main(String args[])
-	                    {
-		                    JFrame frame=new JFrame("Login");
-		                    frame.setSize(400,400);
-		                    frame.setLayout(null);
-		                    frame.setBackground(Color.white);
-		                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		                    JLabel l_name=new JLabel("Name :");
-		                    JLabel l_pswd=new JLabel("Password :");
-		                    l_name.setBounds(50,50,50,50);
-		                    l_pswd.setBounds(20,100,80,50);
-		                    frame.add(l_name);
-		                    frame.add(l_pswd);
-		                    name=new JTextField();
-		                    pswd=new JPasswordField();
-		                    name.setBounds(100,50,250,50);
-		                    pswd.setBounds(100,100,250,50);
-		                    frame.add(name);
-		                    frame.add(pswd);
-		                    view=new JButton("View");
-		                    view.setBounds(150,200,100,50);
-		                    frame.add(view);
-		                    text=new JTextField();
-		                    text.setBounds(0,250,400,50);
-		                    frame.add(text);
-		                    Login obj=new Login();
-		                    view.addActionListener(obj);
-		                    frame.setVisible(true);
-	                    }
-	                    public void actionPerformed(ActionEvent e)
-	                    {
-		                    String pass=String.valueOf(pswd.getPassword());
-		                    text.setText("Username = "+name.getText());
-		                    text.setText(text.getText()+" Password = "+pass);
-	                    }
-                    } 
-            </code>
+                <code>
+                    import java.awt.*;
+
+                    public class pro1 {
+                      public static void main(String[] args) {
+                        Frame frame = new Frame("Text in Frame");
+                    
+                        Label label = new Label("This is some text!");
+                    
+                        frame.add(label);
+                    
+                        frame.setSize(400, 400);
+                    
+                        frame.setVisible(true);
+                      }
+                    }
+                </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j1.png" alt="">  
             </div>
         </details>
 
@@ -136,56 +106,43 @@
                 <p><b>Program:</b></p>
             <pre>
             <code>
-                import javax.swing.*;
                 import java.awt.*;
-                import java.awt.event.*;
-                    class Login implements ActionListener
+                import javax.swing.*;
+                class pro2
+                {
+                    
+                    public static void main(String args[])
                     {
-	                    static JTextField name;
-	                    static JPasswordField pswd; 
-	                    static JButton view;
-	                    static JTextField text;
-	                    public static void main(String args[])
-	                    {
-		                    JFrame frame=new JFrame("Login");
-		                    frame.setSize(400,400);
-		                    frame.setLayout(null);
-		                    frame.setBackground(Color.white);
-		                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		                    JLabel l_name=new JLabel("Name :");
-		                    JLabel l_pswd=new JLabel("Password :");
-		                    l_name.setBounds(50,50,50,50);
-		                    l_pswd.setBounds(20,100,80,50);
-		                    frame.add(l_name);
-		                    frame.add(l_pswd);
-		                    name=new JTextField();
-		                    pswd=new JPasswordField();
-		                    name.setBounds(100,50,250,50);
-		                    pswd.setBounds(100,100,250,50);
-		                    frame.add(name);
-		                    frame.add(pswd);
-		                    view=new JButton("View");
-		                    view.setBounds(150,200,100,50);
-		                    frame.add(view);
-		                    text=new JTextField();
-		                    text.setBounds(0,250,400,50);
-		                    frame.add(text);
-		                    Login obj=new Login();
-		                    view.addActionListener(obj);
-		                    frame.setVisible(true);
-	                    }
-	                    public void actionPerformed(ActionEvent e)
-	                    {
-		                    String pass=String.valueOf(pswd.getPassword());
-		                    text.setText("Username = "+name.getText());
-		                    text.setText(text.getText()+" Password = "+pass);
-	                    }
-                    } 
+                        //Create a frame
+                        Frame frame=new Frame("Login");
+                        TextField name= new TextField();
+                        JPasswordField pswd; 
+                        frame.setSize(400,400);
+                        frame.setLayout(null);
+                        frame.setBackground(Color.white);
+                        //Create two labels
+                        Label l_name=new Label("Name :");
+                        Label l_pswd=new Label("Password :");
+                        l_name.setBounds(50,50,50,50);
+                        l_pswd.setBounds(20,100,80,50);
+                        frame.add(l_name);
+                        frame.add(l_pswd);
+                        //Create two text fields for name and password
+                        name=new TextField();
+                        pswd=new JPasswordField();
+                        name.setBounds(100,50,250,50);
+                        pswd.setBounds(100,100,250,50);
+                        frame.add(name);
+                        frame.add(pswd);
+                        
+                        frame.setVisible(true);
+                    }
+                }
             </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/D-event-model/dlm2.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j2.png" alt="">  
             </div>
         </details>
 
@@ -199,41 +156,49 @@
                 <p><b>Program:</b></p>
             <pre>
             <code>
+                /*Java Program to Display Image when Button is Clicked*/
                 import javax.swing.*;
+                import javax.swing.ImageIcon.*;
                 import java.awt.*;
                 import java.awt.event.*;
-                
-                public class event {
+                class Button_Image implements ActionListener
+                {
                     static JFrame frame;
-                
-                    public static void main(String[] args) {
-                        frame = new JFrame("Button Image");
-                        frame.setSize(500, 500);
+                        //Driver function
+                    public static void main(String args[])
+                    {
+                        //Create a frame
+                        frame=new JFrame("Image on Click");
+                        frame.setSize(500,500);
                         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         frame.getContentPane().setBackground(Color.white);
                         frame.setLayout(new FlowLayout());
-                
-                        JButton button = new JButton("Display");
+                        //Create a button
+                        JButton button=new JButton("Display");
                         frame.add(button);
-                
-                        button.addActionListener(new ActionListener() {
-                            public void actionPerformed(ActionEvent e) {
-                                ImageIcon icon = new ImageIcon("logo.jpeg");
-                                JLabel label = new JLabel(icon);
-                                frame.add(label);
-                                frame.pack();
-                                frame.setSize(500, 500);
-                            }
-                        });
-                
+                        //Create an object
+                        Button_Image obj=new Button_Image();
+                        //Associate ActionListener with button
+                        button.addActionListener(obj);
+                        //Display the frame
                         frame.setVisible(true);
+                    }
+                        //Function to display image
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        //Display Image
+                        ImageIcon icon=new ImageIcon("logo.jpeg");
+                        JLabel label=new JLabel(icon);
+                        frame.add(label);
+                        frame.pack();
+                        frame.setSize(500,500);
                     }
                 }
             </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7031delegationeventmodel3.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j3.png" alt="">  
             </div>
         </details>
 
@@ -250,53 +215,59 @@
                 import javax.swing.*;
                 import java.awt.*;
                 import java.awt.event.*;
-                class Login implements ActionListener
+                class Radio_Button implements ActionListener
                 {
-	                static JTextField name;
-	                static JPasswordField pswd; 
-	                static JButton view;
-	                static JTextField text;
-	                public static void main(String args[])
-	                {
-		                JFrame frame=new JFrame("Login");
-		                frame.setSize(400,400);
-		                frame.setLayout(null);
-		                frame.setBackground(Color.white);
-		                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		                JLabel l_name=new JLabel("Name :");
-		                JLabel l_pswd=new JLabel("Password :");
-		                l_name.setBounds(50,50,50,50);
-		                l_pswd.setBounds(20,100,80,50);
-		                frame.add(l_name);
-		                frame.add(l_pswd);
-		                name=new JTextField();
-		                pswd=new JPasswordField();
-		                name.setBounds(100,50,250,50);
-		                pswd.setBounds(100,100,250,50);
-		                frame.add(name);
-		                frame.add(pswd);
-		                view=new JButton("View");
-		                view.setBounds(150,200,100,50);
-		                frame.add(view);
-		                text=new JTextField();
-		                text.setBounds(0,250,400,50);
-		                frame.add(text);
-		                Login obj=new Login();
-		                view.addActionListener(obj);
-		                frame.setVisible(true);
-	                }
-	                public void actionPerformed(ActionEvent e)
-	                {
-		                String pass=String.valueOf(pswd.getPassword());
-		                text.setText("Username = "+name.getText());
-		                text.setText(text.getText()+" Password = "+pass);
-	                }
+                    static JRadioButton yes;
+                    static JRadioButton no;
+                    static JTextField text;
+                    public static void main(String args[])
+                    {
+                        //Create a frame
+                        JFrame frame=new JFrame("Radio Button");
+                        frame.setSize(500,500);
+                        frame.setLayout(null);
+                        frame.setBackground(Color.white);
+                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        
+                        text=new JTextField();
+                        text.setBounds(0,0,500,50);
+                        frame.add(text);
+                        
+                        yes=new JRadioButton("Yes");
+                        no=new JRadioButton("No");
+                        yes.setBounds(210,100,80,60);
+                        no.setBounds(210,200,80,60);
+                        frame.add(yes);
+                        frame.add(no);
+                        
+                        Radio_Button obj=new Radio_Button();
+                        
+                        yes.addActionListener(obj);
+                        no.addActionListener(obj);
+                        //Display the frame
+                        frame.setVisible(true);
+                    }
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        String b=e.getActionCommand();		
+                        if(b.equals("Yes"))
+                        {
+                            if(no.isSelected())
+                                no.setSelected(false);
+                        }
+                        else
+                        {
+                            if(yes.isSelected())
+                                yes.setSelected(false);
+                        }
+                        text.setText("Label of Button Selected : "+b);
+                    }
                 }
             </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7098DelegationEventModel4.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j4.png" alt="">  
             </div>
         </details>
 
@@ -309,30 +280,29 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>   
+            <code>
                 // Java Program to Handle KeyBoardEvent
                 import java.awt.*;
                 import java.awt.event.*;
-
+                
                 class Main implements KeyListener {
                     static Frame frame;
                     static TextField tf1;
                     static TextField tf2;
-
+                
                     // Driver function
-                        public static void main(String args[]) {
+                    public static void main(String args[]) {
                         frame = new Frame("Keyboard Event");
                         frame.setSize(500, 500);
                         frame.setLayout(null);
-
+                
                         tf1 = new TextField();
                         tf1.setBounds(150, 100, 500, 50);
-
+                
                         tf2 = new TextField();
                         tf2.setBounds(140, 400, 500, 50);
-
+                
                         Main obj = new Main();
-
                         tf2.addKeyListener(obj);
                         frame.addWindowListener(new WindowAdapter() {
                             public void windowClosing(WindowEvent w) {
@@ -342,31 +312,31 @@
                         frame.setVisible(true);
                         frame.add(tf1);
                         frame.add(tf2);
-                            }
-                        public void keyReleased(KeyEvent e) {
+                    }
+                    public void keyReleased(KeyEvent e) {
                         tf1.setText("");
                         tf1.setText("Key Released : " + e.getKeyCode());        
                         System.out.println("Key Released");
-                        }
-
-                        // function to display the unicode of key pressed and the character if it is a letter or a digit
-                        public void keyPressed(KeyEvent e) {
+                    }
+                    public void keyPressed(KeyEvent e) {
                         tf1.setText("");
                         tf1.setText("Key Pressed : " + e.getKeyCode());
                         System.out.println("Key Pressed");
-                            }
-                        // function to display the character of the key typed
-                        public void keyTyped(KeyEvent e) {
+                    }
+                
+                    // function to display the character of the key typed
+                    public void keyTyped(KeyEvent e) {
                         tf1.setText("");
                         tf1.setText("Key Typed : " + e.getKeyChar());
-                        System.out.println("Key Typed");
-                            }
-                        }
-                </code>
+                    System.out.println("Key Typed");
+                    }
+                }
+                
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7002delegationeventmodel5.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j5.png" alt="">  
             </div>
         </details>
 
@@ -381,44 +351,39 @@
             <pre>
             <code>
                 import java.awt.*;
-                import java.awt.event.*;     
-                class MouseL extends Frame {
-                    Button b1 = new Button("Ok");
-                    Button b2 = new Button("Cancel");
+                import java.awt.event.*;
                 
-                    MouseL() {
-                        this.setVisible(true);
-                        this.setSize(300, 450);
-                        setLayout(new FlowLayout());
-                        add(b1);
-                        add(b2);
-                        setBackground(Color.gray);
-                        b1.addMouseListener(new InnerMouseL());
-                        b2.addMouseListener(new InnerMouseL());
-                        addWindowListener(new win());
-                        // pack();
-                    }               
-                    public static void main(String[] args) {
-                        new MouseL();
-                    }
-                }              
-                class win extends WindowAdapter
-                {
-                    public void windowClosing(java.awt.event.WindowEvent w)
-                    {
-                        System.exit(10);
-                    }
-                }  
-                class InnerMouseL extends MouseAdapter {
-                    public void mouseClicked(MouseEvent e) {
-                        System.out.println(e.getClickCount());
-                    }
+                class pro6 extends Frame implements MouseListener{
+                Button b1,b2;
+                
+                pro6(){
+                b1= new Button("ok");
+                b2= new Button("cancel");
+                setLayout(new FlowLayout());
+                add(b1); add(b2);
+                
+                b1.addMouseListener(this);
+                
+                b2.addMouseListener(this);
+                setSize(500,400);
+                setVisible(true);
+                }
+                
+                public static void main(String s[]){
+                new pro6();
+                }
+                
+                public  void mouseClicked(java.awt.event.MouseEvent me){System.out.println("button clicked");}
+                public  void mousePressed(java.awt.event.MouseEvent me){System.out.println("button pressed");}
+                public  void mouseReleased(java.awt.event.MouseEvent me){System.out.println("button released");}
+                public  void mouseEntered(java.awt.event.MouseEvent me){System.out.println("button eneterd");}
+                public  void mouseExited(java.awt.event.MouseEvent me){System.out.println("button exited");}
                 }
             </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/dlm6.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j6.png" alt="">  
             </div>
         </details>
 
@@ -521,7 +486,7 @@
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7098DelegationEventModel7.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j7.png" alt="">  
             </div>
         </details>
 
@@ -563,7 +528,7 @@
 	                Button_Checkbox obj=new Button_Checkbox();
 	
 	                button=new JRadioButton[3];
-	                for(int i=0;i<3;i++)
+	                for(int i=0;i< 3;i++)
 	                    {
 		                    [i]=new JRadioButton("Button "+(i+1));
 		                    button[i].setBounds(200,i*80,100,50);
@@ -572,7 +537,7 @@
 	                        }
 	
 	                checkbox=new JCheckBox[3];
-	                for(int i=0;i<3;i++)
+	                for(int i=0;i< 3;i++)
 	                {
                     checkbox[i]=new JCheckBox("Checkbox"+(i+1));
                     checkbox[i].setBounds(220,(240)+i*80,100,50);
@@ -584,7 +549,7 @@
                     public void actionPerformed(ActionEvent e)
                     {
                     String s="";
-	                for(int i=0;i<3;i++)
+	                for(int i=0;i< 3;i++)
 	                    {
 	                 if(button[i].isSelected())
 	                    s=s+" "+button[i].getText();
@@ -594,7 +559,7 @@
                 public void itemStateChanged(ItemEvent e)
                     {
                         String s="";
-	                for(int i=0;i<3;i++)
+	                for(int i=0;i< 3;i++)
 	                {	
 	                    if(checkbox[i].isSelected())
 	                        s=s+" "+checkbox[i].getText();				
@@ -606,7 +571,7 @@
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7098DelegationEventModel8.png alt="">  
+            <img src="../javapro/Delegation-event-model/j8.png" alt="">  
             </div>
         </details>
 
@@ -619,13 +584,63 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
+            <code>import java.awt.*;
+                import java.awt.event.*;
+                class pro9 extends Frame implements ActionListener {
+                    Frame frame1, frame2;
+                    Button switchButton1, switchButton2;
+                
+                    pro9() {
+                        frame1 = new Frame("Frame 1");
+                        frame2 = new Frame("Frame 2");
+                        switchButton1 = new Button("Switch to Frame 2");
+                        switchButton2 = new Button("Switch to Frame 1");
+                
+                        switchButton1.addActionListener(this);
+                        switchButton2.addActionListener(this);
+                
+                        frame1.setSize(300, 200);
+                        frame2.setSize(300, 200);
+                        frame1.setLayout(new FlowLayout());
+                        frame2.setLayout(new FlowLayout());
+                
+                        frame1.add(new Label("This is Frame 1"));
+                        frame2.add(new Label("This is Frame 2"));
+                        frame1.add(switchButton1);
+                        frame2.add(switchButton2);
+                
+                        frame1.addWindowListener(new WindowAdapter() {
+                            public void windowClosing(WindowEvent we) {
+                                frame1.dispose();
+                                frame2.dispose();
+                            }
+                        });
+                        frame2.addWindowListener(new WindowAdapter() {
+                            public void windowClosing(WindowEvent we) {
+                                frame1.dispose();
+                                frame2.dispose();
+                            }
+                        });
+                        frame1.setVisible(true);
+                    }
+                    public void actionPerformed(ActionEvent ae) {
+                        if (ae.getSource() == switchButton1) {
+                            frame1.setVisible(false);
+                            frame2.setVisible(true);
+                        } else if (ae.getSource() == switchButton2) {
+                            frame2.setVisible(false);
+                            frame1.setVisible(true);
+                        }
+                    }
+                    public static void main(String[] args) {
+                        new pro9();
+                    }
+                } 
                 </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j9.png" alt="">  
             </div>
         </details>
 
@@ -638,13 +653,51 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
-                </code>
+            <code>/*Java Program to draw borders around Push Button*/
+                import javax.swing.*;
+                import java.awt.*;
+                import javax.swing.border.*;
+                class pro10
+                {
+                    //Driver function
+                    public static void main(String args[])
+                    {
+                         //Create a frame
+                     JFrame frame=new JFrame("Borders around Buttons");
+                     frame.setSize(500,500);
+                     frame.setLayout(null);
+                     frame.setBackground(Color.white);
+                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                     //Create push buttons
+                     JButton button=new JButton();
+                     JButton button1=new JButton();
+                
+                         button=new JButton("Button 1");
+                         button.setBounds(210,75,100,50);
+                         frame.add(button);
+                         
+                         button1=new JButton("Button 2");
+                         button1.setBounds(310,130,100,50);
+                         frame.add(button1);
+                    
+                     //Create different borders
+                         LineBorder thick;
+                          BevelBorder bevel;
+                          thick=new LineBorder(Color.black,10);
+                         bevel=new BevelBorder(BevelBorder.RAISED,Color.black,Color.white);
+                     //Add borders to buttons
+                    
+                     button.setBorder(thick);
+                     button1.setBorder(bevel);
+                     //Display frame
+                     frame.setVisible(true);
+                    }
+                }
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j10.png" alt="">  
             </div>
         </details>
 
@@ -657,13 +710,41 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
-                </code>
+            <code>import java.awt.*;
+                public class pro11 extends Frame 
+                {
+                    List awtList;
+                    
+                    public pro11() {
+                        
+                        setSize(500, 250);
+                        setLocation(100,100); 
+                        setVisible(true);
+                           
+                        awtList = new List(5, true);
+                        awtList.add("Apple");
+                        awtList.add("Orange");
+                        awtList.add("Banana");
+                        awtList.add("Grapes");
+                        awtList.add("Pine Apple");
+                        awtList.add("Strawberry");
+                        awtList.add("Jack Fruit");
+                        awtList.add("Papaya");
+                        awtList.add("Water Melon");
+                        awtList.add("Mango");
+                        
+                      setLayout(new FlowLayout());
+                      add(awtList);
+                    }
+                    public static void main(String s[]){
+                    new pro11();
+                    }
+                }
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j11.png" alt="">  
             </div>
         </details>
 
@@ -706,7 +787,7 @@
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7098DelegationEventModel12.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j12.png" alt="">  
             </div>
         </details>
 
@@ -769,7 +850,7 @@
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7098DelegationEventModel13.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j13.png" alt="">  
             </div>
         </details>
 
@@ -791,7 +872,7 @@
                         GraphicsEnvironment local_env; 
                                 local_env= GraphicsEnvironment.getLocalGraphicsEnvironment();		
                         String allfonts[] = local_env.getAvailableFontFamilyNames();		
-                        for(int i=0;i<allfonts.length;i++)
+                        for(int i=0;i< allfonts.length;i++)
                             System.out.println(allfonts[i]);
                     }
                 }
@@ -799,7 +880,7 @@
             </pre>
 
             <p><b>Output: </b></p>
-            <img src="../javapro/Delegation-event-model/7098DelegationEventModel14.png" alt="">  
+            <img src="../javapro/Delegation-event-model/j14.png" alt="">  
             </div>
         </details>
 
@@ -812,13 +893,38 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
+            <code>import java.awt.*;    
+                import java.applet.*    
+                    public class pro15 extends Applet    
+                 {    
+                   Font f1,f2,f3;    
+                    
+                   public void  init()    
+                    {    
+                       f1 = new Font("Arial",Font.BOLD,18);    
+                       f2 = new Font("Forte",Font.PLAIN,24);    
+                       f3 = new Font("Elephant",Font.ITALIC,28);    
+                    }    
+                          
+                   public void  paint(Graphics g)    
+                   {    
+                      g.drawString("Welcome",50,50);    
+                    
+                      g.setFont(f1);     
+                      g.drawString("to ",50,80);    
+                    
+                      g.setFont(f2);     
+                      g.drawString("My ",50,110);    
+                    
+                      g.setFont(f3);     
+                      g.drawString("Website",50,140);    
+                   }    
+                 }    
             </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j15.png" alt="">  
             </div>
         </details>
 
@@ -831,13 +937,30 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
-                </code>
+            <code>/*Java Program to Display Text with Background Color as Cyan*/
+                import java.awt.*;
+                class pro16
+                {
+                     public static void main(String args[])
+                    {
+                    Frame frame = new Frame("Cyan Text");
+                    frame.setSize(400,400);
+                    frame.setLayout(new FlowLayout());
+                    frame.setBackground(Color.CYAN);
+                    String str="The Background of Frame is Cyan";
+                    Label text = new Label(str);
+                    text.setFont(new Font("Serif",Font.ITALIC,20));
+                    frame.add(text);
+                    text.setForeground(Color.red);
+                    //Display the frame
+                    frame.setVisible(true);
+                    }
+                }
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j16.png" alt="">  
             </div>
         </details>
 
@@ -850,13 +973,35 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
-                </code>
+            <code>import java.applet.*;
+                import java.awt.*;
+                import java.awt.event.*;
+                public class pro17 extends Applet implements ActionListener {
+                Button b1;
+                    Color[] c = { Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW };
+                    int bgcolor = 0;
+                    @Override
+                    public void init() {
+                        b1 = new Button("Change Color");
+                        b1.addActionListener(this);
+                        add(b1);
+                    }
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (bgcolor < c.length - 1) {
+                            bgcolor++;
+                        } else {
+                            bgcolor = 0;
+                        }
+                        setBackground(c[bgcolor]);
+                    }
+                }
+                //<applet code= pro17 width= 600 height=500 ></applet>
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j17.png" alt="">  
             </div>
         </details>
 
@@ -905,7 +1050,7 @@
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j18.png" alt="">  
             </div>
         </details>
 
@@ -918,13 +1063,48 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
-                </code>
+            <code>import java.awt.*;
+                import java.awt.event.*;
+                import javax.swing.*;
+                public class pro19 extends JFrame {
+                   JTextField tf;
+                   Container container;
+                   JLabel label;
+                   public pro19() {
+                      container = getContentPane();
+                      setBounds(0, 0, 500, 300);
+                      tf = new JTextField(25);
+                      setLayout(new FlowLayout());
+                      container.add(new JLabel("Enter the number"));
+                      container.add(tf);
+                      container.add(label = new JLabel());
+                      label.setForeground(Color.red);
+                      setDefaultCloseOperation(EXIT_ON_CLOSE);
+                      setLocationRelativeTo(null);
+                      tf.addKeyListener(new KeyAdapter() {
+                         public void keyPressed(KeyEvent ke) {
+                            String value = tf.getText();
+                            int l = value.length();
+                            if (ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9') {
+                               tf.setEditable(true);
+                               label.setText("");
+                            } else {
+                               tf.setEditable(false);
+                               label.setText("* Enter only numeric digits(0-9)");
+                            }
+                         }
+                      });
+                      setVisible(true);
+                   }
+                   public static void main(String[] args) {
+                      new pro19();
+                   }
+                }
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j19.png" alt="">  
             </div>
         </details>
 
@@ -937,13 +1117,42 @@
             <div class="code-box">
                 <p><b>Program:</b></p>
             <pre>
-            <code>
-            
-                </code>
+            <code>import java.awt.*;    
+                import java.awt.event.*;    
+                public class pro20 extends KeyAdapter {    
+                    Label l;    
+                    TextArea area;    
+                    Frame f;    
+                    pro20() {    
+                         f = new Frame ("Key Adapter");    
+                        l = new Label("Enter email: ");    
+                        l.setBounds (20, 50, 200, 20);    
+                        area = new TextArea();  
+                        area.setBounds (20, 80, 300, 300);    
+                        area.addKeyListener(this);    
+                         f.add(l);  
+                         f.add(area);    
+                        f.setSize (400, 400);    
+                        f.setLayout (null);    
+                        f.setVisible (true);    
+                    }    
+                    public void keyReleased (KeyEvent e) {    
+                        int k= e.getKeyCode();
+                            if (k == '@') {
+                               area.setEditable(true);  
+                            } else {
+                               area.setEditable(false);
+                            }
+                    }    
+                    public static void main(String[] args) {    
+                        new pro20();    
+                    }    
+                }    
+            </code>
             </pre>
 
             <p><b>Output: </b></p>
-            <img src=".." alt="">  
+            <img src="../javapro/Delegation-event-model/j13.png" alt="">  
             </div>
         </details> 
     
