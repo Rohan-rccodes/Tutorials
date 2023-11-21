@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP While & do while</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP While & do while Loop</h1>
+    <hr class="line">
+    <p class="desc">
+        The while loop executes a block of code as long as the specified condition is true.
+    </p>
+    <p><b>Syntax: </b></p>
+    <br>
+    <p><b>while(condition is true) {
+        <br>
+        code to be executed if conditionis true 
+        <br>
+    }
+    </b></p>
+
+    <br><br>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* if statement*/</span>
+        $x = 1;
+
+        while($x <= 5) {
+          echo "The number is: $x <br>";
+          $x++;
+        }
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        The number is: 1
+        The number is: 2
+        The number is: 3
+        The number is: 4
+        The number is: 5
+    </pre>
+
+    <img src="images/php-3.png" alt="" class="content-img">
+  
+
+    <h2 class="sub-title">The PHP do...while Loop</h2>
+    <p class="desc">
+        The do...while loop will always execute the block of code once, it will then check the condition, and repeat the loop while the specified condition is true.
+    </p>
+
+    <p><b>Syntax: </b></p>
+    <br>
+    <p><b>
+        do {
+            <br>code to be executed
+        }
+        while(condition is true);
+    </b></p>
+
+    <p class="desc">
+        The example below first sets a variable $x to 1 ($x = 1). Then, the do while loop will write some output, and then increment the variable $x with 1. Then the condition is checked (is $x less than, or equal to 5?), and the loop will continue to run as long as $x is less than, or equal to 5:
+
+
+    </p>
+
+     <!----------------codebox----------------->
+     <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* if statement*/</span>
+        $x = 1;
+
+        do {
+          echo "The number is: $x <br>";
+          $x++;
+        } while ($x > 5);
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        The number is: 1
+    </pre>
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

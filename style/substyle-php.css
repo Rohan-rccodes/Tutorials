@@ -154,14 +154,15 @@ nav .navigation ul li a:hover {
 
 /*------------------SIDEBAR--------------*/
 .sidebar {
-  width: 15%;
-  height: 85%;
+  width: 18%;
+  height: 91%;
   /* height: calc(100vh - 7rem); */
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #ededed; */
+  background-color: #e9ecef;
   overflow-x: hidden;
   padding: 1rem;
   cursor: pointer;
@@ -173,7 +174,8 @@ nav .navigation ul li a:hover {
   margin: 0 0 1rem 0;
 }
 .phplogo {
-  width: 60%;
+  border-radius:60px;
+  width: 50%; 
 }
 .sidelinks {
   margin-top: 0.5rem;
@@ -206,18 +208,20 @@ nav .navigation ul li a:hover {
   background-color: #8189ff;
 }
 .asideActive {
+ 
   border-right: 5px inset orangered;
-  /* background: rgb(251,246,255);
-  background: linear-gradient(277deg, rgba(251,246,255,1) 35%, rgba(155,61,255,1) 100%); */
+  background: rgb(255,255,255);
+  /* background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(195,162,255,1) 68%, rgba(93,0,255,1) 100%); */
 }
 /*---------------------------------------------------------*/
 /*--------------------CONTENT SECTION--------------------*/
 /*---------------------------------------------------------*/
 
 .contentbar {
-  width: 85%;
-  margin-left: 15%;
-  padding: 20px;
+  width: 82%;
+  margin-left: 18%;
+  /* padding: 20px; */
 }
 iframe {
   width: 100%;

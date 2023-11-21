@@ -17,8 +17,10 @@
 
 body {
   scroll-behavior: smooth;
-  background-color: #f1efef;
+  /* background-color: #f8f9fa; */
+  background-color: #fff;
   padding: 3% 5% 3% 5%;
+  color: #121212;
 }
 
 body::-webkit-scrollbar {
@@ -48,7 +50,7 @@ body::-webkit-scrollbar {
   font-weight: 450;
   padding: 10px 0;
   letter-spacing: 1px;
-  color: #111;
+  color: #232323;
 }
 .code-box {
   font-weight: 450;
@@ -57,7 +59,9 @@ body::-webkit-scrollbar {
   display: inline-block;
   padding: 1rem 0.5rem 0;
   margin: 1rem 0;
-  background: #fff;
+  /* background: #f2f2f2; */
+  /* background: #caf0f8; */
+  background-color: #dfeeff;
   width: 80%;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
@@ -75,7 +79,9 @@ body::-webkit-scrollbar {
   display: inline-block;
   padding: 1rem 0.5rem 0;
   margin: 1rem 0;
-  background: #fff;
+  background-color: #dfeeff;
+
+  /* background: #caf0f8; */
   width: 80%;
 }
 ul {

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Include files</title>
+</head>
+<p id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Include files</h1>
+    <hr class="line">
+    <p class="desc">
+        In PHP, include and require are both used for including external files in a PHP script. These external files can contain functions, variables, HTML, or other PHP code that you want to reuse across multiple pages. The primary difference between them lies in how they handle errors and whether the script execution continues when the included file is not found:
+    </p>
+
+
+    <p><b>1. include Statement:</b></p>
+    <p class="desc">
+        <ul>
+            <li>The include statement is used to include a file in PHP.</li>
+            <li>If the included file is not found, include generates a warning and allows the script to continue</li>
+            <li>It is commonly used for non-critical files, such as templates or optional components.</li>
+        </ul>
+    </p>
+    &nbsp;&nbsp;&nbsp;&nbsp;<p><b><i>require("file_to_require.php");</i></b></p>
+    
+
+    <p><b>require Statement:</b></p>
+    <p class="desc">
+        <ul class="type-3">
+            <li>The require statement is also used to include a file in PHP.</li>
+            <li>If the included file is not found, require generates a fatal error and halts script execution.</li>
+            <li>It is commonly used for essential files or components that are necessary for the script to function correctly.</li>
+        </ul>
+    </p>
+    <br>
+    <p><b><i>require("file_to_require.php");</i></b></p>
+
+    <br>
+
+    <p class="desc">Use include when you want to include a file that may not be critical to the operation of your script, and you want the script to continue running even if the included file is missing or encounters an error.</p>
+
+    <p><b>For example :</b></p>
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* include*/</span>
+        include("header.php");
+
+        <span class="comment">/* include*/</span>
+        require("config.php");
+        ?>
+    </pre>
+    
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

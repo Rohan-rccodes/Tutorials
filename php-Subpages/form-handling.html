@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Form Handling</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Form Handling</h1>
+    <hr class="line">
+    <p class="desc">
+        Form handling in PHP is a common way to collect user data and process it. Forms are created in HTML and can use two primary methods to submit data to a server-side script: the GET and POST methods. These methods differ in how they transmit data and how the server-side script accesses it:
+    </p>
+    <h2 class="sub-title">GET Method:</h2>
+    <p>
+        <ul class="type-1">
+            <li>The GET method appends data to the URL as query parameters.</li>
+            <li>Data is visible in the URL, making it suitable for non-sensitive information.</li>
+            <li>Data is limited in size due to URL length restrictions.</li>
+            <li>It is not suitable for passwords or other sensitive data because it's visible in the URL.</li>
+            <li>It is commonly used for search queries and navigation.</li>
+        </ul>
+    </p>
+
+    <h2 class="sub-title">POST Method:</h2>
+    <p>
+        <ul class="type-1">
+            <li>The POST method sends data in the HTTP request body.</li>
+            <li>Data is not visible in the URL, making it suitable for sensitive or larger data.</li>
+            <li>It is commonly used for submitting forms, such as login or registration forms.</li>
+            <li>It doesn't have the same size limitations as the GET method.</li>
+            <li>Here's an example of a simple HTML form that collects a username and password, then displays them on the same page using the POST method:</li>
+        </ul>
+
+    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Simple Form&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h2&gt;Simple Form Example&lt;/h2&gt;
+        
+            &lt;form method="post" action=""&gt;
+                &lt;label for="username"&gt;Username:&lt;/label&gt;
+                &lt;input type="text" id="username" name="username" required&gt;&lt;br&gt;&lt;br&gt;
+        
+                &lt;label for="password"&gt;Password:&lt;/label&gt;
+                &lt;input type="password" id="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+        
+                &lt;input type="submit" value="Submit"&gt;
+            &lt;/form&gt;
+        
+            &lt;?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+                echo "&lt;h3&gt;Submitted Data:&lt;/h3&gt;";
+                echo "Username: $username&lt;br&gt;";
+                echo "Password: $password";
+            }
+            ?&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+
+    <p><b>Output:</b></p>
+    
+    <img src="../images/phpFormHandling.svg" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

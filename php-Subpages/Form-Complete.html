@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Php-Foreach</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Foreach Loop</h1>
+    <hr class="line">
+    <p class="desc">
+        The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+    </p>
+    <h2 class="sub-title">In PHP we have the following conditional statements:</h2>
+    <p class="desc">Syntax
+    </p>
+    <p><b>foreach ($array as $value){
+        <br>
+          code to be executed if conditionis true 
+        <br>
+         }
+    </b></p>
+
+    <br><br>
+
+    <p class="desc">For every loop iteration, the value of the current array element is assigned to $value and the array pointer is moved by one, until it reaches the last array element.</p>
+
+    <br>
+
+    <p class="desc">The following example will output the values of the given array <b>($colors):</b></p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* if statement*/</span>
+        $colors = array("red", "green", "blue", "yellow");
+
+        foreach ($colors as $value) {
+          echo "$value <br>";
+        }
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        red
+        green
+        blue
+        yellow        
+    </pre>
+    
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Php-Programs-List</title>
+    <style>
+        
+    </style>
+
+     <!--------FAV-ICONS---------->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"/>
+
+    <!---------ICONS---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+     <!--------MAIN STYLE---------->
+    <link rel="stylesheet" href="../style/Program-style.css"/>
+
+    <!-- <link rel="stylesheet" href="../style/content.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+    <!----js-style-menu ------>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-------navigation-------->
+<!-- <nav id="navbar">
+    <a href="/index.html"> <img src="../images/logo.png" alt=""></a>
+    
+    <div class="navigation">
+        <ul>
+            <i id="menu-close" class="fa-solid fa-xmark"></i>
+
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="javascript:void(0)" class="tutdrop-btn">Tutorials</a></li>
+            <li><a href="#">Php-Projects</a></li>
+            <li><a href="index.html" target="_blank">Run-Code</a></li>
+            <li><a href="#features">About</a></li>
+            <li><a href="#footer">Feedback</a></li>
+        </ul>
+        <img id="menu-btn" src="../images/menu.png" alt="">
+    </div>
+</nav> -->
+<!-- <div class="dropdown-content dropdownhidden">
+    <ul>
+        <li><a href="#">Html</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="mysql-tutorial.html" target="_blank">MySQL</a></li>
+        <li><a href="plsql-tutorial.html" target="_blank">PL/SQL</a></li>
+    </ul>
+</div> -->
+<!--
+    grid-row-2 : divition of main-container and footer
+-->
+
+
+    <!-----Home section-------->
+
+    <div class="main-container">
+         
+    <div class="left-content">
+
+    <p class="desc"><b>1.PHP Code to print text using echo command</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+        echo "Hello world\n";
+        /*print variable values*/
+        $text = "Sample text";
+        $lucky_number = 100;
+        echo " &lt;br&gt;";
+        echo "Value of text is: " . $text . " Lucky number is: " . $lucky_number . "\n";
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+
+        Hello world
+        Value of text is: Sample text Lucky number is: 100 
+    </pre>
+
+    <p class="desc"><b>2.PHP Code to print text using echo command</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    /*print string*/
+    echo "Hello world\n";
+    
+    /*print variable values*/
+    $text = "Sample text";
+    $lucky_number = 100;
+    
+    echo "< /br>";
+    echo "Value of text is: " . $text . " Lucky number is: " . $lucky_number . "\n";
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        Hello world
+        Value of text is: Sample text Lucky number is: 100 
+    </pre>
+
+    <p class="desc"><b>3.PHP program to create a function to find the addition of two integer numbers</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //function definition
+    //this function will take two integer arguments
+    //and return the sum of them
+    function addTwoNumbers(int $x, int $y)
+    {
+        return $x + $y;
+    }
+    
+    //calling the function and printing the result
+    echo " sum of 10 and 25 : " . addTwoNumbers(10, 25);
+    echo "<br>";
+    echo " sum of 30 and -10: " . addTwoNumbers(30, -10);
+    echo "<br>";
+    ?>    
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        sum of 10 and 25 : 35
+        sum of 30 and -10: 20
+    </pre>
+
+    <p class="desc"><b>4.PHP Code to print current date in various formats</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    /*print date in dd/mm/yy format*/
+    print "Current date in dd/mm/yy format: " . date("d/m/y");
+    print "< /br>";
+
+    /*print date in dd/mm/yyyy format*/
+    print "Current date in dd/mm/yyyy format: " . date("d/m/Y");
+    print "< /br>";
+
+    /*print date in dd MON yyyy format*/
+    print "Current date in dd MON yyyy format: " . date("d M Y");
+    print " < /br>";
+
+    /*print date in Day, dd MON yyyy format*/
+    print "Current date in Day, dd MON yyyy format: " . date("D, d M Y");
+    print "< /br>";
+
+    /*print date in Day, dd MONTH yyyy format*/
+    print "Current date in Day, dd MONTH yyyy format: " . date("D, d F Y");
+    print "< /br>";
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+    Current date in dd/mm/yy format: 08/11/16
+    Current date in dd/mm/yyyy format: 08/11/2016
+    Current date in dd MON yyyy format: 08 Nov 2016
+    Current date in Day, dd MON yyyy format: Tue, 08 Nov 2016
+    Current date in Day, dd MONTH yyyy format: Tue, 08 November 2016
+    </pre>
+
+    <p class="desc"><b>5.How to break a foreach loop in PHP?</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php>
+    // array defination
+    $names = array("joe", "liz", "dan", "kelly", "joy", "max");
+    
+    // foreach loop
+    foreach ($names as $name) {
+        //  display of the loop
+        echo $name . '< br>';
+        // stop when name is equal to dan
+        if ($name == 'dan') break;
+    }
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+
+        joe
+        liz
+        dan 
+    </pre>
+
+    <p class="desc"><b>6.PHP code to use break in a foreach loop with an associative array</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //array definition
+    $members = array("joe" => "12", "liz" => "13", "sam" => "14", "ben" => "15");
+    
+    //variables to count
+    $count = 0;
+    
+    //number f display or loop
+    $end = 2;
+    foreach ($members as $key => $value) {
+        $count++; // increment the counter
+        //display
+        printf("%s is  %d years old<br>", $key, $value);
+        //stop when $count equals $end
+        if ($count == $end) break;
+    }
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+    
+        joe is 12 years old
+        liz is 13 years old
+    </pre>
+
+    <p class="desc"><b>7.PHP program to check whether given number is palindrome or not</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //function: isPalindrome
+    //description
+    function isPalindrome($number){
+        //assign number to temp variable
+        $temp = $number;
+        //variable 'sum' to store reverse number
+        $sum = 0;
+        
+        //loop that will extract digits from the last
+        //to make reverse number
+        while(floor($temp)){
+            $digit = $temp % 10;
+            $sum = $sum*10 + $digit;
+            $temp = $temp/10;
+        }
+        //if number is equal to its reverse number
+        //then it will be a palindrome number
+        if($sum == $number)
+            return 1;
+        else
+            return 0;
+    }
+    
+    //Main code to test above function
+    $num = 12321;
+    if(isPalindrome($num))
+        echo($num . " is a palindrome number");
+    else
+        echo($num . " is not a palindrome number");
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        12321 is a palindrome number
+    </pre>
+
+    <p class="desc"><b>8.PHP Check if a number is Even or Odd</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //function: isEvenOrOdd
+    //description: This function will check
+    //whether a given number is EVEN or ODD
+    function isEvenOrOdd($num){
+         //if num is divisible by 2 than
+         //it will be an EVEN number or it 
+         //will be an ODD number
+         if( $num % 2 == 0)
+             return 1; //will check as EVEN number
+         else
+             return 0; //will check as ODD number
+    }
+    
+    //main code to test the function
+    $number = 12;
+    if(isEvenOrODD($number))
+         print_r($number." is EVEN number");
+    else
+         print_r($number." is ODD number");
+ 
+     print_r("\n");
+     
+     //again check with an ODD number
+    $number = 13;
+    if(isEvenOrODD($number))
+         print_r($number." is EVEN number");
+    else
+         print_r($number." is ODD number");    
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        12 is EVEN number
+        13 is ODD number
+    </pre>
+
+    <p class="desc"><b>9.PHP | Factorial of a number</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //program to find factorial of a number
+    //here, we are designing a function that
+    //will take number as argument and return
+    //factorial of that number
+    
+    //function: getFactorial
+    function getFactorial($num){
+        //declare a variable and assign with 1
+        $factorial = 1;
+        for($loop = 1; $loop <= $num; $loop++)
+            $factorial = $factorial * $loop;
+        return $factorial;
+    }
+
+    //Main code to test above function
+    $number = 1;
+    print_r("Factorial of ".$number. " is = ".getFactorial($number). "\n");
+    $number = 2;
+    print_r("Factorial of ".$number. " is = ".getFactorial($number). "\n");
+    $number = 3;
+    print_r("Factorial of ".$number. " is = ".getFactorial($number). "\n");
+    $number = 4;
+    print_r("Factorial of ".$number. " is = ".getFactorial($number). "\n");  
+    $number = 5;
+    print_r("Factorial of ".$number. " is = ".getFactorial($number). "\n");    
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        Factorial of 1 is = 1
+        Factorial of 2 is = 2
+        Factorial of 3 is = 6
+        Factorial of 4 is = 24
+        Factorial of 5 is = 120
+    </pre>
+
+    <p class="desc"><b>10.Reverse an Integer Number in PHP</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //input
+	$num = 12345;
+	//reverse should be 0
+	$reverse = 0;
+	//run loop until num is not zero
+	while ($num != 0)
+	{
+		$reverse = $reverse * 10 + $num % 10;
+		$num = (int)($num / 10); 
+	}
+	/printing the reverse number 
+	echo "Reverse number of 12345 is: $reverse";
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        Hello world
+        Value of text is: Sample text Lucky number is: 100 
+    </pre>
+
+    <p class="desc"><b>11.PHP program to find integer division using intdiv() function</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    $a = 10;
+    $b = 3;
+    
+    //normal division
+    $result1 = $a/$b;
+    print("value of result1: $result1 \n");
+    print("var_dump: ");
+    var_dump($result1);
+    print("\n");
+    
+    //using intdiv() function
+    $result2 = intdiv($a, $b);
+    print("value of result2: $result2 \n");
+    print("var_dump: ");
+    var_dump($result2);
+    print("\n");    
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        value of result1: 3.3333333333333
+        var_dump: float(3.3333333333333)
+        
+        value of result2: 3
+        var_dump: int(3)
+    </pre>
+
+    <p class="desc"><b>12.Factorial program in PHP using recursive function</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //PHP program to calculate the factorial 
+    //of a given number using recursion.
+    function fact($num)
+    {
+        if ($num == 1) return 1;
+    
+        return $num * fact($num - 1);
+    }
+    
+    $result = fact(5);
+    echo "Factorial is: " . $result;
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        Factorial is: 120
+    </pre>
+
+    <p class="desc"><b>1.PHP Code to print text using echo command</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+        echo "Hello world\n";
+        /*print variable values*/
+        $text = "Sample text";
+        $lucky_number = 100;
+        echo " &lt;br&gt;";
+        echo "Value of text is: " . $text . " Lucky number is: " . $lucky_number . "\n";
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        Hello world
+        Value of text is: Sample text Lucky number is: 100 
+    </pre>
+
+    <p class="desc"><b>13.PHP program to calculate the power of a number using recursion</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //PHP program to calculate the power of a number
+    //using recursion.
+    function Power($num, $p)
+    {
+        if ($p == 0) return 1;
+        return $num * Power($num, $p - 1);
+    }
+    
+    $result = Power(5, 3);
+    echo "Result is: " . $result;
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+        
+        Result is: 125
+    </pre>
+
+    <p class="desc"><b>14.PHP program to calculate factors of a given number</b></p>
+    <pre class="code-box">
+    <code class="language-php"> 
+    < php
+    //We Define a function that gets
+    //an argument and return the factors
+    //of the number it got.
+    // Function definition
+    function factors_of_a_number($n)
+    {
+        if ($n == 0)
+        {
+            // because we cannot divide 0/0 does not exist
+            echo "Zero has no factors";
+        }
+        else
+        {
+            // format our answer to look good.
+            print_r("The factors of $n are {");
+            //We will use a for loop to loop through
+            // each number in the series  1 to our number $n
+            // dividing $n by each number
+            for ($x = 1;$x <= $n;$x++)
+            {
+                // the modulus operator
+                // helps us get the remainder of each division
+                $factor = $n % $x;
+    
+                //we will check to see which number return a 0 as reminder
+                // the we echo that number because it is a factor of our number $n.
+                if ($factor == 0)
+                {
+                    print_r($x . ",");
+                }
+            }
+            print_r ( "}" );
+        }
+    }
+    print_r(factors_of_a_number(0) . "\n");
+    print_r(factors_of_a_number(50) . "\n");
+    ?>
+    </code>
+    </pre>
+    <p class="desc">Output: </p>
+    <pre class="output-box">
+       
+        Zero has no factors
+        The factors of 50 are {1,2,5,10,25,50,}
+    </pre>
+
+    </div>
+
+        
+
+
+        <!-- <div class="right-content"> -->
+            <!-- <iframe src="https://onecompiler.com/php" scrolling="no" frameborder="2" name="Content-box" id="viewframe"></iframe> -->
+        <!-- </div> -->
+
+        </div>
+
+
+
+<!--------------------footer section----------------------->
+
+ <!-- <footer id="footer">
+    <div class="footer-col">
+        <h3>Top Products</h3>
+            <li>Manage Reputation</li>
+            <li>Manage Website</li>
+           <li>Power Tool</li>
+        <li>Marketing Services</li>
+        </div>
+        <div class="footer-col">
+            <h3>Courses</h3>
+            <li>Html5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>DBMS</li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Manage Reputation</li>
+            <li>Power Tool</li>
+            <li>Manage Website</li>
+            <li>Marketing Services</li>
+            </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Stay in the loop, sign up for our newsletter scoop!!</p>
+        <div class="subscribe">
+            <input type="text" placeholder="Your Email Address">
+            <a href="#" class="yellow">SUBSCRIBE</a>
+            </div>
+        </div>
+
+
+                <!------COPYRIGHT SECTION------>
+
+
+        <div class="copyright">
+            <p>copyright &COPY;  2023 | All rights reserved | Made with <span class="heart-beat"> <i class="fa-solid fa-heart"></i> </span> by RCcodes </p>
+            <div class="pro-links">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+</footer> -->
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/prism@1.24.1/prism.js"></script>
+    <script src="script.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/active-tab.js"></script>
+    <script src="../js/snippet-copy.js"></script>
+</body>
+</html>

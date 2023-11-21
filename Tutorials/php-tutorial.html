@@ -20,7 +20,6 @@
     
      <!--------MAIN STYLE---------->
     <link rel="stylesheet" href="../style/substyle-php.css"/>
-    <link rel="stylesheet" href="../style/content.css">
 
     <!----js-style-menu ------>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -38,20 +37,20 @@
             <i id="menu-close" class="fa-solid fa-xmark"></i>
 
             <li><a href="../index.html" target="_blank">Home</a></li>
-            <li><a href="javascript:void(0)" class="tutdrop-btn">Tutorials</a></li>
-            <li><a href="#">Php-Projects</a></li>
-            <li><a href="index.html" target="_blank">Run-Code</a></li>
-            <li><a href="#features">About</a></li>
-            <li><a href="#footer">Feedback</a></li>
+            <li><a href="../index.html" class="tutdrop-btn">Tutorials</a></li>
+            <li><a href="../php-Subpages/Php-Projects.html" target="Content-box">Php-Projects</a></li>
+            <li><a href="../php-Subpages/Php-Programs.html" target="Content-box">Php-Programs</a></li>
+            <li><a href="https://github.com/Rohan-rccodes">About</a></li>
+            <li><a href="#f">Feedback</a></li>
         </ul>
         <img id="menu-btn" src="../images/menu.png" alt="">
     </div>
 </nav>
 <div class="dropdown-content dropdownhidden">
     <ul>
-        <li><a href="#">Html</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
+        <li><a href="">Html</a></li>
+        <li><a href="">CSS</a></li>
+        <li><a href="">JavaScript</a></li>
         <li><a href="mysql-tutorial.html" target="_blank">MySQL</a></li>
         <li><a href="plsql-tutorial.html" target="_blank">PL/SQL</a></li>
     </ul>
@@ -65,7 +64,7 @@
 
 <div class="main-container" id>
     <div class="php-heading">
-        <h2> PHP TUTORIALS</h2>
+        <!-- <h2> PHP TUTORIALS</h2> -->
     </div>
     
 
@@ -76,69 +75,63 @@
 
         <div class="sidelinks">
             <h4>Introduction</h4>
-            <a href="../php-subpages/php-page-1.html" target="Content-box">Getting Started</a>
+            <a href="../php-subpages/Introduction.html" target="Content-box">Getting Started</a>
             <!-- <a href="https://onecompiler.com/php" target="Content-box" id="php-compiler">Php-Install</a> -->
-            <a href="../php-subpages/php-page-2.html" target="Content-box">Php-Install</a>
-            <a href="../php-subpages/php-page-3.html" target="Content-box"> Php Variables</a>
-            <a href="../php-subpages/php-page-4.html" target="Content-box">Php Echo vs Print</a>
-            <a href="../php-subpages/php-page-5.html" target="Content-box">Php Functions</a>
-            <a href="../php-subpages/php-page-6.html" target="Content-box">Php Arrays</a>
-            <a href="../php-subpages/php-page-7.html" target="Content-box">Php Constants</a>
-            <a href="../php-subpages/php-page-8.html" target="Content-box">Php Strings</a>
-            <a href="../php-subpages/php-page-9.html" target="Content-box">Php Data Types</a>
-            <a href="../php-subpages/php-page-10.html" target="Content-box">Php SuperGlobals</a>
-            <a href="../php-subpages/php-page-11.html" target="Content-box">Php RegEx</a>
+            <a href="../php-subpages/Install.html" target="Content-box">Php-Install</a>
+            <a href="../php-subpages/Variables.html" target="Content-box"> Php Variables</a>
+            <a href="../php-subpages/Echo-Print.html" target="Content-box">Php Echo vs Print</a>
+            <a href="../php-subpages/Functions.html" target="Content-box">Php Functions</a>
+            <a href="../php-subpages/Arrays.html" target="Content-box">Php Arrays</a>
+            <a href="../php-subpages/Constants.html" target="Content-box">Php Constants</a>
+            <a href="../php-subpages/Strings.html" target="Content-box">Php Strings</a>
+            <a href="../php-subpages/Data-Types.html" target="Content-box">Php Data Types</a>
+            <a href="../php-subpages/Super-Globals.html" target="Content-box">Php SuperGlobals</a>
+            <a href="../php-subpages/Regex.html" target="Content-box">Php RegEx</a>
         </div> 
         <div class="sidelinks">
-            <h4>Control Structures</h4>
-            <a href="../php-subpages/php-page-13.html"  target="Content-box">Php If Statement</a>
-            <a href="../php-subpages/php-page-14.html"  target="Content-box">Php If else Statement</a>
-            <a href="../php-subpages/php-page-15.html"  target="Content-box">Php If elseif else Statement</a>
-            <a href="#"  target="Content-box">Php nested If Statement</a>
-            <a href="#"  target="Content-box">Php For Loop</a>
-            <a href="#"  target="Content-box">Php While Loop</a>
-            <a href="#"  target="Content-box">Php Do-While Loop</a>
-            <a href="#"  target="Content-box">Php Foreach Loop</a>
-            <a href="#"  target="Content-box">Php Break Statement</a>
-            <a href="#"  target="Content-box">Php Switch Statement</a>
-            <a href="#"  target="Content-box    ">Php Continue Statement</a>
+            <h4>Control Structure</h4>
+            <a href="../php-subpages/if-statement.html"  target="Content-box">Php If Statement</a>   
+            <!-- <a href="#"  target="Content-box">Php For Loop</a> -->
+            <a href="../php-Subpages/while-loop.html"  target="Content-box">Php While Loop</a>
+            <a href="../php-Subpages/for-each.html"  target="Content-box">Php Foreach Loop</a>
+            <a href="../php-Subpages/break-statement.html"  target="Content-box">Php Break Statement</a>
+            <a href="../php-Subpages/switch-statement.html"  target="Content-box">Php Switch Statement</a>
+            <a href="../php-Subpages/continue-statement.html"  target="Content-box">Php Continue Statement</a>
         </div>
 
         <div class="sidelinks">
             <h4>Php Forms</h4>
-            <a href="#">Php Form Handling</a>
-            <a href="#">Php Form Validation</a>
-            <a href="#">Php Form Required</a>
-            <a href="#">Php Form Complete</a>
-            <a href="#">Php Form Handling</a>
+            <a href="../php-Subpages/form-handling.html"  target="Content-box">Php Form Handling</a>
+            <a href="../php-Subpages/form-validation.html" target="Content-box">Php Form Validation</a>
+            <!-- <a href="../php-Subpages/Form-Required.html" target="Content-box">Php Form Required</a> -->
+            <!-- <a href="../php-Subpages/Form-Complete.html" target="Content-box">Php Form Complete</a> -->
         </div>
 
         <div class="sidelinks">
             <h4>Php Files</h4>
-            <a href="#">Php File Handling</a>
-            <a href="#">Php File Open&Read</a>
-            <a href="#">Php File Create&Write</a>
-            <a href="#">Php File Upload</a>
-            <a href="#">Php File Append&Delete </a>
+            <a href="../php-Subpages/File-Handlings.html" target="Content-box">Php File Handling</a>
+            <a href="../php-Subpages/File-Open-Close.html" target="Content-box">Php File Open&Read</a>
+            <a href="../php-Subpages/File-Create-Write.html" target="Content-box">Php File Create&Write</a>
         </div>
 
         <div class="sidelinks">
             <h4>Php Advanced</h4>
-            <a href="#">Php Date and Time</a>
-            <a href="#">Php Sessions</a>
-            <a href="#">Php Cookies</a>
-            <a href="#">Php Include</a>
-            <a href="#">Php Filter</a>
+            <a href="../php-Subpages/Date-Time.html" target="Content-box">Php Date and Time</a>
+            <a href="../php-Subpages/Sessions.html" target="Content-box">Php Sessions</a>
+            <a href="../php-Subpages/Cookies.html" target="Content-box">Php Cookies</a>
+            <a href="../php-Subpages/Include-files.html" target="Content-box">Php Include</a>
+            <a href="../php-Subpages/Include-files.html" target="Content-box">Php Include</a>
+            <a href="../php-Subpages/Include-files.html" target="Content-box">Php String Interpolation</a>
+            <a href="../php-Subpages/Heredoc.html" target="Content-box">Heredoc</a>
+            <!-- <a href="../php-Subpages/">Php Filter</a> -->
         </div>
 
         <div class="sidelinks">
-            <h4>Importants</h4>
-            <a href="#">Php All-Programs</a>
-            <a href="#">Php Mini-Projects</a>
-            <a href="#">Empty</a>
-            <a href="#">Empty</a>
-            <a href="#">Empty</a>
-            <a href="#">Empty</a>
+            <h4>Php More </h4>
+            <a href="../php-Subpages/Php-Programs.html" target="Content-box">Php All-Programs</a>
+            <a href="../php-Subpages/Php-Projects.html" target="Content-box">Php Mini-Projects</a>
+            <a href="#"  target="Content-box">comming Soon...</a>
+            <a href="#"  target="Content-box">comming Soon...</a>
         </div>
     
        
@@ -150,7 +143,7 @@
     <!----CONTENT SECTION---->
    <div class="contentbar">
 
-    <iframe src="../php-subpages/php-page-1.html" frameborder="2" name="Content-box" id="viewFrame"></iframe>
+    <iframe src="../php-subpages/Introduction.html" frameborder="2" name="Content-box" id="viewFrame"></iframe>
         
     </div>
 

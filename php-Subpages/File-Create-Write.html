@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Create/Write</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Create/Write</h1>
+    
+    <hr class="line">
+
+    <br><br>
+    <p class="desc">
+        The fopen() function is also used to create a file. Maybe a little confusing, but in PHP, a file is created using the same function used to open files.
+    </p>
+
+    <p class="desc">If you use fopen() on a file that does not exist, it will create it, given that the file is opened for writing (w) or appending (a).</p>
+    
+    <p class="desc">The example below creates a new file called "testfile.txt". The file will be created in the same directory where the PHP code resides:</p>
+   
+    <p class="desc">$myfile = fopen("testfile.txt", "w")</p>
+    <br>
+
+    <p class="desc"><b>PHP Write to File - fwrite()</b></p>
+    <p class="desc">The fwrite() function is used to write to a file.</p>
+    <p class="desc">The first parameter of fwrite() contains the name of the file to write to and the second parameter is the string to be written.</p>
+
+    <p class="desc">The example below writes a couple of names into a new file called "newfile.txt":</p>
+    <br>
+    <p class="desc"><b>Example :</b></p>
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+        $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        $txt = "John Doe\n";
+        fwrite($myfile, $txt);
+        $txt = "Jane Doe\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
+        ?>
+    </pre>
+
+    <p class="desc"><b>PHP Overwriting</b></p>
+    <p class="desc">Now that "newfile.txt" contains some data we can show what happens when we open an existing file for writing. All the existing data will be ERASED and we start with an empty file.</p>
+    <p class="desc">In the example below we open our existing file "newfile.txt", and write some new data into it:</p>
+    <br>
+    <p class="desc"><b>Example :</b></p>
+    <br>
+
+    <pre class="code-box">
+        <span><</span>?php
+        $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        $txt = "Mickey Mouse\n";
+        fwrite($myfile, $txt);
+        $txt = "Minnie Mouse\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Mickey Mouse
+        Minnie Mouse
+    </pre>
+
+
+    <br><br>
+    <p class="desc"><b>PHP Append Text</b></p>
+    <br>
+    <p class="desc">You can append data to a file by using the "a" mode. The "a" mode appends text to the end of the file, while the "w" mode overrides (and erases) the old content of the file.</p>
+    <br>
+    <p class="desc">In the example below we open our existing file "newfile.txt", and append some text to it:</p>
+    <br>
+    <p class="desc"><b>Example</b></p>
+
+    <br>
+    <br>
+    <pre class="code-box">
+        <span><</span>?php
+        $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+        $txt = "Donald Duck\n";
+        fwrite($myfile, $txt);
+        $txt = "Goofy Goof\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
+        ?>
+    </pre>
+
+    <br>
+    <p class="desc">If we now open the "newfile.txt" file, we will see that Donald Duck and Goofy Goof is appended to the end of the file:</p>
+    <br>
+    <pre class="output-box">
+            Mickey Mouse
+            Minnie Mouse
+            Donald Duck
+            Goofy Goof
+    </pre>
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

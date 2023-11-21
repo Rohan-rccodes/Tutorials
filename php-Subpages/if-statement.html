@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>Page-1 Php-Intro</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP If Else</h1>
+    <hr class="line">
+    <p class="desc">
+        Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.
+    </p>
+    <h2 class="sub-title">In PHP we have the following conditional statements:</h2>
+    <p class="desc">
+        <ul class="type-1">
+            <li>if statement - executes some code if one condition is true</li>
+            <li>if...else statement - executes some code if a condition is true and another code if that condition is false.</li>
+            <li>if...elseif...else statement - executes different codes for more than two conditions</li>
+            <li>switch statement - selects one of many blocks of code to be executed</li>
+        </ul>
+    </p>
+    <p class="desc">
+        <b>Example: </b>The if statement executes some code if one condition is true. Syntax :
+    </p>
+    <br>
+
+    <br>
+    <p><b>if(condition) {
+        <br>
+        code to be executed if conditionis true 
+        <br>
+    }
+    </b></p>
+
+    <br><br>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* if statement*/</span>
+        $t = date("H");
+        
+        if ($t < "20") {
+          echo "Have a good day!";
+        }
+        ?>
+
+        ?> 
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Have a good day!
+    </pre>
+    <p class="desc"> The if...else statement executes some code if a condition is true and another code if that condition is false.</p>
+
+    <img src="images/php-3.png" alt="" class="content-img">
+  
+
+    <h2 class="sub-title">PHP - The if...elseif...else Statement</h2>
+    <p class="desc">
+            Output "Have a good morning!" if the current time is less than 10, and "Have a good day!" if the current time is less than 20. Otherwise it will output "Have a good night!":
+    </p>
+
+     <!----------------codebox----------------->
+     <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* if statement*/</span>
+        $t = date("H");
+        
+        if ($t < "10") {
+          echo "Have a good morning!";
+        } elseif ($t < "20") {
+          echo "Have a good day!";
+        } else {
+          echo "Have a good night!";
+        }
+    ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Have a good day!
+    </pre>
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

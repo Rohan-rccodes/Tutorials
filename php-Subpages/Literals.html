@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Iterables</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Iterables</h1>
+    <hr class="line">
+    <p class="desc">
+        An iterable is any value which can be looped through with a foreach() loop.
+    </p>
+    <br>
+    <p class="desc">The iterable pseudo-type was introduced in PHP 7.1, and it can be used as a data type for function arguments and function return values.</p>
+    <br>
+
+    <p class="desc"><b>Use an iterable function argument:</b></p>
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        < ?php
+        function printIterable(iterable $myIterable) {
+          foreach($myIterable as $item) {
+            echo $item;
+          }
+        }
+        
+        $arr = ["a", "b", "c"];
+        printIterable($arr);
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        abc
+    </pre>
+
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+    <p class="desc">In PHP, the current(), next(), prev(), reset(), and end() functions are used to iterate through arrays. These functions are often used with arrays that have an internal pointer, such as indexed arrays and associative arrays. Here's an overview of each of these functions:</p>
+    <br>
+
+
+    <p class="desc"><b>1.Current():</b></p>
+    <br>
+    <p class="desc">current($array) returns the current element's value that the internal pointer is pointing to in the array. The internal pointer starts at the first element of the array and moves as you iterate through it or use other array functions.</p>
+
+    <br>
+    <p class="desc">If you use current() before any iteration or after reaching the end of the array, it returns false.</p>
+    <br>
+    <pre class="code-box">
+            $fruits = ["apple", "banana", "cherry"];
+            echo current($fruits); // Output: apple
+    </pre>
+
+    <br>
+    <p class="desc"><b>2. next():</b></p>
+    <br>
+    <p class="desc">next($array) moves the internal pointer to the next element in the array and returns its value.</p>
+
+    <br>
+    <p class="desc">If you call next() when the internal pointer is already at the end of the array, it returns false.</p>
+    <br>
+    <pre class="code-box">
+            $fruits = ["apple", "banana", "cherry"];
+            echo current($fruits); // Output: apple
+    </pre>
+
+
+    <p class="desc"><b>3. pre():</b></p>
+    <br>
+    <p class="desc">prev($array) moves the internal pointer to the previous element in the array and returns its value.</p>
+
+    <br>
+    <p class="desc">If you call prev() when the internal pointer is already at the beginning of the array, it returns false.</p>
+    <br>
+    <pre class="code-box">
+            $fruits = ["apple", "banana", "cherry"];
+            echo current($fruits); // Output: apple
+    </pre>
+
+    <br>
+    <p class="desc"><b>4. reset():</b></p>
+    <br>
+    <p class="desc">reset($array) moves the internal pointer to the first element of the array and returns its value.</p>
+    <br>
+    <pre class="code-box">
+            $fruits = ["apple", "banana", "cherry"];
+            echo current($fruits); // Output: apple
+    </pre>
+
+
+    <p class="desc"><b>5. end():</b></p>
+    <br>
+    <p class="desc">end($array) moves the internal pointer to the last element of the array and returns its value.
+    </p>
+    <br>
+    <pre class="code-box">
+            $fruits = ["apple", "banana", "cherry"];
+            echo current($fruits); // Output: apple
+    </pre>
+
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

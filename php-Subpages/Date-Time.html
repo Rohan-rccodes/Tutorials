@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Date and time</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Date and time </h1>
+    <hr class="line">
+    <p class="desc">
+        The PHP date() function formats a timestamp to a more readable date and time.
+    </p>
+    <p><b>Get a DATE </b></p>
+    <p class="desc">The required format parameter of the date() function specifies how to format the date (or time).</p>
+
+
+    <p ><b>Here are some characters that are commonly used for dates:</b></p>
+    <u class="type-2">
+        <li>d - Represents the day of the month (01 to 31)</li>
+        <li>m - Represents a month (01 to 12)</li>
+        <li>Y - Represents a year (in four digits)</li>
+        <li>l (lowercase 'L') - Represents the day of the week</li>
+        <li>Other characters, like"/", ".", or "-" can also be inserted between the characters to add additional formatting.Other characters, like"/", ".", or "-" can also be inserted between the characters to add additional formatting.</li>
+    </u>
+
+
+    <p class="desc">The example below formats today's date in three different ways:</p>
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        <span><</span>?php
+
+        <span class="comment">/* php date*/</span>
+        echo "Today is " . date("Y/m/d") . "< br>";
+        echo "Today is " . date("Y.m.d") . "< br>";
+        echo "Today is " . date("Y-m-d") . "< br>";
+        echo "Today is " . date("l");
+        ?>
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Today is 2023/11/21
+        Today is 2023.11.21
+        Today is 2023-11-21
+        Today is Tuesday       
+    </pre>
+    
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

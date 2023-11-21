@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP String Interpolation</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP String Interpolation</h1>
+    <hr class="line">
+    <br> 
+    <p class="desc">
+        In PHP, you can use string interpolation with curly braces to embed variables and expressions within double-quoted strings. This feature allows you to include the values of variables and evaluate expressions directly within the string. Here's how string interpolation with curly braces works in PHP:
+    </p>
+    <br>
+    <br>
+    <p><b>Basic Variable Interpolation:</b></p>
+    <br>
+    <p class="desc">You can include variable values directly within double-quoted strings by wrapping the variable name in curly braces preceded by a dollar sign ({$variable}).</p>
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        $name = "John";
+        $message = "Hello, {$name}!";
+        echo $message; // Output: Hello, John!
+    </pre>
+
+    <br>
+    <p><b>Complex Expressions:</b></p>
+
+    <br>
+     <p class="desc">You can also evaluate complex expressions and include their results within the string using curly braces. The expression should be enclosed in {}.</p>
+
+     <p class="desc">
+        $x = 5;
+        $y = 3;
+        $result = "The sum of {$x} and {$y} is {$x + $y}.";
+        echo $result; // Output: The sum of 5 and 3 is 8.
+     </p>
+
+     <br>
+     <p class="desc"><b>Nested Curly Braces:</b></p>
+     <br>
+     <pre class="code-box">
+        $name = "Alice";
+        $message = "Hello, {{$name}}!";
+        echo $message; // Output: Hello, {Alice}!
+     </pre>
+
+     <br>
+
+     <p class="desc"><b>Array Indexing :</b></p>
+     <br>
+     <p class="desc">You can interpolate array elements or object properties using curly braces as well.</p>
+     <br>
+     <pre class="code-box">
+        $person = ['name' => 'Alice', 'age' => 30];
+        $message = "Hello, {$person['name']}! You are {$person['age']} years old.";
+        echo $message; // Output: Hello, Alice! You are 30 years old.
+     </pre>
+    <img src="../images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

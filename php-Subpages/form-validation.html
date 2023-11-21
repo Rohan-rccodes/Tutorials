@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Form Validation</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Form Validation</h1>
+    <hr class="line">
+    <p class="desc">
+        Form validation in PHP is the process of ensuring that user-submitted data in HTML forms meets certain criteria or constraints before it is processed or stored in a database. The primary goals of form validation are to:
+    </p>
+    <p>
+        <ul class="type-1">
+            <li>Ensure Data Integrity: Validate user input to ensure it conforms to the expected format and constraints, preventing incorrect or malicious data from being stored or processed.</li>
+            <li>Enhance User Experience: Provide meaningful feedback to users when their input doesn't meet validation criteria, allowing them to correct errors and preventing frustration.</li>
+            <li>Security: Protect against common security vulnerabilities such as SQL injection and cross-site scripting (XSS) by validating and sanitizing user input.</li>
+        </ul>
+    </p>
+
+
+    <p class="desc">Here's a basic example of form validation in PHP to validate a user's registration form:    </p>
+
+    <!----------------codebox----------------->
+    <pre class="code-box">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Registration Form&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h2&gt;Registration Form&lt;/h2&gt;
+            &lt;form method="post" action="processregistration.php"&gt;
+         &lt;label for="username"&gt;Username:&lt;/label&gt;
+         &lt;input type="text" id="username" name="username" required&gt;&lt;br&gt;&lt;br&gt;
+        
+         &lt;label for="email"&gt;Email:&lt;/label&gt;
+         &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+        
+         &lt;label for="password"&gt;Password:&lt;/label&gt;
+         &lt;input type="password" id="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+        
+         &lt;label for="confirm_password"&gt;Confirm Password:&lt;/label&gt;
+         &lt;input type="password" id="confirm_password" name="confirm_password" required&gt;
+         &lt;br&gt;&lt;br&gt;
+        
+        &lt;input type="submit" value="Register"&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                
+    </pre>
+
+
+    <p class="desc">
+        In this HTML code, we have a simple registration form with fields for username, email, password, and password confirmation. The form sends the data to a PHP script named processregistration.php for validation.
+    </p>
+
+    <p class="desc">
+        Now, let's create the processregistration.php script to handle form validation:
+    </p>
+
+    <pre class="code-box">
+        &lt;?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $username = $_POST["username"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $confirm_password = $_POST["confirm_password"];
+            
+            // Basic validation checks
+            $errors = [];
+            
+            if (strlen($username) &lt; 3) {
+                $errors[] = "Username must be at least 3 characters long.";
+            }
+            
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors[] = "Invalid email address.";
+            }
+            
+            if (strlen($password) &lt; 6) {
+                $errors[] = "Password must be at least 6 characters long.";
+            }
+            
+            if ($password !== $confirm_password) {
+                $errors[] = "Passwords do not match.";
+            }
+            
+            if (empty($errors)) {
+                // Process the registration (e.g., insert data into a database)
+                // Redirect to a success page
+                header("Location: validform.html");
+            } else {
+                // Display errors to the user
+                foreach ($errors as $error) {
+                    echo $error . "
+                }
+            }
+        }
+        ?>                
+
+    </pre>
+
+    <p><b>Output:</b></p>
+    
+    <img src="../images/phpFormHandling.svg" alt="" class="content-img-2">
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+

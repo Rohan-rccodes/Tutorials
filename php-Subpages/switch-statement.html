@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/subpages-style.css">
+    <title>PHP Switch</title>
+</head>
+<body id="top-heading">
+    <!-- <h1 class="title"></h1> -->
+    <!-- <h2 class="sub-title"></h2> -->
+    <!-- <p class="desc">    </p> -->
+    <!-- <pre class="code-box"></pre> -->
+
+
+
+    <h1 class="title" >PHP Switch</h1>
+    <hr class="line">
+    <p class="desc">
+        In PHP, the switch statement is a control structure that provides an efficient way to evaluate an expression and execute different blocks of code based on the value of that expression. It's often used when you have a single value and want to perform different actions depending on the possible values of that value. The switch statement is more concise and easier to read than a series of if-elseif statements when dealing with multiple conditions.
+    </p>
+    <p><b>Syntax of switch statement:</b></p>
+    <br>
+
+    <p>
+        &nbsp; switch (expression) { 
+            <br>
+            &nbsp; case value1:
+            <br>
+            &nbsp; &nbsp;  &nbsp; // Code to execute when expression equals value1
+                <br>
+                &nbsp;  &nbsp; break;
+                <br>
+                &nbsp; case value2:
+            <br>
+            &nbsp; &nbsp; // Code to execute when expression equals value2
+                <br>
+                &nbsp; &nbsp; break;
+                <br>
+                &nbsp;   &nbsp;// Additional cases as needed
+            <br>
+            &nbsp; &nbsp; default:
+            <br>
+            &nbsp; &nbsp;    // Code to execute if none of the cases match
+        }
+    </p>
+    <!----------------codebox----------------->
+    <pre class="code-box">
+         $day = "Monday";
+
+         switch ($day) {
+            case "Monday":
+                echo "It's the start of the workweek.";
+                break;
+            case "Friday":
+                echo "It's almost the weekend!";
+                break;
+            default:
+                echo "It's a regular day.";
+        }
+    </pre>
+
+    <p><b>Output:</b></p>
+
+    <pre class="output-box">
+        Tuesday
+    </pre>
+
+    <img src="images/php-4.png" alt="" class="content-img-2">
+
+
+    <div class="btn-box">
+        <div>
+            <a href="#top-heading" class="top-btn btn">Top <span>&#129137;</span></a>
+        </div>
+
+        <div>
+            <a href="php-page-1.html" class="pre-btn btn"><span>&#129136;</span> Prev</a>
+
+            <a href="/php-programs/php-page-3.html" target="Content-box" class="next-btn btn">Next <span>&#129138;</span></a>
+
+        </div>
+        
+
+        
+    </div>
+   
+</body>
+</html>
+
